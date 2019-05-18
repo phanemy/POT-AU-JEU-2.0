@@ -8,6 +8,7 @@ public class SlotScript : MonoBehaviour
     public ItemCptn item;
     private Image imageItem;
     private Image borderImage;
+    private int id;
 
     public void Start()
     {
@@ -15,8 +16,9 @@ public class SlotScript : MonoBehaviour
         imageItem = transform.GetChild(0).GetComponent<Image>();
     }
 
-    public void Init(ItemCptn item)
+    public void Init(ItemCptn item, int id)
     {
+        this.id = id;
         this.item = item;
         imageItem.sprite = item.icon;
         imageItem.color = Color.white;

@@ -25,7 +25,7 @@ public class InventoryPanel : MonoBehaviour
         {
             if (i < items.Count)
             {
-                slots[i].Init(items[i]);
+                slots[i].Init(items[i], i);
             }
             else
             {
