@@ -4694,6 +4694,26 @@ PrefabInstance:
       propertyPath: bloodLustUiSlider
       value: 
       objectReference: {fileID: 306940005}
+    - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: timeStep0_33
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: timeStep33_66
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: timeStep66_99
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: timeStep100
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445697, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: ownCollider
