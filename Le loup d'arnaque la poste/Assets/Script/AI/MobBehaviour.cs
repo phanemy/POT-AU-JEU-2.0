@@ -42,6 +42,10 @@ public class MobBehaviour : MovingEnties
     // Update is called once per frame
     void Update()
     {
+        if(combatComponent.isDead)
+        {
+            Die();
+        }
         float dist = (Position2D - (Vector2)player.transform.position).magnitude;
         if (dist <= followPlayerDist)
         {
@@ -156,19 +160,9 @@ public class MobBehaviour : MovingEnties
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "Weapon")
-    //    {
-    //        CombatComponent cbc = collision.gameObject.transform.parent.GetComponent<CombatComponent>();
-    //        if (cbc != null)
-    //            if(combatComponent.takeDamage(cbc.damage))
-    //                Die();
-    //    }
-    //}
-
-    //void Die()
-    //{
-    //    Destroy(this);
-    //}
+    private void Die()
+    {
+        Utils.InstantiatePickable(transform, dropItems);
+        Destroy(gameObject);
+    }
 }

@@ -9,11 +9,18 @@ public static class Utils
 
     public static void Init()
     {
-        pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/DropableItem.prefab");
+        pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Dropable/DropableItemPrefab").GetComponent<ItemPrefab>();
     }
 
-    public static void InstantiatePickable(Vector3 position, Pickable item)
+    public static void InstantiatePickable(Transform transf, Pickable item)
     {
-        GameObject.Instantiate<ItemPrefab>(pickablePrefab).Init(position, item);
+        if(pickablePrefab == null)
+            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
+
+        ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
+        newGm.Init(transf.position, item);
+        newGm.transform.SetParent(transf.parent);
+        BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
+        box.isTrigger = true;
     }
 }

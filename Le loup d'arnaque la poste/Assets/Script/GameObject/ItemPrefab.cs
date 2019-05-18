@@ -12,4 +12,10 @@ public class ItemPrefab : MonoBehaviour
         this.item = item;
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+            Debug.Log("must be pick");
+    }
 }

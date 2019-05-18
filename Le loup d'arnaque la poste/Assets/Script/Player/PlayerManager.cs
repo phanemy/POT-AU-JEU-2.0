@@ -37,6 +37,7 @@ public class PlayerManager : MonoBehaviour
         lycanthropyComponent.startGame(bloodLustComponent);
         bloodLustComponent.startGame();
         dir = DirectionEnum.Bottom;
+        Utils.Init();
     }
 
     // Update is called once per frame
@@ -46,7 +47,6 @@ public class PlayerManager : MonoBehaviour
         {
             if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
-                Debug.Log("attack");
                 combatComponent.Attack(dir);
 
                 if (spriteManager.update)
