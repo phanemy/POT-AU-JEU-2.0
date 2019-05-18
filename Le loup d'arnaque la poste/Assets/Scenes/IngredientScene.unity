@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &164096364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 106772151880526854, guid: 7e88f0883ff34bd438f109dc6e026602,
+    type: 3}
+  m_PrefabInstance: {fileID: 276342760740198136}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6d91baca5a3c444aa7f1436e409204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &182557870
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da6da734767f024991592e6f9e5d7fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 164096364}
 --- !u!4 &182557872
 Transform:
   m_ObjectHideFlags: 0
@@ -428,6 +441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Panel inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 276342759880126144, guid: 7e88f0883ff34bd438f109dc6e026602,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 276342759880126145, guid: 7e88f0883ff34bd438f109dc6e026602,
         type: 3}
