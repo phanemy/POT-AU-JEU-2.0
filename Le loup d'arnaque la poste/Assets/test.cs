@@ -5,7 +5,6 @@ using UnityEngine;
 public class test : MonoBehaviour
 {
     public Inventory inventaire;
-    public InventoryPanel panel;
     public ItemCptn[] cptn = new ItemCptn[4];
 
     // Start is called before the first frame update
@@ -28,14 +27,6 @@ public class test : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.A))
         {
             inventaire.AddItem(cptn[1]);
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            inventaire.AddItem(cptn[2]);
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            inventaire.AddItem(cptn[3]);
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
