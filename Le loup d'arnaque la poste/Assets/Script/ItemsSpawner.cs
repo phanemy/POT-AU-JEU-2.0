@@ -23,7 +23,7 @@ public class ItemsSpawner : MonoBehaviour
     {
         timeSinceLastSpawn = 0f;
         xScale = (transform.localScale.x / 2);
-        yScale = (transform.localScale.x / 2);
+        yScale = (transform.localScale.y / 2);
     }
 
     private void Update()
