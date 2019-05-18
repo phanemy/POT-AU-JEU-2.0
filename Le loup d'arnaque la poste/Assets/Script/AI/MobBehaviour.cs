@@ -13,6 +13,7 @@ public class MobBehaviour : MovingEnties
     [Range(0.1f, 1)]
     public float startMovingChance = 0.1f;
     public bool drawDebug = false;
+    [SerializeField]
     public Pickable dropItems;
     [SerializeField]
     public SpriteManager spriteManager;
