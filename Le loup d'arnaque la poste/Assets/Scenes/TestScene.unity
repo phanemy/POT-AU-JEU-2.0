@@ -555,11 +555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1399409422}
     m_Modifications:
-    - target: {fileID: 6688428466509488764, guid: e41537df5ed38d34eb6676fbc73345b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Mandragore (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6688428466509488763, guid: e41537df5ed38d34eb6676fbc73345b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -614,6 +609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688428466509488764, guid: e41537df5ed38d34eb6676fbc73345b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Mandragore (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6688428466509489030, guid: e41537df5ed38d34eb6676fbc73345b3,
         type: 3}
@@ -4572,7 +4572,7 @@ PrefabInstance:
     - target: {fileID: 276342759880126144, guid: 02677eb7d464fe947b6112addbe5230b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 276342759880126145, guid: 02677eb7d464fe947b6112addbe5230b,
         type: 3}
@@ -5002,11 +5002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 281864352}
     m_Modifications:
-    - target: {fileID: 5244119913729445753, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_Name
-      value: Hero
-      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445754, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5061,6 +5056,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937691821919625332, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: m_Name
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445753, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: m_Name
+      value: Hero
       objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
@@ -5177,11 +5182,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4937691821919625332, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_Name
-      value: Box
-      objectReference: {fileID: 0}
     - target: {fileID: 596098023256792254, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5211,11 +5211,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1399409422}
     m_Modifications:
-    - target: {fileID: 6688428466509488764, guid: e41537df5ed38d34eb6676fbc73345b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Mandragore
-      objectReference: {fileID: 0}
     - target: {fileID: 6688428466509488763, guid: e41537df5ed38d34eb6676fbc73345b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5270,6 +5265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6688428466509488764, guid: e41537df5ed38d34eb6676fbc73345b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Mandragore
       objectReference: {fileID: 0}
     - target: {fileID: 6688428466509489030, guid: e41537df5ed38d34eb6676fbc73345b3,
         type: 3}

@@ -8,6 +8,11 @@ public class Inventory : MonoBehaviour
     public InventoryPanel inventoryPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
 
+    public void Start()
+    {
+        inventoryPanel.gameObject.SetActive(false);
+    }
+
     public void Update()
     {
         if (Input.GetButtonDown("Inventary"))

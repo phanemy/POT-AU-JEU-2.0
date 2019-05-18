@@ -10,7 +10,7 @@ public class InventoryPanel : MonoBehaviour
 
     private List<SlotScript> slots = new List<SlotScript>();
 
-    void Start()
+    void Awake()
     {
         slotPanelTransform = transform.GetChild(0);
         
