@@ -9,7 +9,7 @@ public class SlotScript : MonoBehaviour
     private Inventory inventory;
     private Image imageItem;
     private Image borderImage;
-    private int id;
+    private int id = -1;
 
     public void Start()
     {
@@ -54,6 +54,7 @@ public class SlotScript : MonoBehaviour
         imageItem.color = Color.clear;
         imageItem.sprite = null;
         borderImage.color = Color.white;
+        id = -1;
     }
 
     public void RemoveFromInventory()
