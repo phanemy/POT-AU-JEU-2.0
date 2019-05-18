@@ -18,3 +18,10 @@ public enum Loot
     Sol,
     Coffre
 }
+
+public enum Effect
+{
+    EffectA,
+    EffectB,
+    EffectC
+}
