@@ -11,6 +11,7 @@ public abstract class MovingEnties : MonoBehaviour
         private set { }
     }
 
+    public DirectionEnum Direction{get; private set;}
 
     protected Pathfinder pathFinder;
 
