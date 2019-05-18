@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: d58a94bb5aa04634c910a71cc4e0aa77
+guid: e40303d93be88334c96ca435a4cb33c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3735966279272386194
-    second: PersoTest_Sprite
+      213: -6367634124021630630
+    second: Lycanthope
   - first:
-      213: 1720416987547844105
-    second: House
-  - first:
-      213: -2610070018157594849
-    second: Hero
-  - first:
-      213: 8340562600450389181
-    second: Obstacle
-  - first:
-      213: -6134591921222819078
-    second: Daim
-  - first:
-      213: -7302195682700487162
-    second: Villager
+      213: 3862084971680554635
+    second: BloodLust
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -60,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 728, y: 535, z: 837, w: 289}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -102,55 +90,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hero
+      name: Lycanthope
       rect:
         serializedVersion: 2
-        x: 756
-        y: 539
-        width: 313
-        height: 248
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1af55a4b760490d49aa7f2b1b348ddc6
-      internalID: -2610070018157594849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Obstacle
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 574
-        width: 309
-        height: 189
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2728e1b44a27cb44b4bf776a43484a6
-      internalID: 8340562600450389181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: House
-      rect:
-        serializedVersion: 2
-        x: 411
-        y: 189
-        width: 239
-        height: 294
+        x: 18
+        y: 782
+        width: 160
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +104,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0496ca19c06454ea3be84027041f78
-      internalID: 1720416987547844105
+      spriteID: 7de886cfdff3dce4bb17db2f463c3580
+      internalID: -6367634124021630630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daim
+      name: BloodLust
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 282
-        width: 200
-        height: 104
+        x: 47
+        y: 948
+        width: 76
+        height: 117
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,41 +125,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27230c4a0be780941b386d0d7439d667
-      internalID: -6134591921222819078
+      spriteID: 4da1f7106af12ec4c89f1394c1332101
+      internalID: 3862084971680554635
       vertices: []
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Villager
-      rect:
-        serializedVersion: 2
-        x: 1415
-        y: 636
-        width: 100
-        height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9714f71d9d4461847918412e907a01a1
-      internalID: -7302195682700487162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    outline:
-    - - {x: -960, y: -540}
-      - {x: -960, y: 540}
-      - {x: 960, y: 540}
-      - {x: 960, y: -540}
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: af0de4989a86bb248a18d7386ce9e1db
+    spriteID: ab1c5f53713e35d4393747cfbcc233e8
     internalID: 0
     vertices: []
     indices: 
