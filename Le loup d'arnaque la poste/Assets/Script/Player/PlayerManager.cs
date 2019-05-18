@@ -15,10 +15,11 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public SpriteManager spriteManager;
 
-    private Vector3 movement;
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
+
+    private Vector3 movement;
     private DirectionEnum dir;
 
     bool isLose;
@@ -52,7 +53,7 @@ public class PlayerManager : MonoBehaviour
                 movement = new Vector3(inputX, inputY, 0);
                 if (movement.magnitude > 0)
                 {
-                    updateDir();
+                    dir = DirectionEnumMethods.GetDirection(movement);
                     spriteManager.ActualDir = dir;
 
                     float run = Input.GetAxis("Run");
@@ -82,18 +83,20 @@ public class PlayerManager : MonoBehaviour
         loseScreen.SetActive(true);
     }
 
-    void updateDir()
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Vector2 right = new Vector2(1, 0);
-        float angle = Vector2.SignedAngle(movement, right);
-        if (angle > -45 && angle <= 45)
-            dir = DirectionEnum.Right;
-        else if (angle > 45 && angle <= 135)
-            dir = DirectionEnum.Bottom;
-        else if (angle > -135 && angle <= -45)
-            dir = DirectionEnum.Top;
-        else
-            dir = DirectionEnum.Left;
+        if (collision.tag == "Mob")
+        {
+            collision.gameObject.GetComponent<MobBehaviour>();
+        }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Mob")
+        {
+            collision.gameObject.GetComponent<MobBehaviour>();
+        }
+    }
 }

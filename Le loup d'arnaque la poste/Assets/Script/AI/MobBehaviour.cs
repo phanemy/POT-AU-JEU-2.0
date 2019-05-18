@@ -2,29 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobBahaviour : MovingEnties
+[RequireComponent(typeof(SpriteManager))]
+public class MobBehaviour : MovingEnties
 {
     public int initialLife = 2;
-    public float distMaxMovement = 2;
+    public float followSpeed = 2;
+    public float maxMovementDist = 2;
+    public float followPlayerDist = 3;
     [Range(0.1f, 1)]
-    public float startMovingChance = 0.5f;
+    public float startMovingChance = 0.1f;
     public bool drawDebug = false;
-
-
+    public Pickable dropItems;
+    [SerializeField]
+    public SpriteManager spriteManager;
+    private Vector3 movement;
+    private DirectionEnum dir;
     private int actualLife;
     private GameObject player;
-    private bool isFleeing;
+    private bool isSearching;
 
     private void Start()
     {
+        spriteManager.init(gameObject.GetComponent<SpriteRenderer>());
         path = null;
         player = GameObject.FindGameObjectWithTag("Player");
+        CircleCollider2D circle = gameObject.GetComponent<CircleCollider2D>();
+        if (circle != null)
+        {
+            circle.radius = maxMovementDist;
+            circle.isTrigger = true;
+        }
+        actualLife = initialLife;
+        dir = DirectionEnum.Bottom;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isMoving && !isFleeing)
+        float dist = (Position2D - (Vector2)player.transform.position).magnitude;
+        if (dist <= followPlayerDist)
+        {
+
+            targetPos = player.transform.position;
+            path = pathFinder.FindPath(Position2D, targetPos);
+            if (path != null)
+            {
+                if (!isSearching)
+                    indexDest = 0;
+                else if (indexDest > path.Length)
+                    indexDest = 0;
+
+                isSearching = true;
+                isMoving = true;
+            }
+            else
+            {
+                isSearching = false;
+                isMoving = false;
+                indexDest = -1;
+            }
+        }
+        else if (isSearching) 
+        {
+            isSearching = false;
+            isMoving = false;
+            indexDest = -1;
+        }
+
+        if (!isMoving && !isSearching)
         {
             if (choseDestination())
             {
@@ -48,11 +93,13 @@ public class MobBahaviour : MovingEnties
         if (Position2D != targetPos)
         {
             Vector2 axis;
-            float updateSpeed = speed * Time.deltaTime;
-
+            float updateSpeed = (isSearching? followSpeed : speed) * Time.deltaTime;
             if (indexDest != -1)
             {
                 axis = path[indexDest] - Position2D;
+                dir = DirectionEnumMethods.GetDirection(axis);
+                spriteManager.ActualDir = dir;
+
                 if (axis.magnitude <= updateSpeed)
                 {
                     transform.position = new Vector3(path[indexDest].x, path[indexDest].y, transform.position.z);
@@ -61,6 +108,9 @@ public class MobBahaviour : MovingEnties
                     {
                         indexDest = -1;
                         isMoving = false;
+                        if (isSearching)
+                            isSearching = false;
+                        spriteManager.stop();
                     }
                 }
                 else
@@ -69,43 +119,20 @@ public class MobBahaviour : MovingEnties
                     transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
                 }
             }
-            //else
-            //{
-            //    axis = targetPos - Position2D;
-            //    if (axis.magnitude <= updateSpeed)
-            //    {
-            //        transform.position = new Vector3(targetPos.x, targetPos.y, transform.position.z);
-            //        isMoving = false;
-            //    }
-            //    else
-            //    {
-            //        axis.Normalize();
-            //        transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
-            //    }
-            //}
+            spriteManager.Update();
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "Player")
-    //    {
-    //        isMoving = true;
-
-    //    }
-    //}
 
     protected override bool choseDestination()
     {
         if (Random.value < startMovingChance)
         {
-            targetPos = Random.insideUnitCircle.normalized * distMaxMovement;
+            targetPos = Position2D + Random.insideUnitCircle.normalized * maxMovementDist;
             return true;
         }
         else
             return false;
     }
-
 
     private void OnDrawGizmos()
     {
@@ -114,12 +141,15 @@ public class MobBahaviour : MovingEnties
             Gizmos.color = Color.blue;
             if (isMoving)
             {
-                //Gizmos.DrawLine(path[0], Position2D);
                 for (int i = 1; i < path.Length; i++)
                     Gizmos.DrawLine(path[i - 1], path[i]);
             }
             else
-                Gizmos.DrawWireSphere(Position2D, distMaxMovement * 2);
+            {
+                Gizmos.DrawWireSphere(Position2D, maxMovementDist);
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(Position2D, followPlayerDist );
+            }
         }
     }
 
