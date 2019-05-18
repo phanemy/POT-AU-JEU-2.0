@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SlotScript : MonoBehaviour
 {
     public ItemCptn item;
+    private Inventory inventory;
     private Image imageItem;
     private Image borderImage;
     private int id;
@@ -14,6 +15,11 @@ public class SlotScript : MonoBehaviour
     {
         borderImage = GetComponent<Image>();
         imageItem = transform.GetChild(0).GetComponent<Image>();
+    }
+
+    public void Init(Inventory inv)
+    {
+        inventory = inv;
     }
 
     public void Init(ItemCptn item, int id)
@@ -48,5 +54,10 @@ public class SlotScript : MonoBehaviour
         imageItem.color = Color.clear;
         imageItem.sprite = null;
         borderImage.color = Color.white;
+    }
+
+    public void RemoveFromInventory()
+    {
+        inventory.RemoveItem(id);
     }
 }

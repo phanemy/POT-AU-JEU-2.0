@@ -133,8 +133,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 8597252431418113841}
+        m_MethodName: RemoveFromInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

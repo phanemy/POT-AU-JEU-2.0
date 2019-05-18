@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    private Inventory inventaire;
+    public Inventory inventaire;
     public InventoryPanel panel;
     public ItemCptn[] cptn = new ItemCptn[4];
 
@@ -12,8 +12,6 @@ public class test : MonoBehaviour
     void Start()
     {
         Utils.Init();
-        inventaire = new Inventory();
-        inventaire.inventoryPanel = panel;
     }
 
     // Update is called once per frame

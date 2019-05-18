@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryPanel : MonoBehaviour
 {
     public SlotScript slotPrefab;
+    public Inventory inventory;
     private Transform slotPanelTransform;
 
     private List<SlotScript> slots = new List<SlotScript>();
@@ -15,7 +16,9 @@ public class InventoryPanel : MonoBehaviour
         
         for(int i = 0; i < Utils.NbSlot; ++i)
         {
-            slots.Add(Instantiate<SlotScript>(slotPrefab, slotPanelTransform));
+            SlotScript slot = Instantiate<SlotScript>(slotPrefab, slotPanelTransform);
+            slot.Init(inventory);
+            slots.Add(slot);
         }
     }
 

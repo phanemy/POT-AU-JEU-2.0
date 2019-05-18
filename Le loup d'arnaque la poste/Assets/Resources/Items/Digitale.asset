@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Digitale
   description: Une superbe fleur
-  icon: {fileID: 21300000, guid: 467da88977e45c543905056c77808626, type: 3}
+  icon: {fileID: 21300000, guid: 2fc2eb88450900449ae91fff22160f82, type: 3}
   rarety: 2
   location: 0
   type: 1
