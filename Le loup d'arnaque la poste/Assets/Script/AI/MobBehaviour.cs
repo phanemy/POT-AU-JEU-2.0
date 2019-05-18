@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteManager))]
+[RequireComponent(typeof(CombatComponent))]
 public class MobBehaviour : MovingEnties
 {
-    public int initialLife = 2;
+    //public int initialLife = 2;
     public float followSpeed = 2;
     public float maxMovementDist = 2;
     public float followPlayerDist = 3;
@@ -15,6 +16,8 @@ public class MobBehaviour : MovingEnties
     public Pickable dropItems;
     [SerializeField]
     public SpriteManager spriteManager;
+    private CombatComponent combatComponent;
+
     private Vector3 movement;
     private DirectionEnum dir;
     private int actualLife;
@@ -27,12 +30,12 @@ public class MobBehaviour : MovingEnties
         path = null;
         player = GameObject.FindGameObjectWithTag("Player");
         CircleCollider2D circle = gameObject.GetComponent<CircleCollider2D>();
+        combatComponent = gameObject.GetComponent<CombatComponent>();
         if (circle != null)
         {
             circle.radius = maxMovementDist;
             circle.isTrigger = true;
         }
-        actualLife = initialLife;
         dir = DirectionEnum.Bottom;
     }
 
@@ -153,4 +156,19 @@ public class MobBehaviour : MovingEnties
         }
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "Weapon")
+    //    {
+    //        CombatComponent cbc = collision.gameObject.transform.parent.GetComponent<CombatComponent>();
+    //        if (cbc != null)
+    //            if(combatComponent.takeDamage(cbc.damage))
+    //                Die();
+    //    }
+    //}
+
+    //void Die()
+    //{
+    //    Destroy(this);
+    //}
 }
