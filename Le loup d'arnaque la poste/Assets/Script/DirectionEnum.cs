@@ -25,6 +25,23 @@ public static class DirectionEnumMethods
                 return DirectionEnum.Top;
             else
                 return DirectionEnum.Left;
+    }
+
+    public static Quaternion GetQuaternionFromDirection(DirectionEnum dir)
+    {
+        switch (dir)
+        {
+            case DirectionEnum.Bottom:
+                return Quaternion.Euler(0,0,180);
+            case DirectionEnum.Left:
+                return Quaternion.Euler(0, 0, 90);
+            case DirectionEnum.Top:
+                return Quaternion.Euler(0, 0, 0);
+            case DirectionEnum.Right:
+                return Quaternion.Euler(0, 0, -90);
+            default:
+                return Quaternion.identity;
         }
+    }
 }
 
