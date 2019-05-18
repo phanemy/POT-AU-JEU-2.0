@@ -2,36 +2,125 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MobBehaviour : MonoBehaviour
+public class MobBahaviour : MovingEnties
 {
-    public float speed = 2f;
-    public Vector2 Position2D
+    public int initialLife = 2;
+    public float distMaxMovement = 2;
+    [Range(0.1f, 1)]
+    public float startMovingChance = 0.5f;
+    public bool drawDebug = false;
+
+
+    private int actualLife;
+    private GameObject player;
+    private bool isFleeing;
+
+    private void Start()
     {
-        get { return transform.position; }
-        private set { }
+        path = null;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    public DirectionEnum Direction{get; private set;}
-
-    protected Pathfinder pathFinder;
-
-    protected Vector2 targetPos;
-    protected Vector2[] path;
-    protected int indexDest;
-    protected bool isMoving;
-
-    // Start is called before the first frame update
-
-    protected void Awake()
+    // Update is called once per frame
+    void Update()
     {
-        indexDest = -1;
-        isMoving = false;
-        AINavMeshGenerator gen = GameObject.FindWithTag("navMeshGenerator").GetComponent<AINavMeshGenerator>();
-        if (gen == null)
-            Debug.LogError("missing grid Generator");
-        pathFinder = new Pathfinder(gen);
+        if (!isMoving && !isFleeing)
+        {
+            if (choseDestination())
+            {
+                path = pathFinder.FindPath(Position2D, targetPos, player);
+                if (path != null && path.Length != 0)
+                {
+                    isMoving = true;
+                    indexDest = 0;
+                    move();
+                }
+            }
+        }
+        else
+        {
+            move();
+        }
     }
 
-    protected abstract bool choseDestination();
-    protected abstract void move();
+    protected override void move()
+    {
+        if (Position2D != targetPos)
+        {
+            Vector2 axis;
+            float updateSpeed = speed * Time.deltaTime;
+
+            if (indexDest != -1)
+            {
+                axis = path[indexDest] - Position2D;
+                if (axis.magnitude <= updateSpeed)
+                {
+                    transform.position = new Vector3(path[indexDest].x, path[indexDest].y, transform.position.z);
+                    indexDest++;
+                    if (indexDest == path.Length)
+                    {
+                        indexDest = -1;
+                        isMoving = false;
+                    }
+                }
+                else
+                {
+                    axis.Normalize();
+                    transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
+                }
+            }
+            //else
+            //{
+            //    axis = targetPos - Position2D;
+            //    if (axis.magnitude <= updateSpeed)
+            //    {
+            //        transform.position = new Vector3(targetPos.x, targetPos.y, transform.position.z);
+            //        isMoving = false;
+            //    }
+            //    else
+            //    {
+            //        axis.Normalize();
+            //        transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
+            //    }
+            //}
+        }
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "Player")
+    //    {
+    //        isMoving = true;
+
+    //    }
+    //}
+
+    protected override bool choseDestination()
+    {
+        if (Random.value < startMovingChance)
+        {
+            targetPos = Random.insideUnitCircle.normalized * distMaxMovement;
+            return true;
+        }
+        else
+            return false;
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        if (drawDebug)
+        {
+            Gizmos.color = Color.blue;
+            if (isMoving)
+            {
+                //Gizmos.DrawLine(path[0], Position2D);
+                for (int i = 1; i < path.Length; i++)
+                    Gizmos.DrawLine(path[i - 1], path[i]);
+            }
+            else
+                Gizmos.DrawWireSphere(Position2D, distMaxMovement * 2);
+        }
+    }
+
 }
