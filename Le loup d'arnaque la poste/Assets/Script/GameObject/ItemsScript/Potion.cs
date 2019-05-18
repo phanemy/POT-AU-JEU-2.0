@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject
+public class Potion : ItemCptn
 {
-    public string itemName;
+    public List<Effect> effects = new List<Effect>();
 }

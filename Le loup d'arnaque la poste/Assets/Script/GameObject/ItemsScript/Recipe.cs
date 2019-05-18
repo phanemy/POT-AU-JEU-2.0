@@ -6,4 +6,5 @@ using UnityEngine;
 public class Recipe : ScriptableObject
 {
     public List<Item> Items = new List<Item>();
+    public Potion potion;
 }
