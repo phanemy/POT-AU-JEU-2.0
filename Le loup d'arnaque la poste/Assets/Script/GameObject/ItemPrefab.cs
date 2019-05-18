@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPrefab : MonoBehaviour
 {
     public Pickable item;
+    public SpriteRenderer childRend;
 
     public void Init(Vector3 position, Pickable item)
     {
@@ -13,9 +14,9 @@ public class ItemPrefab : MonoBehaviour
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void CanBeGather(bool boolean)
     {
-        if (collision.tag == "Player")
-            Debug.Log("must be pick");
+        Debug.Log(boolean);
+        childRend.enabled = boolean;
     }
 }

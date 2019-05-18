@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class CombatComponent : MonoBehaviour
 {
     public float initialLife = 2f;
@@ -9,6 +9,7 @@ public class CombatComponent : MonoBehaviour
     public float attackSpeed = 1f;
     public float damage = 1f;
     public float knockBackDist = 1f;
+    public float attackDist = 1f;
 
     public BoxCollider2D ownCollider;
     public Animator att;
@@ -76,7 +77,9 @@ public class CombatComponent : MonoBehaviour
 
     public bool takeDamage(float takenDamage)
     {
+        
         actualLife -= takenDamage;
+        Debug.Log(gameObject.name + " " + actualLife);
         return (actualLife <= 0);
     }
 
@@ -98,5 +101,11 @@ public class CombatComponent : MonoBehaviour
                         isDead = true;
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position,attackDist);
     }
 }

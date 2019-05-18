@@ -6,11 +6,17 @@ using UnityEngine;
 [System.Serializable]
 public class SpriteManager
 {
+    [SerializeField]
     public Sprite[] goingTop;
+    [SerializeField]
     public Sprite[] goingBot;
+    [SerializeField]
     public Sprite[] goingLeft;
+    [SerializeField]
     public Sprite[] goingRight;
+    [SerializeField]
     public float changeTime = 0.2f;
+    [SerializeField]
     public DirectionEnum ActualDir {
         get { return actualDir; }
         set {

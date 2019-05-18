@@ -6,21 +6,28 @@ using UnityEngine.UI;
 [RequireComponent(typeof(BloodLust))]
 [RequireComponent(typeof(Lycanthropy))]
 [RequireComponent(typeof(CombatComponent))]
+[System.Serializable]
 public class PlayerManager : MonoBehaviour
 {
     public float speed = 1f;
+    [SerializeField]
     public float runSpeed = 2f;
+    [SerializeField]
     public float runBloodLustCost = 0.001f;
+    [SerializeField]
     public GameObject loseScreen;
+    [SerializeField]
     public GameObject statCanvas;
     [SerializeField]
     public SpriteManager spriteManager;
+    [SerializeField]
+    public Inventory inventory;
 
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
     private CombatComponent combatComponent;
-
+    public ItemPrefab pickableItem;
     private Vector3 movement;
     private DirectionEnum dir;
 
@@ -43,9 +50,17 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isLose != true)
+        if(!isLose || !combatComponent.isDead)
         {
-            if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
+            if(Input.GetAxis("Interact") != 0 && pickableItem != null)
+            {
+                if (inventory.AddItem(pickableItem.item))
+                {
+                    Destroy(pickableItem);
+                    pickableItem = null;
+                }
+            }
+            else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
                 combatComponent.Attack(dir);
 
@@ -86,28 +101,45 @@ public class PlayerManager : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            if(!isLose)
+            {
+                DisplayLoseScreen();
+            }
+        }
     }
 
     void DisplayLoseScreen()
     {
+        isLose = true;
         statCanvas.SetActive(false);
-        loseScreen.SetActive(true);
+        loseScreen.SetActive(true);        
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Pickable")
         {
-            collision.gameObject.GetComponent<MobBehaviour>();
+            if (pickableItem != null)
+            {
+                pickableItem.CanBeGather(false);
+                pickableItem = null;
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Pickable")
         {
-            collision.gameObject.GetComponent<MobBehaviour>();
+            if (pickableItem == null)
+            {
+                pickableItem = collision.gameObject.GetComponent<ItemPrefab>();
+                if (pickableItem != null)
+                    pickableItem.CanBeGather(true);
+            }
         }
     }
 }

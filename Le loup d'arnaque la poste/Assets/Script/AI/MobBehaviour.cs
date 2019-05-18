@@ -47,7 +47,13 @@ public class MobBehaviour : MovingEnties
             Die();
         }
         float dist = (Position2D - (Vector2)player.transform.position).magnitude;
-        if (dist <= followPlayerDist)
+        if (dist <= combatComponent.attackDist && combatComponent.CanAttack)
+        {
+            combatComponent.Attack(dir);
+            if (spriteManager.update)
+                spriteManager.stop();
+        }
+        else if (dist <= followPlayerDist)
         {
 
             targetPos = player.transform.position;
@@ -69,29 +75,31 @@ public class MobBehaviour : MovingEnties
                 indexDest = -1;
             }
         }
-        else if (isSearching) 
+        else if (isSearching)
         {
             isSearching = false;
             isMoving = false;
             indexDest = -1;
         }
-
-        if (!isMoving && !isSearching)
+        if (!combatComponent.isAttacking)
         {
-            if (choseDestination())
+            if (!isMoving && !isSearching)
             {
-                path = pathFinder.FindPath(Position2D, targetPos, player);
-                if (path != null && path.Length != 0)
+                if (choseDestination())
                 {
-                    isMoving = true;
-                    indexDest = 0;
-                    move();
+                    path = pathFinder.FindPath(Position2D, targetPos, player);
+                    if (path != null && path.Length != 0)
+                    {
+                        isMoving = true;
+                        indexDest = 0;
+                        move();
+                    }
                 }
             }
-        }
-        else
-        {
-            move();
+            else
+            {
+                move();
+            }
         }
     }
 
@@ -155,6 +163,7 @@ public class MobBehaviour : MovingEnties
             {
                 Gizmos.DrawWireSphere(Position2D, maxMovementDist);
                 Gizmos.color = Color.red;
+
                 Gizmos.DrawWireSphere(Position2D, followPlayerDist );
             }
         }

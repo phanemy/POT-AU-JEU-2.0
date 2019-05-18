@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2182100fe4325734c83ba0d17dc1f9d2, type: 3}
-  m_Name: test
+  m_Name: Racine
   m_EditorClassIdentifier: 
-  itemName: test
-  description: test
-  icon: {fileID: 21300000, guid: ee72063748b854643bf45d673fdcc133, type: 3}
-  rarety: 0
-  location: 0
+  itemName: Racine
+  description: Racine de Mandragore
+  icon: {fileID: 21300000, guid: 98610f7550d9d55499fe6b82e0d17b7a, type: 3}
+  rarety: 1
+  location: 1
   type: 0

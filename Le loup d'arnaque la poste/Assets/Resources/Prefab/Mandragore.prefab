@@ -193,7 +193,7 @@ MonoBehaviour:
   followPlayerDist: 3
   startMovingChance: 0.1
   drawDebug: 1
-  dropItems: {fileID: 11400000, guid: c0b1aa993144e9343ba77576f8aa8b79, type: 2}
+  dropItems: {fileID: 11400000, guid: f21e747de915aeb4b83746d2223b3bb3, type: 2}
   spriteManager:
     goingTop:
     - {fileID: -929924348341195587, guid: 52993598ec3cc4946a3cc777e92ecf87, type: 3}
@@ -262,6 +262,7 @@ MonoBehaviour:
   ownCollider: {fileID: 6688428465447531142}
   att: {fileID: 6688428466509488762}
   weaponParent: {fileID: 6688428464937696232}
+  isDead: 0
   timeSinceLastAttack: 0
   isAttacking: 0
 --- !u!95 &6688428466509488762
