@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(BloodLust))]
 [RequireComponent(typeof(Lycanthropy))]
+[RequireComponent(typeof(CombatComponent))]
 public class PlayerManager : MonoBehaviour
 {
     public float speed = 1f;
@@ -18,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
+    private CombatComponent combatComponent;
 
     private Vector3 movement;
     private DirectionEnum dir;
@@ -29,6 +31,7 @@ public class PlayerManager : MonoBehaviour
         spriteManager.init(gameObject.GetComponent < SpriteRenderer>());
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
+        combatComponent = gameObject.GetComponent<CombatComponent>();
         camTransform = Camera.main.transform;
         camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
         lycanthropyComponent.startGame(bloodLustComponent);
@@ -41,40 +44,48 @@ public class PlayerManager : MonoBehaviour
     {
         if(isLose != true)
         {
-            if (lycanthropyComponent.LycanthropyPercent == 1f)
+            if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
-                DisplayLoseScreen();
+                Debug.Log("attack");
+                combatComponent.Attack(dir);
+
+                if (spriteManager.update)
+                    spriteManager.stop();
             }
-            else
+            else if (!combatComponent.isAttacking)
             {
-
-                float inputX = Input.GetAxis("Horizontal");
-                float inputY = Input.GetAxis("Vertical");
-                movement = new Vector3(inputX, inputY, 0);
-                if (movement.magnitude > 0)
+                if (lycanthropyComponent.LycanthropyPercent == 1f)
                 {
-                    dir = DirectionEnumMethods.GetDirection(movement);
-                    spriteManager.ActualDir = dir;
-
-                    float run = Input.GetAxis("Run");
-
-                    transform.position = transform.position + movement * Time.deltaTime * (((1 - run) * speed) + (run * runSpeed));
-                    if (run == 1)
-                        bloodLustComponent.addBloodLust(runBloodLustCost);
-
-                    camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
-                    if (!spriteManager.update)
-                      spriteManager.restart();
-
-                    spriteManager.Update();
-
+                    DisplayLoseScreen();
                 }
                 else
-                    if (spriteManager.update)
+                {
+                    float inputX = Input.GetAxis("Horizontal");
+                    float inputY = Input.GetAxis("Vertical");
+                    movement = new Vector3(inputX, inputY, 0);
+                    if (movement.magnitude > 0)
+                    {
+                        dir = DirectionEnumMethods.GetDirection(movement);
+                        spriteManager.ActualDir = dir;
+
+                        float run = Input.GetAxis("Run");
+
+                        transform.position = transform.position + movement * Time.deltaTime * (((1 - run) * speed) + (run * runSpeed));
+                        if (run == 1)
+                            bloodLustComponent.addBloodLust(runBloodLustCost);
+
+                        camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
+                        if (!spriteManager.update)
+                            spriteManager.restart();
+
+                        spriteManager.Update();
+                    }
+                    else
+                        if (spriteManager.update)
                         spriteManager.stop();
+                }
             }
         }
-
     }
 
     void DisplayLoseScreen()

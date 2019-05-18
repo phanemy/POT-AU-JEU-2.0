@@ -6,6 +6,8 @@ TagManager:
   tags:
   - navMeshGenerator
   - Mob
+  - FightBox
+  - Weapon
   layers:
   - Default
   - TransparentFX

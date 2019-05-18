@@ -42,8 +42,9 @@ public class SlotScript : MonoBehaviour
 
     public void Remove()
     {
-        this.item = null;
+        item = null;
         imageItem.color = Color.clear;
+        imageItem.sprite = null;
         borderImage.color = Color.white;
     }
 }
