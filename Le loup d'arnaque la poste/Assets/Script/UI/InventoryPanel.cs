@@ -14,7 +14,7 @@ public class InventoryPanel : MonoBehaviour
         Debug.Log("Init");
         slotPanelTransform = transform.GetChild(0);
         
-        for(int i = 0; i < 16; ++i)
+        for(int i = 0; i < Utils.NbSlot; ++i)
         {
             slots.Add(Instantiate<SlotScript>(slotPrefab, slotPanelTransform));
         }
@@ -22,9 +22,16 @@ public class InventoryPanel : MonoBehaviour
 
     public void Show(List<ItemCptn> items)
     {
-        for (int i = 0; i < items.Count; ++i)
+        for (int i = 0; i < Utils.NbSlot; ++i)
         {
-            slots[i].Init(items[i], 0);
+            if (i < items.Count)
+            {
+                slots[i].Init(items[i]);
+            }
+            else
+            {
+                slots[i].Remove();
+            }
         }
     }
 }

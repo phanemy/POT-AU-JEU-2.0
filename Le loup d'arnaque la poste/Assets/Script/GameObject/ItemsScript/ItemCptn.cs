@@ -6,4 +6,5 @@ public class ItemCptn : Item
 {
     public string description;
     public Sprite icon;
+    public Rarete rarety;
 }

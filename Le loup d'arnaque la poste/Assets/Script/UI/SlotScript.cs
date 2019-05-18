@@ -6,21 +6,44 @@ using UnityEngine.UI;
 public class SlotScript : MonoBehaviour
 {
     public ItemCptn item;
-    public int stack;
     private Image imageItem;
-    private Text stackItem;
+    private Image borderImage;
 
     public void Start()
     {
-        imageItem = GetComponentInChildren<Image>();
-        stackItem = GetComponentInChildren<Text>();
+        borderImage = GetComponent<Image>();
+        imageItem = transform.GetChild(0).GetComponent<Image>();
     }
 
-    public void Init(ItemCptn item, int nb)
+    public void Init(ItemCptn item)
     {
         this.item = item;
-        stack = nb;
         imageItem.sprite = item.icon;
-        stackItem.text = "" + nb;
+        imageItem.color = Color.white;
+        switch(item.rarety)
+        {
+            case Rarete.Commun:
+                borderImage.color = Color.white;
+                break;
+
+            case Rarete.Rare:
+                borderImage.color = Color.yellow;
+                break;
+
+            case Rarete.Epique:
+                borderImage.color = Color.red;
+                break;
+
+            case Rarete.Crafter:
+                borderImage.color = Color.magenta;
+                break;
+        }
+    }
+
+    public void Remove()
+    {
+        this.item = null;
+        imageItem.color = Color.clear;
+        borderImage.color = Color.white;
     }
 }

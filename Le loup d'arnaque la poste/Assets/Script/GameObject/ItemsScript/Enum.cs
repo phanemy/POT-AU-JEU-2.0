@@ -2,7 +2,8 @@
 {
     Commun,
     Rare,
-    Epique
+    Epique,
+    Crafter
 }
 
 public enum Localisation

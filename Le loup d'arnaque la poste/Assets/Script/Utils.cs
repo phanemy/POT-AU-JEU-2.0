@@ -5,6 +5,7 @@ using UnityEngine;
 public static class Utils
 {
     static private ItemPrefab pickablePrefab;
+    static public int NbSlot = 16;
 
     public static void Init()
     {

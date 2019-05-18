@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Pickable", menuName = "GameJam/Pickable", order = 1)]
+[CreateAssetMenu(fileName = "Pickable", menuName = "GameJam/Pickable", order = 2)]
 public class Pickable : ItemCptn
 {
     public Localisation location;
-    public Rarete rarety;
     public Loot type;
 }

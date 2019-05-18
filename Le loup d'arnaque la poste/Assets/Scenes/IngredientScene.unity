@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 164096364}
+  cailloux: {fileID: 11400000, guid: 81624a80caf76ee47b57dae32fb121f6, type: 2}
 --- !u!4 &182557872
 Transform:
   m_ObjectHideFlags: 0
@@ -505,7 +506,7 @@ PrefabInstance:
     - target: {fileID: 276342759880126145, guid: 7e88f0883ff34bd438f109dc6e026602,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 276342759880126145, guid: 7e88f0883ff34bd438f109dc6e026602,
         type: 3}
