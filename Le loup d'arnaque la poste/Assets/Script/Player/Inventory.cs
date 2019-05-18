@@ -8,6 +8,14 @@ public class Inventory : MonoBehaviour
     public InventoryPanel inventoryPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
 
+    public void Update()
+    {
+        if (Input.GetButtonDown("Inventary"))
+        {
+            Show();
+        }
+    }
+
     public void Show()
     {
         if (inventoryPanel.gameObject.activeSelf)
@@ -43,8 +51,11 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(int id)
     {
-        items.RemoveAt(id);
-        inventoryPanel.Show(items);
+        if (id >= 0 && id < items.Count)
+        {
+            items.RemoveAt(id);
+            inventoryPanel.Show(items);
+        }
     }
 
     public void Clear()
