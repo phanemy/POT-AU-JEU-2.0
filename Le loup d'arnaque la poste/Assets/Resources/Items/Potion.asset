@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a06ffda9f069743ba283bc840bf3e4, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  icon: {fileID: 0}
-  rarety: 0
+  itemName: Brevage
+  description: Brevage qui fait aller vite !
+  icon: {fileID: 21300000, guid: a43eea2fcb00a9a4caa17576cf632836, type: 3}
+  rarety: 3
   effects: 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d626b86fd3fb44e877b74a8feaac08, type: 3}
   m_Name: Appel
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  icon: {fileID: 0}
-  rarety: 0
-  location: 0
-  type: 0
+  itemName: Pomme
+  description: Miam
+  icon: {fileID: 21300000, guid: 4c85dafb371e57840a5c07575d7f21b2, type: 3}
+  rarety: 1
+  location: 1
+  type: 1

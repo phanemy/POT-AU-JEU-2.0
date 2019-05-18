@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2d626b86fd3fb44e877b74a8feaac08, type: 3}
-  m_Name: Mandragore
+  m_Name: Digitale
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
-  icon: {fileID: 0}
-  rarety: 0
+  itemName: Digitale
+  description: Une superbe fleur
+  icon: {fileID: 21300000, guid: 467da88977e45c543905056c77808626, type: 3}
+  rarety: 2
   location: 0
-  type: 0
+  type: 1
