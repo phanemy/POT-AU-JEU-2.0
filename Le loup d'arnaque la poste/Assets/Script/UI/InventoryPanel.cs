@@ -11,7 +11,6 @@ public class InventoryPanel : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Init");
         slotPanelTransform = transform.GetChild(0);
         
         for(int i = 0; i < Utils.NbSlot; ++i)

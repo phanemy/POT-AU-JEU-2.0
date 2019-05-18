@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,10 +41,18 @@ public class Inventory
     public void RemoveItem(ItemCptn item)
     {
         items.Remove(item);
+        inventoryPanel.Show(items);
     }
 
     public void RemoveItem(int id)
     {
         items.RemoveAt(id);
+        inventoryPanel.Show(items);
+    }
+
+    public void Clear()
+    {
+        items.Clear();
+        inventoryPanel.Show(items);
     }
 }

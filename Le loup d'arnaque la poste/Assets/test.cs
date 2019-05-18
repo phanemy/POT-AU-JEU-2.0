@@ -27,17 +27,21 @@ public class test : MonoBehaviour
         {
             inventaire.AddItem(cptn[0]);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
             inventaire.AddItem(cptn[1]);
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             inventaire.AddItem(cptn[2]);
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
             inventaire.AddItem(cptn[3]);
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            inventaire.Clear();
         }
     }
 }
