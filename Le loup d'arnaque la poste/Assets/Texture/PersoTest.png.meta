@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: d58a94bb5aa04634c910a71cc4e0aa77
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3735966279272386194
+    second: PersoTest_Sprite
+  - first:
+      213: 1720416987547844105
+    second: PersoTest_0
+  - first:
+      213: -2610070018157594849
+    second: PersoTest_1
+  - first:
+      213: 8340562600450389181
+    second: PersoTest_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,9 +52,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 3
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -82,7 +94,49 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PersoTest_1
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 540
+        width: 313
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af55a4b760490d49aa7f2b1b348ddc6
+      internalID: -2610070018157594849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersoTest_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 574
+        width: 309
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2728e1b44a27cb44b4bf776a43484a6
+      internalID: 8340562600450389181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -960, y: -540}
       - {x: -960, y: 540}
