@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour
                 {
                     float inputX = Input.GetAxis("Horizontal");
                     float inputY = Input.GetAxis("Vertical");
-                    movement = new Vector3(inputX, inputY, 0);
+                    movement = new Vector3(inputX, inputY, 0).normalized;
                     if (movement.magnitude > 0)
                     {
                         dir = DirectionEnumMethods.GetDirection(movement);
