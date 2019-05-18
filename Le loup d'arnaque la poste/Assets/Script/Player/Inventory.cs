@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject
+public class Inventory
 {
-    public string itemName;
+    private List<Item> items = new List<Item>();
 }
