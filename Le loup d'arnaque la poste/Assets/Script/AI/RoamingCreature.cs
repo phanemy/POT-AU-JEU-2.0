@@ -9,7 +9,6 @@ public class RoamingCreature : MovingEnties
     [Range(0.1f,1)]
     public float startMovingChance = 0.5f;
     public bool drawDebug = false;
-       
     private int actualLife;
     private GameObject player;
     private bool isFleeing;
