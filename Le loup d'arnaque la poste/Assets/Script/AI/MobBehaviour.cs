@@ -162,7 +162,7 @@ public class MobBehaviour : MovingEnties
 
     private void Die()
     {
-        Utils.InstantiatePickable(transform, dropItems);
+        Utils.InstantiatePickable(transform.position, dropItems);
         Destroy(gameObject);
     }
 }

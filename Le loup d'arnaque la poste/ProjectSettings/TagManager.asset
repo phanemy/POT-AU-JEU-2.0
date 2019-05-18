@@ -8,6 +8,7 @@ TagManager:
   - Mob
   - FightBox
   - Weapon
+  - BackGround
   layers:
   - Default
   - TransparentFX
