@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Recipe", menuName = "GameJam/Recipe", order = 2)]
 public class Recipe : ScriptableObject
 {
-    public List<Item> Items = new List<Item>();
+    public Item[] Items = new Item[3];
     public Potion potion;
 }
