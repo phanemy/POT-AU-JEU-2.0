@@ -11,6 +11,7 @@ public class InventoryPanel : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Init");
         slotPanelTransform = transform.GetChild(0);
         
         for(int i = 0; i < 16; ++i)
@@ -19,5 +20,11 @@ public class InventoryPanel : MonoBehaviour
         }
     }
 
-    
+    public void Show(List<ItemCptn> items)
+    {
+        for (int i = 0; i < items.Count; ++i)
+        {
+            slots[i].Init(items[i], 0);
+        }
+    }
 }
