@@ -10,7 +10,7 @@ public class SpriteManager
     public Sprite[] goingBot;
     public Sprite[] goingLeft;
     public Sprite[] goingRight;
-    public float changeTime = 1f;
+    public float changeTime = 0.2f;
     public DirectionEnum ActualDir {
         get { return actualDir; }
         set {
@@ -20,16 +20,16 @@ public class SpriteManager
                 switch (actualDir)
                 {
                     case DirectionEnum.Bottom:
-                        rend.sprite = goingBot[0];
+                        rend.sprite = goingBot[1];
                         break;
                     case DirectionEnum.Left:
-                        rend.sprite = goingLeft[0];
+                        rend.sprite = goingLeft[1];
                         break;
                     case DirectionEnum.Top:
-                        rend.sprite = goingTop[0];
+                        rend.sprite = goingTop[1];
                         break;
                     case DirectionEnum.Right:
-                        rend.sprite = goingRight[0];
+                        rend.sprite = goingRight[1];
                         break;
                     default: break;
                 }
@@ -56,16 +56,16 @@ public class SpriteManager
         switch (actualDir)
         {
             case DirectionEnum.Bottom:
-                rend.sprite = goingBot[0];
+                rend.sprite = goingBot[1];
                 break;
             case DirectionEnum.Left:
-                rend.sprite = goingLeft[0];
+                rend.sprite = goingLeft[1];
                 break;
             case DirectionEnum.Top:
-                rend.sprite = goingTop[0];
+                rend.sprite = goingTop[1];
                 break;
             case DirectionEnum.Right:
-                rend.sprite = goingRight[0];
+                rend.sprite = goingRight[1];
                 break;
             default: break;
         }

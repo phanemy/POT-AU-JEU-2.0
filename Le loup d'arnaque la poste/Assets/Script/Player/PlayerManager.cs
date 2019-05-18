@@ -80,7 +80,6 @@ public class PlayerManager : MonoBehaviour
     {
         statCanvas.SetActive(false);
         loseScreen.SetActive(true);
-        Debug.Log(loseScreen.activeSelf);
     }
 
     void updateDir()
