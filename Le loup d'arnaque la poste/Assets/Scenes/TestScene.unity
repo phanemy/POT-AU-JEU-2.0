@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84164072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194155549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObstacleContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,6 +1102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 150030471524876111, guid: 545345618c4274c43bd007adbb78bd5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 150030471524876110, guid: 545345618c4274c43bd007adbb78bd5a,
         type: 3}
@@ -1971,7 +1976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 855343632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Houses Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1993,6 +1998,29 @@ Transform:
   m_Father: {fileID: 84164072}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &991785248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4537389767223935383, guid: 39f5e20749b3e99448acc8bd6509a292,
+    type: 3}
+  m_PrefabInstance: {fileID: 97374993719194045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &991785250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991785248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4109a8ae76cbb648b0b5376076a8ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gen: {fileID: 1436528732}
+  house: {fileID: 1008860834}
+  speed: 1
+  path: []
+  indexDest: 0
 --- !u!1 &1006812692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 887664204102278663, guid: ae6c0305092a14048b08ad01d3ddd5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 887664204102278660, guid: ae6c0305092a14048b08ad01d3ddd5b8,
         type: 3}
@@ -3359,7 +3392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1399409422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PNJ Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3466,6 +3499,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1436528729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436528731}
+  - component: {fileID: 1436528730}
+  - component: {fileID: 1436528732}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1436528730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436528729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1436528731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436528729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436528732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436528729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa9e62335c9ee44f873b933cbe46898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 0.1
+  pointDistributionSize: 0.25
+  destroyNodeMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  size:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 20
+    height: 20
 --- !u!224 &1449513175 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3296441100901296163, guid: e1f48625802ff5548ada552086391771,
@@ -4488,6 +4592,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Villager
       objectReference: {fileID: 0}
+    - target: {fileID: 4537389767223935383, guid: 39f5e20749b3e99448acc8bd6509a292,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3100022469081037410, guid: 39f5e20749b3e99448acc8bd6509a292,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4556,6 +4665,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 887664204102278663, guid: ae6c0305092a14048b08ad01d3ddd5b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 887664204102278660, guid: ae6c0305092a14048b08ad01d3ddd5b8,
         type: 3}
