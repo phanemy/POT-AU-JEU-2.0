@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Inventory
 {
+    public GameObject inventoryPanel;
     private List<Item> items = new List<Item>();
 }
