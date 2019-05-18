@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
             {
                 if (inventory.AddItem(pickableItem.item))
                 {
-                    Destroy(pickableItem);
+                    pickableItem.Gather();
                     pickableItem = null;
                 }
             }

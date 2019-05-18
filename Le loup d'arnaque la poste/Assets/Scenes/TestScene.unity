@@ -1091,6 +1091,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &461042704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 150030471524876111, guid: 545345618c4274c43bd007adbb78bd5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 467000563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &461042705
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461042704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.15}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 5.12}
+    newSize: {x: 2.39, y: 2.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.98, y: 2.7}
+  m_EdgeRadius: 0
 --- !u!1001 &467000563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,7 +1195,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 150030471524876109, guid: 545345618c4274c43bd007adbb78bd5a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cecf40dab375ea8408f60e9e455465d7,
+        type: 3}
+    - target: {fileID: 9022304415072065264, guid: 545345618c4274c43bd007adbb78bd5a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022304415072065264, guid: 545345618c4274c43bd007adbb78bd5a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022304415072065264, guid: 545345618c4274c43bd007adbb78bd5a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9022304415072065264, guid: 545345618c4274c43bd007adbb78bd5a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 545345618c4274c43bd007adbb78bd5a, type: 3}
 --- !u!1 &516868934
 GameObject:
@@ -2004,6 +2058,54 @@ Transform:
   m_Father: {fileID: 84164072}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &891200173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891200174}
+  - component: {fileID: 891200175}
+  m_Layer: 8
+  m_Name: Villageois
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891200174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891200173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1399409422}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891200175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891200173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af15ade9e7452fe49840747211030ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  initialLife: 2
+  distMaxMovement: 2
+  startMovingChance: 0.5
+  drawDebug: 0
 --- !u!4 &1008860834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 150030471524876110, guid: 545345618c4274c43bd007adbb78bd5a,
@@ -3179,6 +3281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1095083260}
+  - {fileID: 891200174}
   m_Father: {fileID: 84164072}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

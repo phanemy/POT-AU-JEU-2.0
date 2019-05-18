@@ -14,7 +14,7 @@ public static class Utils
         backGround = GameObject.FindWithTag("BackGround");
     }
 
-    public static void InstantiatePickable(Vector3 position, Pickable item)
+    public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
     {
         if(pickablePrefab == null)
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
@@ -24,5 +24,20 @@ public static class Utils
         newGm.transform.SetParent(backGround.transform);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
+        return newGm;
+    }
+
+    public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item, ItemsSpawner spawn)
+    {
+        if (pickablePrefab == null)
+            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
+
+        ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
+        newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), item, spawn);
+        newGm.transform.SetParent(backGround.transform);
+        BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
+        box.isTrigger = true;
+        return newGm;
+
     }
 }
