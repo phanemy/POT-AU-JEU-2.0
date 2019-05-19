@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5947386aff0af614c8187da30b8e4ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childRend: {fileID: 8903036987659532589}
-  textrender: {fileID: 3751311998935786132}
+  childRend: {fileID: 3751311998935786132}
+  textrender: {fileID: 8903036987659532589}
   displayTime: 1
 --- !u!61 &8306502049651694594
 BoxCollider2D:

@@ -108,7 +108,7 @@ public class Menu : MonoBehaviour
     {
         mainCanvas.SetActive(true);
         startButton.SetActive(true);
-
         SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(1));
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(2));
     }
 }
