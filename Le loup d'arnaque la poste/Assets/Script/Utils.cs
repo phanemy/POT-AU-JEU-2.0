@@ -22,8 +22,22 @@ public static class Utils
 
     private static Recipe[] InitRecipes()
     {
+        //Resources.Load<Recipe>("Recipes/CataplasmeR");
+        //Resources.Load<Recipe>("Recipes/CatarthiqueR");
+        //Resources.Load<Recipe>("Recipes/CeleriteR");
+        //Resources.Load<Recipe>("Recipes/EssenceR");
+        //Resources.Load<Recipe>("Recipes/FleauR");
+        //Resources.Load<Recipe>("Recipes/PacificationR");
+        //Resources.Load<Recipe>("Recipes/PurificationR");
+        //Resources.Load<Recipe>("Recipes/RemedeR");
+        //Resources.Load<Recipe>("Recipes/TonifiantR");
+        //Resources.Load<Recipe>("Recipes/TranquilisantR");
+        Resources.LoadAll("Recipes", typeof(Recipe));
+        Resources.LoadAll("Items", typeof(ItemCptn));
         Recipe[] allRecipe = Resources.FindObjectsOfTypeAll<Recipe>();
         ItemCptn[] allItems = Resources.FindObjectsOfTypeAll<ItemCptn>();
+        Debug.Log(allRecipe.Length+" "+ allItems.Length);
+
         List<Recipe> finalRecipes = new List<Recipe>();
 
         foreach (Recipe recipe in allRecipe)
@@ -37,7 +51,7 @@ public static class Utils
 
     private static Recipe GenerateRecipe(ItemCptn[] allItems, Recipe recipe)
     {
-        Recipe newRecipe = new Recipe();
+        Recipe newRecipe = ScriptableObject.CreateInstance<Recipe>();
         newRecipe.potion = recipe.potion;
         int i = 0;
 
