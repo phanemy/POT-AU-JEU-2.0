@@ -154,7 +154,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 7
+  maxEntity: 3
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 6688428466509488760, guid: e41537df5ed38d34eb6676fbc73345b3,
     type: 3}
@@ -206,7 +206,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 6
+  maxEntity: 3
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 6688428466509488760, guid: deddbf145dd14f748bbb87c8fbcd21ba,
     type: 3}
@@ -5995,7 +5995,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 0
   delayBeforeStartSpawnMax: 15
-  maxEntity: 4
+  maxEntity: 2
   debugColor: {r: 1, g: 0.9600028, b: 0, a: 1}
   itemToSpawn: {fileID: 11400000, guid: dcc26780f3dae0e4e9314eee11c7b927, type: 2}
 --- !u!4 &726279928
@@ -14876,7 +14876,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 8
+  maxEntity: 4
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 6688428466509488760, guid: e41537df5ed38d34eb6676fbc73345b3,
     type: 3}
