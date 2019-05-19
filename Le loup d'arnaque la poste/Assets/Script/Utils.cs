@@ -8,6 +8,7 @@ public static class Utils
     static GameObject middleGround;
     static private ItemPrefab pickablePrefab;
     static public int NbSlot = 16;
+    static public int NbSlotColdon = 3;
 
     public static void Init()
     {

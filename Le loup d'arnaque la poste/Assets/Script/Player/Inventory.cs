@@ -6,13 +6,16 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public InventoryPanel inventoryPanel;
+    public ChaudronPanel ChaudronPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
     public ItemCptn potion;
     public PlayerManager player;
+    private bool caldonVisible = false;
 
     public void Start()
     {
         inventoryPanel.gameObject.SetActive(false);
+        ChaudronPanel.gameObject.SetActive(false);
         items.Add(potion);
     }
 
@@ -35,6 +38,14 @@ public class Inventory : MonoBehaviour
             inventoryPanel.gameObject.SetActive(true);
             inventoryPanel.Show(items);
         }
+        caldonVisible = false;
+        ChaudronPanel.gameObject.SetActive(false);
+    }
+
+    public void ShowColdon()
+    {
+        caldonVisible = true;
+        ChaudronPanel.gameObject.SetActive(true);
     }
 
     public bool AddItem(ItemCptn item)

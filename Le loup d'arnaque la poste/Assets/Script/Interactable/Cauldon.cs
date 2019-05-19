@@ -15,8 +15,7 @@ public class Cauldon : MonoBehaviour, Interactable
     
     public bool interact(PlayerManager player)
     {
-        Debug.Log("interact with cauldon");
-        //return true because it isn't collectable the reference in play must be null only if player go aways
+        player.inventory.ShowColdon();
         return true;
     }
 }
