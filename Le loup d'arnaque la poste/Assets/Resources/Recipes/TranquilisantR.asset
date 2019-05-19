@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TranquilisantR
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: cfc2512097d0e2f43987329123a466db, type: 2}
+  - {fileID: 11400000, guid: 47416dcc64976584dbead0b4381866c9, type: 2}
   - {fileID: 11400000, guid: 47416dcc64976584dbead0b4381866c9, type: 2}
   - {fileID: 11400000, guid: 47416dcc64976584dbead0b4381866c9, type: 2}
   potion: {fileID: 11400000, guid: 328d66b9f291aad42acec915d4bff48c, type: 2}

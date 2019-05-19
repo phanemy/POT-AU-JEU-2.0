@@ -65,7 +65,7 @@ public class PlayerManager : MonoBehaviour
 
         if (!isLose && !combatComponent.isDead)
         {
-            if (Input.GetAxis("Interact") != 0 && interactableItem != null )
+            if (Input.GetButtonDown("Interact") && interactableItem != null )
             {
                 if (interactableItem.interact(this))
                 {
@@ -76,7 +76,7 @@ public class PlayerManager : MonoBehaviour
                     }
                 }
             }
-            else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
+            else if (Input.GetButtonDown("Fight") && combatComponent.CanAttack)
             {
                 combatComponent.Attack(dir);
                 bloodLustComponent.addBloodLust(attackBloodLustCost);
