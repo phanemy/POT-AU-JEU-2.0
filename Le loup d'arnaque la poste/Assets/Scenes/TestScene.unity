@@ -2056,11 +2056,6 @@ PrefabInstance:
       objectReference: {fileID: 551223040}
     - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
-      propertyPath: winCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2062977805}
