@@ -187,6 +187,8 @@ public class MobBehaviour : MovingEnties
 
     private void Die()
     {
+        PlayerManager pl = player.GetComponent<PlayerManager>();
+        pl.mobDie((int)combatComponent.initialLife);
         Utils.InstantiatePickable(transform.position, dropItems);
         if (spawner != null)
             spawner.wasGather();

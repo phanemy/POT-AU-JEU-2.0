@@ -1589,11 +1589,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9205959258818736841, guid: 02677eb7d464fe947b6112addbe5230b,
-        type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 2062977805}
     - target: {fileID: 276342759880126145, guid: 02677eb7d464fe947b6112addbe5230b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1699,6 +1694,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9205959258818736841, guid: 02677eb7d464fe947b6112addbe5230b,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 2062977805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02677eb7d464fe947b6112addbe5230b, type: 3}
 --- !u!1 &2144007678
@@ -1963,6 +1963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296441100671584246, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 914369458923777630, guid: e1f48625802ff5548ada552086391771,
         type: 3}

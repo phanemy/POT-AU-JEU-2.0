@@ -122,8 +122,6 @@ public class Inventory : MonoBehaviour
 
     public void CraftItem()
     {
-        Debug.Log("Craft");
-
         if (caldonItems.Count == Utils.NbSlotColdon)
         {
             foreach(Recipe recipe in Utils.recipes)

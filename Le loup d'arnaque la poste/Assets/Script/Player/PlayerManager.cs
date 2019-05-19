@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public Inventory inventory;
     public AudioSource clipWalk;
+    public float attackBloodLustCost = 0.01f;
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
@@ -80,7 +81,7 @@ public class PlayerManager : MonoBehaviour
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
                 combatComponent.Attack(dir);
-
+                bloodLustComponent.addBloodLust(attackBloodLustCost);
                 if (spriteManager.update)
                 {
                     clipWalk.Stop();
@@ -237,5 +238,10 @@ public class PlayerManager : MonoBehaviour
     public void InitRestart()
     {
         GameObject.Find("MenuManager").GetComponent<Menu>().RestartMenu();
+    }
+
+    public void mobDie(int count)
+    {
+        bloodLustComponent.addBloodLust(-attackBloodLustCost*count);
     }
 }
