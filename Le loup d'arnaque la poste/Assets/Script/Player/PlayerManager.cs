@@ -179,4 +179,9 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+
+    public void appplyEffect(Potion potion)
+    {
+
+    }
 }

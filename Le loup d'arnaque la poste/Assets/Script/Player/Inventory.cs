@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     public InventoryPanel inventoryPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
     public ItemCptn potion;
+    public PlayerManager player;
 
     public void Start()
     {
@@ -52,8 +53,13 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(ItemCptn item)
     {
+        Potion pop = item as Potion;
+        if (pop != null)
+            player.appplyEffect(pop);
+
         items.Remove(item);
         inventoryPanel.Show(items);
+
     }
 
     public void RemoveItem(int id)
