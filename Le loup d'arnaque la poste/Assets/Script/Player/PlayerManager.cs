@@ -107,7 +107,7 @@ public class PlayerManager : MonoBehaviour
 
                         transform.position = transform.position + movement * Time.deltaTime * (((1 - run) * speed) + (run * runSpeed));
                         if (run == 1)
-                            bloodLustComponent.addBloodLust(runBloodLustCost);
+                            bloodLustComponent.addBloodLust(runBloodLustCost * Time.deltaTime);
 
                         camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
                         if (!spriteManager.update)
