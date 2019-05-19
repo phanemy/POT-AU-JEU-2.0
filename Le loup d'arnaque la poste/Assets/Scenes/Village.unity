@@ -32374,16 +32374,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5244119913729445754, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5244119913729445754, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: loseScreen
@@ -32399,11 +32389,6 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1093937964}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: initialspeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: bloodLustUiSlider
@@ -32419,11 +32404,6 @@ PrefabInstance:
       propertyPath: lycanthropyUiSlider
       value: 
       objectReference: {fileID: 1671542280}
-    - target: {fileID: 5244119913729445702, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aea88aeb82e23f4294cac9f2a8df990, type: 3}
 --- !u!1 &456707242
@@ -40801,6 +40781,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8903036987659532589, guid: f347d7c6cf454004b9fb76bcaa1e266a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2344667623535059840, guid: b561f46bda6e033469abbbd57c1ed9d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f347d7c6cf454004b9fb76bcaa1e266a, type: 3}
 --- !u!4 &1437482552 stripped
