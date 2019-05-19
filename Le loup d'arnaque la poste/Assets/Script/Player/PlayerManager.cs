@@ -206,8 +206,6 @@ public class PlayerManager : MonoBehaviour
         if (!potion.win)
         {
             combatComponent.health(potion.life);
-            bloodLustComponent.addBloodLust(potion.bloodLust);
-            lycanthropyComponent.decreaseLevel((potion.Lycanthropie < 0) ? -potion.Lycanthropie : potion.Lycanthropie);
             lycanthropyComponent.decreaseLevel((potion.Lycanthropie < 0) ? -potion.Lycanthropie : potion.Lycanthropie);
 
             speed += potion.speed;
