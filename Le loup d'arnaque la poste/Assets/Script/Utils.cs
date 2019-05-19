@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Utils
 {
-    //static GameObject backGround;
+    static GameObject backGround;
     //static GameObject middleGround;
     static private ItemPrefab pickablePrefab;
     static public int NbSlot = 16;
@@ -15,7 +15,7 @@ public static class Utils
     public static void Init()
     {
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
-        //backGround = GameObject.FindWithTag("BackGround");
+        backGround = GameObject.FindWithTag("BackGround");
         //middleGround = GameObject.FindWithTag("MiddleGround");
         recipes = InitRecipes();
     }
@@ -81,6 +81,7 @@ public static class Utils
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
         newGm.Init(new Vector3(position.x, position.y, 5), item);
+        newGm.transform.SetParent(backGround.transform, true);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
@@ -93,6 +94,7 @@ public static class Utils
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
         newGm.Init(new Vector3(position.x, position.y,5), item, spawn);
+        newGm.transform.SetParent(backGround.transform, true);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
@@ -103,6 +105,7 @@ public static class Utils
     {
         MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
         newGm.Init(new Vector3(position.x, position.y,5), spawn);
+        newGm.transform.SetParent(backGround.transform, true);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
