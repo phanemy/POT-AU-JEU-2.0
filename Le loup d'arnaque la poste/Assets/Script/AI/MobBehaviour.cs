@@ -49,6 +49,9 @@ public class MobBehaviour : MovingEnties
     // Update is called once per frame
     void Update()
     {
+        if (!Menu.inGame)
+            return;
+
         if(combatComponent.isDead)
         {
             Die();

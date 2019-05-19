@@ -41,6 +41,9 @@ public class Lycanthropy : MonoBehaviour
 
     void Update()
     {
+        if (!Menu.inGame)
+            return;
+
         progressTimeFromLast += Time.deltaTime;
         float updateTime = bloodLustComponent.LycanthropeProgressFromBloodLust;
         if (progressTimeFromLast >= updateTime)

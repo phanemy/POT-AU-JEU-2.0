@@ -46,10 +46,12 @@ public class BloodLust : MonoBehaviour
 
     IEnumerator UpadteBloodLust()
     {
+
         while (true)
         {
             yield return new WaitForSeconds(progressTimeInSeconds);
-            addBloodLust(1);
+            if (Menu.inGame)
+                addBloodLust(1);
         }
     }
 

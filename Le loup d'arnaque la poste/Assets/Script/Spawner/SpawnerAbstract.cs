@@ -32,7 +32,7 @@ public abstract class SpawnerAbstract : MonoBehaviour
 
     protected void Update()
     {
-        if (actualNumber < maxEntity)
+        if (Menu.inGame &&  actualNumber < maxEntity)
         {
             timeSinceLastSpawn += Time.deltaTime;
             if (!canSpawn && timeSinceLastSpawn >= delayBeforeStartSpawn)

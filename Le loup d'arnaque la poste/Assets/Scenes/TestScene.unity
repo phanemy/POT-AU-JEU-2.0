@@ -1468,7 +1468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &519420029
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1476,7 +1476,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1499,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -5435,6 +5435,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: loseScreen
+      value: 
+      objectReference: {fileID: 1771228177}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: statCanvas
+      value: 
+      objectReference: {fileID: 551223040}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 2062977805}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 602408007}
     - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: bloodLustUiSlider
@@ -5475,31 +5500,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: loseScreen
-      value: 
-      objectReference: {fileID: 1771228177}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: statCanvas
-      value: 
-      objectReference: {fileID: 551223040}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 2062977805}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
-        type: 3}
-      propertyPath: winCanvas
-      value: 
-      objectReference: {fileID: 602408007}
     - target: {fileID: 5244119913729445702, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: m_Enabled

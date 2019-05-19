@@ -60,7 +60,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isLose && !combatComponent.isDead)
+        if (!Menu.inGame)
+            return;
+
+        if (!isLose && !combatComponent.isDead)
         {
             //if(Input.GetAxis("Interact") != 0 && pickableItem != null)
             //{
