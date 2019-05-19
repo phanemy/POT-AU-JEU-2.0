@@ -1497,6 +1497,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0efc3981e3d34044887b3595eda352c6, type: 3}
+--- !u!1 &1863008607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863008609}
+  - component: {fileID: 1863008608}
+  m_Layer: 0
+  m_Name: Sel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1863008608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863008607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 3
+  delayBeetweenSpawnMax: 4
+  delayBeforeStartSpawnMin: 1
+  delayBeforeStartSpawnMax: 3
+  maxEntity: 3
+  debugColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0.42745098}
+  itemToSpawn: {fileID: 11400000, guid: 43bb92eefcdeebc45893d438adfc49f0, type: 2}
+--- !u!4 &1863008609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863008607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1920017714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9205959258818736841, guid: 02677eb7d464fe947b6112addbe5230b,
@@ -1538,6 +1589,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9205959258818736841, guid: 02677eb7d464fe947b6112addbe5230b,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 2062977805}
     - target: {fileID: 276342759880126145, guid: 02677eb7d464fe947b6112addbe5230b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1643,11 +1699,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 9205959258818736841, guid: 02677eb7d464fe947b6112addbe5230b,
-        type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 2062977805}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02677eb7d464fe947b6112addbe5230b, type: 3}
 --- !u!1 &2144007678

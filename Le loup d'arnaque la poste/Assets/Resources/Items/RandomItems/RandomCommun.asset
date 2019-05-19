@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd032068e5f934478c6efa9b0824eec, type: 3}
   m_Name: RandomCommun
   m_EditorClassIdentifier: 
-  name: 
+  itemName: RandomCommun
   rarity: 0

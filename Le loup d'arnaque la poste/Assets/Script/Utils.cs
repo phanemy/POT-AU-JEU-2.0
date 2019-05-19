@@ -29,16 +29,17 @@ public static class Utils
 
         foreach (Recipe recipe in allRecipe)
         {
-
-            finalRecipes.Add(recipe);
+            Recipe newRecipe = GenerateRecipe(allItems, recipe);
+            finalRecipes.Add(newRecipe);
         }
 
-        return Resources.FindObjectsOfTypeAll<Recipe>();
+        return finalRecipes.ToArray();
     }
 
     private static Recipe GenerateRecipe(ItemCptn[] allItems, Recipe recipe)
     {
         Recipe newRecipe = new Recipe();
+        newRecipe.potion = recipe.potion;
         int i = 0;
 
         foreach (Item item in recipe.Items)
