@@ -400,6 +400,7 @@ MonoBehaviour:
     - {fileID: 9097479709055234549, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
   inventory: {fileID: 0}
   clipWalk: {fileID: 7440562238985716409}
+  attackBloodLustCost: 0.01
 --- !u!61 &5244119913729445696
 BoxCollider2D:
   m_ObjectHideFlags: 0
