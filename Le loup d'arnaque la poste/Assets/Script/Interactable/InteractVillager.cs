@@ -6,16 +6,12 @@ using UnityEngine.UI;
 public class InteractVillager : MonoBehaviour, Interactable
 {
     public SpriteRenderer childRend;
-    public Text textContainer;
-    public GameObject textrender;
+    public SpriteRenderer textrender;
     public string text;
     public float displayTime;
     private bool isShow;
 
-    public void Start()
-    {
-        textContainer.text = text;
-    }
+
 
     public void CanBeInteract(bool boolean)
     {
@@ -37,10 +33,10 @@ public class InteractVillager : MonoBehaviour, Interactable
     public IEnumerator displayText()
     {
 
-        textrender.SetActive(true);
+        textrender.enabled = true;
         isShow = true;
          yield return new WaitForSeconds(displayTime);
         isShow = false;
-        textrender.SetActive(false);
+        textrender.enabled = false;
     }
 }
