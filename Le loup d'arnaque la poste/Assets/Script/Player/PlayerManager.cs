@@ -46,6 +46,7 @@ public class PlayerManager : MonoBehaviour
         speed = initialspeed;
         runSpeed = initialRunSpeed;
         spriteManager.init(gameObject.GetComponent < SpriteRenderer>());
+        spriteManager.changeLycanthropieLevel(0);
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
         combatComponent = gameObject.GetComponent<CombatComponent>();
@@ -55,6 +56,7 @@ public class PlayerManager : MonoBehaviour
         bloodLustComponent.startGame();
         dir = DirectionEnum.Bottom;
         Utils.Init();
+        
     }
 
     // Update is called once per frame
