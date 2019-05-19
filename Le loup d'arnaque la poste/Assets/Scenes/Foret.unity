@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 51492134}
   - component: {fileID: 51492133}
   m_Layer: 0
-  m_Name: Mob spawner
+  m_Name: Mandragore spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,9 +154,10 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 4
+  maxEntity: 5
   debugColor: {r: 1, g: 1, b: 1, a: 1}
-  itemToSpawn: {fileID: 0}
+  itemToSpawn: {fileID: 6688428466509488760, guid: e41537df5ed38d34eb6676fbc73345b3,
+    type: 3}
 --- !u!4 &51492134
 Transform:
   m_ObjectHideFlags: 0
@@ -165,11 +166,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51492132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.2, y: 85, z: -215.96278}
-  m_LocalScale: {x: 10.387444, y: 19.554382, z: 1.2392074}
+  m_LocalPosition: {x: -24.7, y: 69.9, z: -215.96278}
+  m_LocalScale: {x: 35.695908, y: 46.197227, z: 1.2392074}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &172983363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172983365}
+  - component: {fileID: 172983364}
+  m_Layer: 0
+  m_Name: Dryade spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &172983364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172983363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552902ab7e08683448f2b83501acc735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 20
+  delayBeetweenSpawnMax: 40
+  delayBeforeStartSpawnMin: 30
+  delayBeforeStartSpawnMax: 50
+  maxEntity: 3
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 6688428466509488760, guid: deddbf145dd14f748bbb87c8fbcd21ba,
+    type: 3}
+--- !u!4 &172983365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172983363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.2, y: 84.6, z: -215.96278}
+  m_LocalScale: {x: 39.451416, y: 27.737576, z: 1.7577957}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &284214691
 GameObject:
@@ -5691,6 +5744,159 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &468452434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468452436}
+  - component: {fileID: 468452435}
+  m_Layer: 0
+  m_Name: Quartz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468452435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468452434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 30
+  delayBeetweenSpawnMax: 60
+  delayBeforeStartSpawnMin: 20
+  delayBeforeStartSpawnMax: 40
+  maxEntity: 2
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 11400000, guid: ff1cb1d47bce9ac4d8b69c7e90a4edd2, type: 2}
+--- !u!4 &468452436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468452434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51.74, y: 26.09, z: -364.75073}
+  m_LocalScale: {x: 4.3789024, y: 4.1487756, z: 4.1487756}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &511468102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511468104}
+  - component: {fileID: 511468103}
+  m_Layer: 0
+  m_Name: Amanite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &511468103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511468102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 5
+  delayBeetweenSpawnMax: 20
+  delayBeforeStartSpawnMin: 0
+  delayBeforeStartSpawnMax: 15
+  maxEntity: 2
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 11400000, guid: dcc26780f3dae0e4e9314eee11c7b927, type: 2}
+--- !u!4 &511468104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511468102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.7, y: 27.7, z: -364.75073}
+  m_LocalScale: {x: 9.652768, y: 4.753965, z: 2.697285}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &726279926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726279928}
+  - component: {fileID: 726279927}
+  m_Layer: 0
+  m_Name: Amanite (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &726279927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726279926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 5
+  delayBeetweenSpawnMax: 20
+  delayBeforeStartSpawnMin: 0
+  delayBeforeStartSpawnMax: 15
+  maxEntity: 3
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 11400000, guid: dcc26780f3dae0e4e9314eee11c7b927, type: 2}
+--- !u!4 &726279928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726279926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56.7, y: 86, z: -364.75073}
+  m_LocalScale: {x: 9.652768, y: 12.8475895, z: 2.697285}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775231211
 GameObject:
   m_ObjectHideFlags: 0
@@ -14247,7 +14453,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1566034392
+--- !u!1 &1337405784
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14255,24 +14461,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1566034393}
+  - component: {fileID: 1337405786}
+  - component: {fileID: 1337405785}
   m_Layer: 0
-  m_Name: Items spawner
+  m_Name: Mandragore spawner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1566034393
+--- !u!114 &1337405785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337405784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552902ab7e08683448f2b83501acc735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
+  delayBeforeStartSpawnMin: 30
+  delayBeforeStartSpawnMax: 50
+  maxEntity: 6
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 6688428466509488760, guid: e41537df5ed38d34eb6676fbc73345b3,
+    type: 3}
+--- !u!4 &1337405786
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566034392}
+  m_GameObject: {fileID: 1337405784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.103781, y: 29.60805, z: -220.84299}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 33.4, y: 56.1, z: -215.96278}
+  m_LocalScale: {x: 76.03396, y: 24.051434, z: 1.2392074}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
