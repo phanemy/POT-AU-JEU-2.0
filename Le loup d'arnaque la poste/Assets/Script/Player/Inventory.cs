@@ -7,10 +7,12 @@ public class Inventory : MonoBehaviour
 {
     public InventoryPanel inventoryPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
+    public ItemCptn potion;
 
     public void Start()
     {
         inventoryPanel.gameObject.SetActive(false);
+        items.Add(potion);
     }
 
     public void Update()

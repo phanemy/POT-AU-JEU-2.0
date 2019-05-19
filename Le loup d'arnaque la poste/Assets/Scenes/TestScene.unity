@@ -3553,6 +3553,12 @@ PrefabInstance:
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 1920017714}
+    - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
+      propertyPath: potion
+      value: 
+      objectReference: {fileID: 11400000, guid: 670ef9641f7332b4981fc25896aa6c74,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d5819adbdaa3a45a014155818a85cb, type: 3}
 --- !u!224 &1449513175 stripped
