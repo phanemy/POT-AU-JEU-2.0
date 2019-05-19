@@ -882,7 +882,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-<<<<<<< Updated upstream
   m_Text: 'Control:
 
 
@@ -913,22 +912,6 @@ MonoBehaviour:
 
 
     Good Luck.'
-=======
-  m_Text: 'Press zqsd to move
-
-
-    Press zqsd to move
-
-    Press right mouse click to attack
-
-    Press e to interact
-
-    Press tab to show/hide inventory
-
-    Press escape to display menu
-
-    Press escape to display menu'
->>>>>>> Stashed changes
 --- !u!222 &775872290
 CanvasRenderer:
   m_ObjectHideFlags: 0
