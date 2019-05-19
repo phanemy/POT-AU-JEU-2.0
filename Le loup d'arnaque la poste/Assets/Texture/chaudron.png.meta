@@ -146,10 +146,10 @@ TextureImporter:
       name: chaudron_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 240
-        width: 64
-        height: 64
+        x: 5
+        y: 244
+        width: 56
+        height: 60
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
