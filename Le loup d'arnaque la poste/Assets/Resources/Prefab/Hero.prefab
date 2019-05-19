@@ -334,7 +334,7 @@ MonoBehaviour:
   initialspeed: 1
   initialRunSpeed: 2
   runBloodLustCost: 0.1
-  attackBloodLustCost: 0.01
+  attackBloodLustCost: 5
   loseScreen: {fileID: 0}
   statCanvas: {fileID: 0}
   spriteManager:
@@ -360,9 +360,6 @@ MonoBehaviour:
     - {fileID: -2081350088033782230, guid: 08c5b5df352d1ac46a1c5efb2f60e68d, type: 3}
     changeTime: 0.2
     spritesHumain:
-    - {fileID: -133919486818879063, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
-    - {fileID: 5502796597368691375, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
-    - {fileID: -7781604919305684794, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -628059644605897295, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: 6412787126946696290, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -6645645396031931649, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
@@ -372,10 +369,10 @@ MonoBehaviour:
     - {fileID: 3185180736396930441, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: 4067350064413068878, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -2262817394840675934, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
+    - {fileID: -133919486818879063, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
+    - {fileID: 5502796597368691375, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
+    - {fileID: -7781604919305684794, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     sprites33_66:
-    - {fileID: 8705388010662042007, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
-    - {fileID: 5037457074752967068, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
-    - {fileID: -1328976827267632531, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 6489371945083619348, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 7073554517276688825, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: -5270355428326910629, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
@@ -385,10 +382,10 @@ MonoBehaviour:
     - {fileID: 7723559959151116028, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 9191841913531045593, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 9097479709055234549, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: 8705388010662042007, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: 5037457074752967068, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: -1328976827267632531, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     sprites66_99:
-    - {fileID: -2222482442075865421, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
-    - {fileID: 854587533092848133, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
-    - {fileID: 3265540044750120816, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 9044708862281140763, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: -4963559621091209125, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 5846442661370981703, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
@@ -398,6 +395,9 @@ MonoBehaviour:
     - {fileID: 6474358076326431576, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 6587344738144755231, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: -7250049394573588225, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
+    - {fileID: -2222482442075865421, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
+    - {fileID: 854587533092848133, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
+    - {fileID: 3265540044750120816, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
   inventory: {fileID: 0}
   clipWalk: {fileID: 7440562238985716409}
 --- !u!61 &5244119913729445696
@@ -417,7 +417,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.63}
+    oldSize: {x: 0.54, y: 0.64}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

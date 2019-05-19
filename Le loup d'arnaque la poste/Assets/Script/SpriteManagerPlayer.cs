@@ -38,15 +38,17 @@ public class SpriteManagerPlayer : SpriteManager
         {
             for (int i = 0; i < 3; ++i)
             {
-                goingTop[i] = sprites[i];
-                goingBot[i] = sprites[i + 3];
-                goingLeft[i] = sprites[i + 6];
-                goingRight[i] = sprites[i + 9];
+                goingBot[i] = sprites[i ];
+                goingLeft[i] = sprites[i + 3];
+                goingRight[i] = sprites[i + 6];
+                goingTop[i] = sprites[i+9];
+
             }
-            goingTop[3] = sprites[1];
-            goingBot[3] = sprites[4];
-            goingLeft[3] = sprites[7];
-            goingRight[3] = sprites[10];
+            goingBot[3] = sprites[1];
+            goingLeft[3] = sprites[4];
+            goingRight[3] = sprites[7];
+            goingTop[3] = sprites[10];
+
             restart();
         }
 
