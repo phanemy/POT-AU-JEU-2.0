@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -8,15 +9,13 @@ public class Inventory : MonoBehaviour
     public InventoryPanel inventoryPanel;
     public ChaudronPanel ChaudronPanel;
     private new List<ItemCptn> items = new List<ItemCptn>();
-    public ItemCptn potion;
+    private new List<ItemCptn> caldonItems = new List<ItemCptn>();
     public PlayerManager player;
-    private bool caldonVisible = false;
 
     public void Start()
     {
         inventoryPanel.gameObject.SetActive(false);
         ChaudronPanel.gameObject.SetActive(false);
-        items.Add(potion);
     }
 
     public void Update()
@@ -38,14 +37,16 @@ public class Inventory : MonoBehaviour
             inventoryPanel.gameObject.SetActive(true);
             inventoryPanel.Show(items);
         }
-        caldonVisible = false;
         ChaudronPanel.gameObject.SetActive(false);
     }
 
     public void ShowColdon()
     {
-        caldonVisible = true;
         ChaudronPanel.gameObject.SetActive(true);
+        ChaudronPanel.Show(caldonItems);
+
+        inventoryPanel.gameObject.SetActive(true);
+        inventoryPanel.Show(items);
     }
 
     public bool AddItem(ItemCptn item)
@@ -62,6 +63,20 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    private bool AddCaldonItem(ItemCptn item)
+    {
+        if (caldonItems.Count >= Utils.NbSlotColdon)
+        {
+            return false;
+        }
+        else
+        {
+            caldonItems.Add(item);
+            ChaudronPanel.Show(caldonItems);
+            return true;
+        }
+    }
+
     public void RemoveItem(ItemCptn item)
     {
         Potion pop = item as Potion;
@@ -73,15 +88,54 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public void RemoveItem(int id)
+    public void RemoveItem(int id, bool isInventary)
     {
-        if (id >= 0 && id < items.Count)
+        if (id >= 0 && id < items.Count && isInventary)
         {
-            Potion pop = items[id] as Potion;
-            if (pop != null)
-                player.appplyEffect(pop);
-            items.RemoveAt(id);
-            inventoryPanel.Show(items);
+            if (ChaudronPanel.gameObject.activeSelf)
+            {
+                ItemCptn item = items[id];
+                if (AddCaldonItem(item))
+                {
+                    items.RemoveAt(id);
+                    inventoryPanel.Show(items);
+                }
+            }
+            else
+            {
+                Potion pop = items[id] as Potion;
+                if (pop != null)
+                    player.appplyEffect(pop);
+                items.RemoveAt(id);
+                inventoryPanel.Show(items);
+            }
+        }
+
+        if (id >= 0 && id < caldonItems.Count && !isInventary)
+        {
+            ItemCptn item = caldonItems[id];
+            caldonItems.RemoveAt(id);
+            ChaudronPanel.Show(caldonItems);
+            AddItem(item);
+        }
+    }
+
+    public void CraftItem()
+    {
+        if (caldonItems.Count == Utils.NbSlotColdon)
+        {
+            foreach(Recipe recipe in Utils.recipes)
+            {
+                bool ok = caldonItems.Except(recipe.Items).Count() == 0;
+
+                if (ok)
+                {
+                    AddItem(recipe.potion);
+                    break;
+                }
+            }
+            caldonItems.Clear();
+            ChaudronPanel.Show(caldonItems);
         }
     }
 

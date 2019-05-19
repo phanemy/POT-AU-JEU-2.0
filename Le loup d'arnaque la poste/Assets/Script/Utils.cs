@@ -10,11 +10,15 @@ public static class Utils
     static public int NbSlot = 16;
     static public int NbSlotColdon = 3;
 
+    static public Recipe[] recipes;
+
     public static void Init()
     {
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
         backGround = GameObject.FindWithTag("BackGround");
         backGround = GameObject.FindWithTag("MiddleGround");
+        recipes = Resources.FindObjectsOfTypeAll<Recipe>();
+        Debug.Log(recipes.Length);
     }
 
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)

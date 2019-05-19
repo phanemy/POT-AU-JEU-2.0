@@ -10,6 +10,7 @@ public class SlotScript : MonoBehaviour
     private Image imageItem;
     private Image borderImage;
     private int id = -1;
+    private bool isInventary;
 
     public void Start()
     {
@@ -17,9 +18,10 @@ public class SlotScript : MonoBehaviour
         imageItem = transform.GetChild(0).GetComponent<Image>();
     }
 
-    public void Init(Inventory inv)
+    public void Init(Inventory inv, bool isInventary)
     {
         inventory = inv;
+        this.isInventary = isInventary;
     }
 
     public void Init(ItemCptn item, int id)
@@ -59,6 +61,6 @@ public class SlotScript : MonoBehaviour
 
     public void RemoveFromInventory()
     {
-        inventory.RemoveItem(id);
+        inventory.RemoveItem(id, isInventary);
     }
 }

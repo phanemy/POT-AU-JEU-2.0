@@ -17,7 +17,7 @@ public class InventoryPanel : MonoBehaviour
         for(int i = 0; i < Utils.NbSlot; ++i)
         {
             SlotScript slot = Instantiate<SlotScript>(slotPrefab, slotPanelTransform);
-            slot.Init(inventory);
+            slot.Init(inventory, true);
             slots.Add(slot);
         }
     }

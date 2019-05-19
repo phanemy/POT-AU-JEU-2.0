@@ -17,7 +17,7 @@ public class ChaudronPanel : MonoBehaviour
         for (int i = 0; i < Utils.NbSlotColdon; ++i)
         {
             SlotScript slot = Instantiate<SlotScript>(slotPrefab, slotPanelTransform);
-            slot.Init(inventory);
+            slot.Init(inventory, false);
             slots.Add(slot);
         }
     }
