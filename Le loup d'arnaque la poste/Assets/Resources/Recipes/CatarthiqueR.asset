@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CatarthiqueR
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 1e039aaea5e761042b9bca29dc090f1c, type: 2}
+  - {fileID: 11400000, guid: b1140a660f1d2ea469b8514c335d82ce, type: 2}
   - {fileID: 11400000, guid: 5ae6e7b8c7d66fd43b8653162f9e205c, type: 2}
   - {fileID: 11400000, guid: 487095a4791846644a40d0314a8c0485, type: 2}
   potion: {fileID: 11400000, guid: 70344595303d21e449ec6a8c211ab5c6, type: 2}
