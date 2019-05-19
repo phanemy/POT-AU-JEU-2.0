@@ -66,6 +66,7 @@ public class Lycanthropy : MonoBehaviour
         LycanthropyPercent -= count / 100f;
         if (LycanthropyPercent < 0)
             LycanthropyPercent = 0;
+        UpdateSlider();
     }
 
     void UpdateSlider()

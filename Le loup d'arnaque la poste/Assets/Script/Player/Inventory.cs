@@ -77,6 +77,9 @@ public class Inventory : MonoBehaviour
     {
         if (id >= 0 && id < items.Count)
         {
+            Potion pop = items[id] as Potion;
+            if (pop != null)
+                player.appplyEffect(pop);
             items.RemoveAt(id);
             inventoryPanel.Show(items);
         }
