@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe96aa5d59f9cc47b80bec928fc01fa, type: 3}
-  m_Name: OtherPotion
+  m_Name: Essence
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 43bb92eefcdeebc45893d438adfc49f0, type: 2}
-  - {fileID: 11400000, guid: 43bb92eefcdeebc45893d438adfc49f0, type: 2}
-  - {fileID: 11400000, guid: 43bb92eefcdeebc45893d438adfc49f0, type: 2}
-  potion: {fileID: 11400000, guid: 562124d48ab9bfb4584f3c8d634355d7, type: 2}
+  - {fileID: 11400000, guid: 97584f3c66012394e9f472cdfeae2623, type: 2}
+  - {fileID: 11400000, guid: 5ae6e7b8c7d66fd43b8653162f9e205c, type: 2}
+  - {fileID: 11400000, guid: 5ae6e7b8c7d66fd43b8653162f9e205c, type: 2}
+  potion: {fileID: 11400000, guid: d8c05eec7dadc644eb7a0b9d2f3e62e0, type: 2}

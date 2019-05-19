@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
-  m_Name: Potion
+  m_Name: Pacification
   m_EditorClassIdentifier: 
-  itemName: Potion
+  itemName: Potion de pacification
   description: 
-  icon: {fileID: 21300000, guid: d6e5b1a5cdbf4db4cb0cc2b4975de7ec, type: 3}
+  icon: {fileID: 21300000, guid: 8001eb7460314fc44b83bff7b7649a99, type: 3}
   rarety: 3
   life: 0
-  bloodLust: 0
-  Lycanthropie: 0
+  bloodLust: -20
+  Lycanthropie: -20
   effectTime: 0
   speed: 0
   runSpeed: 0

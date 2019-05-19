@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe96aa5d59f9cc47b80bec928fc01fa, type: 3}
-  m_Name: LifePotion
+  m_Name: PurificationR
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
-  - {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
-  - {fileID: 11400000, guid: 5a6397280ca2a874fa5567a15a040fbd, type: 2}
-  potion: {fileID: 11400000, guid: 670ef9641f7332b4981fc25896aa6c74, type: 2}
+  - {fileID: 11400000, guid: 5ae6e7b8c7d66fd43b8653162f9e205c, type: 2}
+  - {fileID: 11400000, guid: 47416dcc64976584dbead0b4381866c9, type: 2}
+  - {fileID: 11400000, guid: 97584f3c66012394e9f472cdfeae2623, type: 2}
+  potion: {fileID: 11400000, guid: 3bf46262b3430964286c6c3f177c35f1, type: 2}
