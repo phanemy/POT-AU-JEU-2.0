@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LifePotion
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 4e466c3b59772c943b883076e375e197, type: 2}
-  - {fileID: 11400000, guid: 4e466c3b59772c943b883076e375e197, type: 2}
-  - {fileID: 11400000, guid: 4e466c3b59772c943b883076e375e197, type: 2}
+  - {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
+  - {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
+  - {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
   potion: {fileID: 11400000, guid: 670ef9641f7332b4981fc25896aa6c74, type: 2}
