@@ -31,14 +31,18 @@ public class ItemPrefab : MonoBehaviour, Interactable
     public void Gather()
     {
         if (spawner != null)
+        {
             spawner.wasGather();
+        }
 
         Destroy(this.gameObject);
     }
 
     public bool interact(PlayerManager player)
     {
-        if (player.inventory.AddItem(item))
+        bool b = player.inventory.AddItem(item);
+        DebugConsoleBuild.Log(b.ToString(), 1);
+        if (b)
         {
             this.Gather();
             return true;

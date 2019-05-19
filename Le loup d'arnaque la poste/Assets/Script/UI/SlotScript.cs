@@ -26,27 +26,32 @@ public class SlotScript : MonoBehaviour
 
     public void Init(ItemCptn item, int id)
     {
-        this.id = id;
-        this.item = item;
-        imageItem.sprite = item.icon;
-        imageItem.color = Color.white;
-        switch(item.rarety)
+        if(item != null && imageItem !=null)
         {
-            case Rarete.Commun:
-                borderImage.color = Color.white;
-                break;
+            DebugConsoleBuild.Log(("init  " + item.ToString()), 1);
+            DebugConsoleBuild.Log(("init  " + item.icon.ToString()), 0);
+            this.id = id;
+            this.item = item;
+            imageItem.sprite = item.icon;
+            imageItem.color = Color.white;
+            switch (item.rarety)
+            {
+                case Rarete.Commun:
+                    borderImage.color = Color.white;
+                    break;
 
-            case Rarete.Rare:
-                borderImage.color = Color.yellow;
-                break;
+                case Rarete.Rare:
+                    borderImage.color = Color.yellow;
+                    break;
 
-            case Rarete.Epique:
-                borderImage.color = Color.red;
-                break;
+                case Rarete.Epique:
+                    borderImage.color = Color.red;
+                    break;
 
-            case Rarete.Crafter:
-                borderImage.color = Color.magenta;
-                break;
+                case Rarete.Crafter:
+                    borderImage.color = Color.magenta;
+                    break;
+            }
         }
     }
 
