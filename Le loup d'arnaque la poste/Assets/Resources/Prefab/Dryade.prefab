@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6688428466509488762}
   - component: {fileID: 6688428466509489029}
   m_Layer: 0
-  m_Name: Mandragore
+  m_Name: Dryade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5851663181995217784, guid: 4133ef87b6c6d8b4181038c6b5ed887d,
+  m_Sprite: {fileID: -3372485248864064649, guid: 372c76b5b11064847bb2a576a7686098,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -193,28 +193,28 @@ MonoBehaviour:
   followPlayerDist: 3
   startMovingChance: 0.1
   drawDebug: 0
-  dropItems: {fileID: 11400000, guid: 311ecd94338008e4fa8d59e41b98ceff, type: 2}
+  dropItems: {fileID: 11400000, guid: 487095a4791846644a40d0314a8c0485, type: 2}
   spriteManager:
     goingTop:
-    - {fileID: 6723861058899089491, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8255014049509791790, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8065530070065025354, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8255014049509791790, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
+    - {fileID: 2896206741646701041, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -3171369028526542426, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -3659324389542550479, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -3171369028526542426, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     goingBot:
-    - {fileID: -5851663181995217784, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: -1458544498025111071, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: -1030158960067996013, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: -1458544498025111071, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
+    - {fileID: -3372485248864064649, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 1304496989724426431, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 6504291394568413388, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 1304496989724426431, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     goingLeft:
-    - {fileID: 2237344609723790733, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 4185709006090702165, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8497376874396615696, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 4185709006090702165, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
+    - {fileID: -1900974077667159603, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 5959479799409275937, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 5253527823111406239, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: 5959479799409275937, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     goingRight:
-    - {fileID: -6098184228153387350, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8986238795027483831, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: -3000835293284643083, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
-    - {fileID: 8986238795027483831, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
+    - {fileID: 8877568281902974432, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -1984744733496495350, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -4692388955235488471, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
+    - {fileID: -1984744733496495350, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     changeTime: 0.1
 --- !u!61 &6688428466509488761
 BoxCollider2D:

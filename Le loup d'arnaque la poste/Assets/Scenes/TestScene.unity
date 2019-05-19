@@ -608,7 +608,7 @@ PrefabInstance:
     - target: {fileID: 2557653864613001669, guid: f7fe5675bc97a0c44b97434d44a14e9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2557653864613001669, guid: f7fe5675bc97a0c44b97434d44a14e9d,
         type: 3}
@@ -1075,57 +1075,6 @@ Transform:
   - {fileID: 84164072}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1328224085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1328224087}
-  - component: {fileID: 1328224086}
-  m_Layer: 0
-  m_Name: Champs de pomme
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1328224086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328224085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drawDebug: 0
-  delayBeetweenSpawnMin: 1
-  delayBeetweenSpawnMax: 2
-  delayBeforeStartSpawnMin: 2
-  delayBeforeStartSpawnMax: 4
-  maxEntity: 6
-  debugColor: {r: 0, g: 1, b: 0.15492964, a: 0.42745098}
-  itemToSpawn: {fileID: 11400000, guid: 5ef4da5ab0779244282c9148dd8cc69f, type: 2}
---- !u!4 &1328224087
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328224085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.51, y: 0.14, z: 0}
-  m_LocalScale: {x: 10, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399409421
 GameObject:
@@ -1762,7 +1711,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &887664202697328878
 PrefabInstance:
@@ -1965,8 +1914,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3296441099814750076, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296441100733789171, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 914369458923777630, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1f48625802ff5548ada552086391771, type: 3}
+--- !u!224 &3296441100132022517 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2153583412882458995, guid: e1f48625802ff5548ada552086391771,
+    type: 3}
+  m_PrefabInstance: {fileID: 3296441100132022516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5244119913282690788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2059,6 +2029,11 @@ PrefabInstance:
       propertyPath: bloodLustUiSlider
       value: 
       objectReference: {fileID: 306940005}
+    - target: {fileID: 5244119913729445697, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: lifeSlider
+      value: 
+      objectReference: {fileID: 3296441100132022517}
     - target: {fileID: 5244119913729445700, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: lycanthropyUiSlider

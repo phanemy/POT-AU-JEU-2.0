@@ -17,6 +17,8 @@ public class CombatComponent : MonoBehaviour
 
     public float AttckUID { get; private set; }
     private float LastAttckUIDReceive;
+    public RectTransform lifeSlider;
+    public int sliderMaxSizeInPixel;
 
     public BoxCollider2D ownCollider;
     public Animator att;
@@ -86,7 +88,14 @@ public class CombatComponent : MonoBehaviour
     public bool takeDamage(float takenDamage)
     {
         actualLife -= takenDamage;
+        if(lifeSlider != null)
+        updateSlider();
         return (actualLife <= 0);
+    }
+
+    private void updateSlider()
+    {
+        lifeSlider.sizeDelta = new Vector2((initialLife - actualLife) * sliderMaxSizeInPixel /initialLife, lifeSlider.sizeDelta.y);
     }
 
     public void health(float healtCount)
