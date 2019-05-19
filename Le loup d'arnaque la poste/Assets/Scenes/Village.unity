@@ -40665,7 +40665,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -37.860394, y: -2.2451572}
+  m_Offset: {x: -37.860394, y: -3.2762127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -40676,7 +40676,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.522911, y: 53.985638}
+  m_Size: {x: 7.522911, y: 51.923527}
   m_EdgeRadius: 0
 --- !u!4 &1323114212
 Transform:
@@ -45326,6 +45326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StatCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296441100671584244, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4405551849419970642, guid: e1f48625802ff5548ada552086391771,
         type: 3}
