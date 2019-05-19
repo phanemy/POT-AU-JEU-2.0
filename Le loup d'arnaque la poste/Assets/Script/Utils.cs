@@ -17,7 +17,61 @@ public static class Utils
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
         backGround = GameObject.FindWithTag("BackGround");
         backGround = GameObject.FindWithTag("MiddleGround");
-        recipes = Resources.FindObjectsOfTypeAll<Recipe>();
+        recipes = InitRecipes();
+        Debug.Log(recipes.Length);
+    }
+
+    private static Recipe[] InitRecipes()
+    {
+        Recipe[] allRecipe = Resources.FindObjectsOfTypeAll<Recipe>();
+        ItemCptn[] allItems = Resources.FindObjectsOfTypeAll<ItemCptn>();
+        List<Recipe> finalRecipes = new List<Recipe>();
+
+        foreach (Recipe recipe in allRecipe)
+        {
+
+            finalRecipes.Add(recipe);
+        }
+
+        return Resources.FindObjectsOfTypeAll<Recipe>();
+    }
+
+    private static Recipe GenerateRecipe(ItemCptn[] allItems, Recipe recipe)
+    {
+        Recipe newRecipe = new Recipe();
+        int i = 0;
+
+        foreach (Item item in recipe.Items)
+        {
+            if (item as RandomItem != null)
+            {
+                RandomItem randomItem = item as RandomItem;
+                newRecipe.Items[i++] = RandomItem(allItems, randomItem.rarity);
+            }
+            else
+            {
+                newRecipe.Items[i++] = item;
+            }
+        }
+
+        return newRecipe;
+    }
+
+    private static Item RandomItem(ItemCptn[] allItems, Rarete rarety)
+    {
+        List<ItemCptn> raretyList = new List<ItemCptn>();
+
+        foreach(ItemCptn item in allItems)
+        {
+            if (item.rarety == rarety)
+            {
+                raretyList.Add(item);
+            }
+        }
+
+        int id = Random.Range(0, raretyList.Count);
+
+        return raretyList[id];
     }
 
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
