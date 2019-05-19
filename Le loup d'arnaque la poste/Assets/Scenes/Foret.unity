@@ -206,7 +206,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 40
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 3
+  maxEntity: 2
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 6688428466509488760, guid: deddbf145dd14f748bbb87c8fbcd21ba,
     type: 3}
@@ -5829,7 +5829,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 0
   delayBeforeStartSpawnMax: 15
-  maxEntity: 2
+  maxEntity: 3
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 11400000, guid: dcc26780f3dae0e4e9314eee11c7b927, type: 2}
 --- !u!4 &511468104
@@ -5845,6 +5845,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &518079384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518079386}
+  - component: {fileID: 518079385}
+  m_Layer: 0
+  m_Name: Amanite (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &518079385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518079384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99252ef4c09f5e42aa320edb14a7b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawDebug: 1
+  delayBeetweenSpawnMin: 30
+  delayBeetweenSpawnMax: 40
+  delayBeforeStartSpawnMin: 5
+  delayBeforeStartSpawnMax: 15
+  maxEntity: 2
+  debugColor: {r: 1, g: 1, b: 1, a: 1}
+  itemToSpawn: {fileID: 11400000, guid: cfc2512097d0e2f43987329123a466db, type: 2}
+--- !u!4 &518079386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518079384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -55.44, y: 30.52, z: -364.75073}
+  m_LocalScale: {x: 9.17013, y: 9.274353, z: 2.697285}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726279926
 GameObject:
@@ -5880,7 +5931,7 @@ MonoBehaviour:
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 0
   delayBeforeStartSpawnMax: 15
-  maxEntity: 3
+  maxEntity: 4
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 11400000, guid: dcc26780f3dae0e4e9314eee11c7b927, type: 2}
 --- !u!4 &726279928
