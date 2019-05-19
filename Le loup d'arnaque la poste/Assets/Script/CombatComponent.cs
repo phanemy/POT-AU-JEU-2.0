@@ -114,6 +114,7 @@ public class CombatComponent : MonoBehaviour
         actualLife += healtCount;
         if (actualLife > initialLife)
             actualLife = initialLife;
+        updateSlider();
     }
 
     public void CombatEnd()

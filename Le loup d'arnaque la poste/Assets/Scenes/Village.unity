@@ -40433,25 +40433,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
         type: 3}
-      propertyPath: ChaudronPanel
-      value: 
-      objectReference: {fileID: 1400522891}
-    - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
-        type: 3}
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 2083320275}
     - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
         type: 3}
+      propertyPath: ChaudronPanel
+      value: 
+      objectReference: {fileID: 1400522891}
+    - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 584299315}
-    - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
-        type: 3}
-      propertyPath: defaultPotion
-      value: 
-      objectReference: {fileID: 11400000, guid: c08f325b17752254a990d37fcc0dce3a,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d5819adbdaa3a45a014155818a85cb, type: 3}
 --- !u!114 &1093937964 stripped
