@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class Utils
 {
-    static GameObject backGround;
-    static GameObject middleGround;
+    //static GameObject backGround;
+    //static GameObject middleGround;
     static private ItemPrefab pickablePrefab;
     static public int NbSlot = 16;
     static public int NbSlotColdon = 3;
@@ -15,8 +15,8 @@ public static class Utils
     public static void Init()
     {
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
-        backGround = GameObject.FindWithTag("BackGround");
-        middleGround = GameObject.FindWithTag("MiddleGround");
+        //backGround = GameObject.FindWithTag("BackGround");
+        //middleGround = GameObject.FindWithTag("MiddleGround");
         recipes = InitRecipes();
     }
 
@@ -80,8 +80,7 @@ public static class Utils
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
-        newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), item);
-        newGm.transform.SetParent(backGround.transform);
+        newGm.Init(new Vector3(position.x, position.y, 5), item);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
@@ -93,8 +92,7 @@ public static class Utils
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
-        newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), item, spawn);
-        newGm.transform.SetParent(backGround.transform);
+        newGm.Init(new Vector3(position.x, position.y,5), item, spawn);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
@@ -104,8 +102,7 @@ public static class Utils
     public static MobBehaviour InstantiateMob(Vector3 position, MobBehaviour mob, SpawnerAbstract spawn)
     {
         MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
-        newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), spawn);
-        newGm.transform.SetParent(middleGround.transform);
+        newGm.Init(new Vector3(position.x, position.y,5), spawn);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;

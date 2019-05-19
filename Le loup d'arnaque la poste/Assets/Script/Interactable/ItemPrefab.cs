@@ -12,6 +12,7 @@ public class ItemPrefab : MonoBehaviour, Interactable
         transform.position = position;
         this.item = item;
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
+        transform.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
 
     public void Init(Vector3 position, Pickable item, SpawnerAbstract spawner)
@@ -19,6 +20,7 @@ public class ItemPrefab : MonoBehaviour, Interactable
         transform.position = position;
         this.item = item;
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
+        transform.GetComponent<SpriteRenderer>().sortingOrder = 2;
         this.spawner = spawner;
     }
 
