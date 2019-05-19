@@ -70,8 +70,11 @@ public class PlayerManager : MonoBehaviour
             {
                 if (interactableItem.interact(this))
                 {
-                    interactableItem = null;
-                    interactableItem.CanBeInteract(false);
+                    if (interactableItem != null)
+                    {
+                        interactableItem.CanBeInteract(false);
+                        interactableItem = null;
+                    }
                 }
             }
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)

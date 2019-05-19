@@ -248,7 +248,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2659791124853098621, guid: 05e7da34aac24d04799796eb9df45d25,
+  m_Sprite: {fileID: 6412787126946696290, guid: 05e7da34aac24d04799796eb9df45d25,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
     - {fileID: -133919486818879063, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: 5502796597368691375, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -7781604919305684794, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
-    - {fileID: -2659791124853098621, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
+    - {fileID: -628059644605897295, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: 6412787126946696290, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -6645645396031931649, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
     - {fileID: -1199132095171068526, guid: 05e7da34aac24d04799796eb9df45d25, type: 3}
@@ -380,7 +380,7 @@ MonoBehaviour:
     - {fileID: 7073554517276688825, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: -5270355428326910629, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: -2746768887606357294, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
-    - {fileID: 3170462378352142582, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: -1498547710990011003, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 3170462378352142582, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 7723559959151116028, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 9191841913531045593, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
@@ -417,7 +417,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.64, y: 0.63}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
