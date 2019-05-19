@@ -882,36 +882,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Control:
-
-
-    Press zqsd to move
-
-    Press right mouse click to attack
-
-    Press e to interact
-
-    Press tab to show/hide inventory
-
-    Press escape to display menu
-
-
-    Objective:
-
-
-    Stop your transformation, if your Lycanthropy reach 100% you lose,
-
-    The higher your bloodlust is, the faster your lycantropy increase.
-
-
-    Collect resource (kill monster, gather item)
-
-    Go to the cauldon  and craft potion,
-
-    One potion will save you the other buff or health you.
-
-
-    Good Luck.'
+  m_Text: "Control:\n\nPress Z to go up\nPress Q to go left\nPress S to go down\nPress
+    D to go right\nRight mouse click to attack\nPress E to interact\nPress Tabulation
+    to show/hide inventory\nPress Escape to display menu\n\nObjective:\n\nYou were
+    cursed and will turn into a werewolf if \nStop your transformation, if your Lycanthropy
+    reach 100% you lose,\nThe higher your bloodlust is, the faster your lycantropy
+    increase.\n\nCollect resource (kill monster, gather item)\nGo to the cauldon  and
+    craft potion,\nOne potion will save you the other buff or health you.\n\nGood
+    Luck."
 --- !u!222 &775872290
 CanvasRenderer:
   m_ObjectHideFlags: 0
