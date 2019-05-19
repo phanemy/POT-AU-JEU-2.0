@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPrefab : MonoBehaviour
+public class ItemPrefab : MonoBehaviour, Interactable
 {
     public Pickable item;
     public SpriteRenderer childRend;
@@ -23,7 +23,7 @@ public class ItemPrefab : MonoBehaviour
     }
 
 
-    public void CanBeGather(bool boolean)
+    public void CanBeInteract(bool boolean)
     {
         childRend.enabled = boolean;
     }
@@ -34,5 +34,16 @@ public class ItemPrefab : MonoBehaviour
             spawner.wasGather();
 
         Destroy(this.gameObject);
+    }
+
+    public bool interact(PlayerManager player)
+    {
+        if (player.inventory.AddItem(item))
+        {
+            this.Gather();
+            return true;
+        }
+        else
+            return false;
     }
 }

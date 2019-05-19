@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
     private CombatComponent combatComponent;
-    public ItemPrefab pickableItem;
+    public Interactable interactableItem;
     private Vector3 movement;
     private DirectionEnum dir;
     private int previousLevel;
@@ -53,13 +53,18 @@ public class PlayerManager : MonoBehaviour
     {
         if(!isLose || !combatComponent.isDead)
         {
-            if(Input.GetAxis("Interact") != 0 && pickableItem != null)
+            //if(Input.GetAxis("Interact") != 0 && pickableItem != null)
+            //{
+            //    if (inventory.AddItem(pickableItem.item))
+            //    {
+            //        pickableItem.Gather();
+            //        pickableItem = null;
+            //    }
+            //}
+            if (Input.GetAxis("Interact") != 0 && interactableItem != null)
             {
-                if (inventory.AddItem(pickableItem.item))
-                {
-                    pickableItem.Gather();
-                    pickableItem = null;
-                }
+                if (interactableItem.interact(this))
+                    interactableItem = null;
             }
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
@@ -152,25 +157,25 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Pickable")
+        if (collision.tag == "Interactable")
         {
-            if (pickableItem != null)
+            if (interactableItem != null)
             {
-                pickableItem.CanBeGather(false);
-                pickableItem = null;
+                interactableItem.CanBeInteract(false);
+                interactableItem = null;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Pickable")
+        if (collision.tag == "Interactable")
         {
-            if (pickableItem == null)
+            if (interactableItem == null)
             {
-                pickableItem = collision.gameObject.GetComponent<ItemPrefab>();
-                if (pickableItem != null)
-                    pickableItem.CanBeGather(true);
+                interactableItem = collision.gameObject.GetComponent<Interactable>();
+                if (interactableItem != null)
+                    interactableItem.CanBeInteract(true);
             }
         }
     }

@@ -11,7 +11,7 @@ public static class Utils
 
     public static void Init()
     {
-        pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Dropable/DropableItemPrefab").GetComponent<ItemPrefab>();
+        pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
         backGround = GameObject.FindWithTag("BackGround");
         backGround = GameObject.FindWithTag("MiddleGround");
     }
@@ -19,7 +19,7 @@ public static class Utils
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
     {
         if(pickablePrefab == null)
-            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
+            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
         newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), item);
@@ -32,7 +32,7 @@ public static class Utils
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item, SpawnerAbstract spawn)
     {
         if (pickablePrefab == null)
-            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
+            pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
         newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), item, spawn);

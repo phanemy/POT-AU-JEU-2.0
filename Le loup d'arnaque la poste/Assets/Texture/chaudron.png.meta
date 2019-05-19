@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 570e5924aee242b47a687f44a28073f5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6297927176834813137
+    second: chaudron_0
+  - first:
+      213: 3740659748155035275
+    second: chaudron_1
+  - first:
+      213: 4024947673061958338
+    second: chaudron_2
+  - first:
+      213: 2466552470015067280
+    second: chaudron_3
+  - first:
+      213: 5488114749303318305
+    second: chaudron_4
+  - first:
+      213: 678042436806524912
+    second: chaudron_5
+  - first:
+      213: -4749078300534278791
+    second: chaudron_6
+  - first:
+      213: -1250813509750384031
+    second: chaudron_7
+  - first:
+      213: 1490201075037173051
+    second: chaudron_8
+  - first:
+      213: -2632773157444370156
+    second: chaudron_9
+  - first:
+      213: -1865370094860927575
+    second: chaudron_10
+  - first:
+      213: 6735560439162036964
+    second: chaudron_11
+  - first:
+      213: -5436242687480565083
+    second: chaudron_12
+  - first:
+      213: -8137131208852320263
+    second: chaudron_13
+  - first:
+      213: -8664408462529825
+    second: chaudron_14
+  - first:
+      213: 4888941341540149170
+    second: chaudron_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +88,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +117,346 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chaudron_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 244
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a838f27ba4f16b42bd717d30b2c8918
+      internalID: -6297927176834813137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 244
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9173e0c04b2c54fa46b4562097d077
+      internalID: 3740659748155035275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 244
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7505a05e85c8ec42a3bb640e34f14ee
+      internalID: 4024947673061958338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 183
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da49382b2f19cfb4495d4074b0c4294b
+      internalID: 2466552470015067280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 183
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3909ad314a2d9244b6bb5ea25bcb229
+      internalID: 5488114749303318305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 183
+        width: 56
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5d806257eb3cc4ba99d3a5cc006628
+      internalID: 678042436806524912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 122
+        width: 56
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd1a1312201f4b43b0f0eee3933d82c
+      internalID: -4749078300534278791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_7
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 122
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94badd23777f40543887bb3e8408f328
+      internalID: -1250813509750384031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_8
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 122
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca069446db9aca44997523a0f5e5f51
+      internalID: 1490201075037173051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_9
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 61
+        width: 56
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8654593b29018942a86ed7aafb79ade
+      internalID: -2632773157444370156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_10
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 61
+        width: 56
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d1f5c5e51669e419b8cfd234cc9285
+      internalID: -1865370094860927575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_11
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 61
+        width: 56
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fe797e3c2a3474587511deb2b77d62
+      internalID: 6735560439162036964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 56
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac54a4e07e6e3240a08a8df18d4762a
+      internalID: -5436242687480565083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 56
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373a83f1267fca74f89f9fc8fe14d11b
+      internalID: -8137131208852320263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chaudron_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 56
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dcc4e5c665a464bb3e5f5cf688c790
+      internalID: -8664408462529825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

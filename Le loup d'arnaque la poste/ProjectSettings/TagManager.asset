@@ -9,8 +9,8 @@ TagManager:
   - FightBox
   - Weapon
   - BackGround
-  - Pickable
   - MiddleGround
+  - Interactable
   layers:
   - Default
   - TransparentFX
