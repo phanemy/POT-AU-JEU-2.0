@@ -84,6 +84,7 @@ public class Menu : MonoBehaviour
             imFadeOut.color = new Color(imFadeOut.color.r, imFadeOut.color.g, imFadeOut.color.b, (FadeTime - timeSinceFade) / FadeTime);
         }
         LoadingCanvas.SetActive(false);
+        imFadeOut.color = new Color(imFadeOut.color.r, imFadeOut.color.g, imFadeOut.color.b, 1);
         inGame = true;
         isLaunch = true;
     }
@@ -93,4 +94,11 @@ public class Menu : MonoBehaviour
         helpImage.SetActive(!helpImage.activeSelf);
     }
 
+    public void RestartMenu()
+    {
+        mainCanvas.SetActive(true);
+        startButton.SetActive(true);
+
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(1));
+    }
 }

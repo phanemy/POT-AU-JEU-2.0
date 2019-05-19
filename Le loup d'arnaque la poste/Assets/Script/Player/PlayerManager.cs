@@ -140,13 +140,6 @@ public class PlayerManager : MonoBehaviour
             text.text =message ;
     }
 
-    void DisplayWinScreen()
-    {
-        isLose = true;
-        statCanvas.SetActive(false);
-        winCanvas.SetActive(true);
-    }
-
 
     private bool checkLevel()
     {
@@ -222,7 +215,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            DisplayWinScreen();
+            DisplayLoseScreen("You have succefully cure yourless :D");
         }
     }
 
@@ -233,5 +226,10 @@ public class PlayerManager : MonoBehaviour
         runSpeed -= potion.runSpeed;
         combatComponent.attackSpeed -= potion.attackSpeed;
         combatComponent.damage -= potion.damage;
+    }
+
+    public void InitRestart()
+    {
+        GameObject.Find("MenuManager").GetComponent<Menu>().RestartMenu();
     }
 }

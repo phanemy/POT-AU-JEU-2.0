@@ -46,6 +46,12 @@ public class CombatComponent : MonoBehaviour
         damage = initialDamage;
     }
 
+    public void Start()
+    {
+        if (lifeSlider != null)
+            sliderMaxSizeInPixel = (int)lifeSlider.sizeDelta.x;
+    }
+
     public void Update()
     {
         if (!isAttacking && !isDead)
@@ -89,13 +95,15 @@ public class CombatComponent : MonoBehaviour
     {
         actualLife -= takenDamage;
         if(lifeSlider != null)
-        updateSlider();
+            updateSlider();
         return (actualLife <= 0);
     }
 
     private void updateSlider()
     {
-        lifeSlider.sizeDelta = new Vector2((initialLife - actualLife) * sliderMaxSizeInPixel /initialLife, lifeSlider.sizeDelta.y);
+        float percent = (initialLife - actualLife) / initialLife;
+        percent = 1 - percent;
+        lifeSlider.sizeDelta = new Vector2(percent * sliderMaxSizeInPixel, lifeSlider.sizeDelta.y);
     }
 
     public void health(float healtCount)

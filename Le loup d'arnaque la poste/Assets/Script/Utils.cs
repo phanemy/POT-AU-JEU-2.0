@@ -18,7 +18,6 @@ public static class Utils
         backGround = GameObject.FindWithTag("BackGround");
         backGround = GameObject.FindWithTag("MiddleGround");
         recipes = Resources.FindObjectsOfTypeAll<Recipe>();
-        Debug.Log(recipes.Length);
     }
 
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
