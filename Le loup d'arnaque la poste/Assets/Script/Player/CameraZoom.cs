@@ -10,7 +10,7 @@ public class CameraZoom : MonoBehaviour
 
     private Camera cam;
 
-    private void OnEnable()
+    private void Awake()
     {
         cam = this.GetComponent<Camera>();
         if (cam == null)

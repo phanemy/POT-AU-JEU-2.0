@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - BackGround
   - Pickable
+  - MiddleGround
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public static class Utils
 {
     static GameObject backGround;
+    static GameObject middleGround;
     static private ItemPrefab pickablePrefab;
     static public int NbSlot = 16;
 
@@ -12,6 +13,7 @@ public static class Utils
     {
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Dropable/DropableItemPrefab").GetComponent<ItemPrefab>();
         backGround = GameObject.FindWithTag("BackGround");
+        backGround = GameObject.FindWithTag("MiddleGround");
     }
 
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
@@ -27,7 +29,7 @@ public static class Utils
         return newGm;
     }
 
-    public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item, ItemsSpawner spawn)
+    public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item, SpawnerAbstract spawn)
     {
         if (pickablePrefab == null)
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Dropable/DropableItemPrefab");
@@ -40,4 +42,15 @@ public static class Utils
         return newGm;
 
     }
+
+    public static MobBehaviour InstantiateMob(Vector3 position, MobBehaviour mob, SpawnerAbstract spawn)
+    {
+        MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
+        newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), spawn);
+        newGm.transform.SetParent(backGround.transform);
+        BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
+        box.isTrigger = true;
+        return newGm;
+    }
+
 }

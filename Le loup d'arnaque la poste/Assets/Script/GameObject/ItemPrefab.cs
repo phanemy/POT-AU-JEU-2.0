@@ -6,7 +6,7 @@ public class ItemPrefab : MonoBehaviour
 {
     public Pickable item;
     public SpriteRenderer childRend;
-    private ItemsSpawner spawner;
+    private SpawnerAbstract spawner;
     public void Init(Vector3 position, Pickable item)
     {
         transform.position = position;
@@ -14,7 +14,7 @@ public class ItemPrefab : MonoBehaviour
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
     }
 
-    public void Init(Vector3 position, Pickable item, ItemsSpawner spawner)
+    public void Init(Vector3 position, Pickable item, SpawnerAbstract spawner)
     {
         transform.position = position;
         this.item = item;
@@ -25,7 +25,6 @@ public class ItemPrefab : MonoBehaviour
 
     public void CanBeGather(bool boolean)
     {
-        Debug.Log(boolean);
         childRend.enabled = boolean;
     }
 

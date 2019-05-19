@@ -42,10 +42,10 @@ public class SpriteManager
             }
         }
     }
-    private DirectionEnum actualDir;
-    private float timeSinceLastChange = 0f;
-    private SpriteRenderer rend;
-    private int index;
+    protected DirectionEnum actualDir;
+    protected float timeSinceLastChange = 0f;
+    protected SpriteRenderer rend;
+    protected int index;
     public bool update { get; private set; }
 
     public void init(SpriteRenderer renderer)
@@ -77,11 +77,34 @@ public class SpriteManager
         }
     }
 
-    public void restart()
+    public void start()
     {
         update = true;
 
         timeSinceLastChange = 0f;
+    }
+
+    protected void restart()
+    {
+        update = true;
+
+        timeSinceLastChange = 0f;
+        switch (actualDir)
+        {
+            case DirectionEnum.Bottom:
+                rend.sprite = goingBot[1];
+                break;
+            case DirectionEnum.Left:
+                rend.sprite = goingLeft[1];
+                break;
+            case DirectionEnum.Top:
+                rend.sprite = goingTop[1];
+                break;
+            case DirectionEnum.Right:
+                rend.sprite = goingRight[1];
+                break;
+            default: break;
+        }
     }
 
     public void Update()

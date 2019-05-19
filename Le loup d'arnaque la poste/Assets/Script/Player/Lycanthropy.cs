@@ -11,8 +11,26 @@ public class Lycanthropy : MonoBehaviour
 
 
     float progressTimeFromLast = 0f;
-    public float LycanthropyPercent { get; private set;}
+    public float LycanthropyPercent { get; private set; }
     private BloodLust bloodLustComponent;
+
+
+    public int LycanthropyLevel
+    {
+        get
+        {
+            if (LycanthropyPercent < 0.33f)
+                return 0;
+            else if (LycanthropyPercent < 0.66f)
+                return 1;
+            else if (LycanthropyPercent < 0.99f)
+                return 2;
+            else
+                return 3;
+
+        }
+        private set { }
+    }
 
     public void startGame(BloodLust bloodLustComponent)
     {
@@ -24,7 +42,7 @@ public class Lycanthropy : MonoBehaviour
     void Update()
     {
         progressTimeFromLast += Time.deltaTime;
-        int updateTime = bloodLustComponent.LycanthropeProgressFromBloodLust;
+        float updateTime = bloodLustComponent.LycanthropeProgressFromBloodLust;
         if (progressTimeFromLast >= updateTime)
         {
             updateLycanthropy();
@@ -34,7 +52,7 @@ public class Lycanthropy : MonoBehaviour
 
     private void updateLycanthropy()
     {
-        LycanthropyPercent += 0.01f ;
+        LycanthropyPercent += 0.01f;
         if (LycanthropyPercent > 1f)
             LycanthropyPercent = 1f;
         else if (LycanthropyPercent < 0f)

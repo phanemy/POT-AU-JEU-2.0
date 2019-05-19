@@ -24,7 +24,7 @@ public class MobBehaviour : MovingEnties
     private int actualLife;
     private GameObject player;
     private bool isSearching;
-
+    private SpawnerAbstract spawner;
     private void Start()
     {
         spriteManager.init(gameObject.GetComponent<SpriteRenderer>());
@@ -38,6 +38,12 @@ public class MobBehaviour : MovingEnties
             circle.isTrigger = true;
         }
         dir = DirectionEnum.Bottom;
+    }
+
+    public void Init(Vector3 position, SpawnerAbstract spawner)
+    {
+        transform.position = position;
+        this.spawner = spawner;
     }
 
     // Update is called once per frame
@@ -54,7 +60,8 @@ public class MobBehaviour : MovingEnties
             if (spriteManager.update)
                 spriteManager.stop();
         }
-        else if (dist <= followPlayerDist)
+        else
+        if (dist <= followPlayerDist)
         {
 
             targetPos = player.transform.position;
@@ -135,8 +142,13 @@ public class MobBehaviour : MovingEnties
                     transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
                 }
             }
+            if (!spriteManager.update)
+                spriteManager.start();
             spriteManager.Update();
         }
+        else
+            if (spriteManager.update)
+                spriteManager.stop();
     }
 
     protected override bool choseDestination()
@@ -173,6 +185,8 @@ public class MobBehaviour : MovingEnties
     private void Die()
     {
         Utils.InstantiatePickable(transform.position, dropItems);
+        if (spawner != null)
+            spawner.wasGather();
         Destroy(gameObject);
     }
 }

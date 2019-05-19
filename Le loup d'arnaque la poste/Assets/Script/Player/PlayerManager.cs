@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public GameObject statCanvas;
     [SerializeField]
-    public SpriteManager spriteManager;
+    public SpriteManagerPlayer spriteManager;
     [SerializeField]
     public Inventory inventory;
 
@@ -30,11 +30,12 @@ public class PlayerManager : MonoBehaviour
     public ItemPrefab pickableItem;
     private Vector3 movement;
     private DirectionEnum dir;
-
+    private int previousLevel;
     bool isLose;
 
     private void Start()
     {
+        previousLevel = 0;
         spriteManager.init(gameObject.GetComponent < SpriteRenderer>());
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
@@ -69,7 +70,7 @@ public class PlayerManager : MonoBehaviour
             }
             else if (!combatComponent.isAttacking)
             {
-                if (lycanthropyComponent.LycanthropyPercent == 1f)
+                if (checkLevel())
                 {
                     DisplayLoseScreen();
                 }
@@ -91,7 +92,7 @@ public class PlayerManager : MonoBehaviour
 
                         camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
                         if (!spriteManager.update)
-                            spriteManager.restart();
+                            spriteManager.start();
 
                         spriteManager.Update();
                     }
@@ -116,7 +117,38 @@ public class PlayerManager : MonoBehaviour
         statCanvas.SetActive(false);
         loseScreen.SetActive(true);        
     }
+    private bool checkLevel()
+    {
+        switch(lycanthropyComponent.LycanthropyLevel)
+        {
+            case 3:
+                return true;
+            case 2:
+                if (previousLevel != 2)
+                {
+                    previousLevel =2;
+                    spriteManager.changeLycanthropieLevel(2);
+                }
+                return false;
+            case 1:
+                if (previousLevel != 1)
+                {
+                    previousLevel = 1;
+                    spriteManager.changeLycanthropieLevel(1);
+                }
 
+                return false;
+            case 0:
+                if (previousLevel != 0)
+                {
+                    previousLevel = 0;
+                    spriteManager.changeLycanthropieLevel(0);
+                }
+                return false;
+            default:
+                return false;
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {

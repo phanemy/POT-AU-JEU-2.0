@@ -11,10 +11,12 @@ public class CombatComponent : MonoBehaviour
     public float knockBackDist = 1f;
     public float attackDist = 1f;
 
+    public float AttckUID { get; private set; }
+    private float LastAttckUIDReceive;
+
     public BoxCollider2D ownCollider;
     public Animator att;
     public Transform weaponParent;
-
     public bool CanAttack
     {
         get
@@ -30,7 +32,7 @@ public class CombatComponent : MonoBehaviour
     public bool isKnockBack { get; private set; }
     public bool isAttacking;/*{ get; private set; }*/
 
-    public void OnEnable()
+    public void Awake()
     {
         isKnockBack = false;
         isAttacking = false;
@@ -49,6 +51,7 @@ public class CombatComponent : MonoBehaviour
         {
             timeSinceLastAttack = 0;
             isAttacking = true;
+            AttckUID = Random.value;
             switch (dir)
             {
                 case DirectionEnum.Bottom:
@@ -77,9 +80,7 @@ public class CombatComponent : MonoBehaviour
 
     public bool takeDamage(float takenDamage)
     {
-        
         actualLife -= takenDamage;
-        Debug.Log(gameObject.name + " " + actualLife);
         return (actualLife <= 0);
     }
 
@@ -96,9 +97,13 @@ public class CombatComponent : MonoBehaviour
             if (collision.tag == "Weapon" && collision != ownCollider)
             {
                 CombatComponent cbc = collision.gameObject.transform.parent.parent.GetComponent<CombatComponent>();
-                if (cbc != null)
+                if (cbc != null && cbc.AttckUID != LastAttckUIDReceive)
+                {
+                    LastAttckUIDReceive = cbc.AttckUID;
                     if (takeDamage(cbc.damage))
                         isDead = true;
+                }
+                    
             }
         }
     }
