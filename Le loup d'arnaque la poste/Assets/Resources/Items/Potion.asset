@@ -24,4 +24,4 @@ MonoBehaviour:
   runSpeed: 0
   attackSpeed: 0
   damage: 0
-  win: 1
+  win: 0
