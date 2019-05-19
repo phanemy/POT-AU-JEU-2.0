@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba0c58b7a04e7e46908ef75e4baad55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  followSpeed: 2
+  speed: 1
+  followSpeed: 4.5
   maxMovementDist: 2
   followPlayerDist: 4
   startMovingChance: 0.1

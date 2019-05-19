@@ -32389,6 +32389,16 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1093937964}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: initialspeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445755, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: initialRunSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: bloodLustUiSlider
