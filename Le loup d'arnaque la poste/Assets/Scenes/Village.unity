@@ -34913,7 +34913,7 @@ Tilemap:
   - first: {x: -1, y: -13, z: 0}
     second:
       m_TileIndex: 23
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -34922,7 +34922,7 @@ Tilemap:
   - first: {x: 0, y: -13, z: 0}
     second:
       m_TileIndex: 21
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -35507,7 +35507,7 @@ Tilemap:
   - first: {x: -11, y: -6, z: 0}
     second:
       m_TileIndex: 20
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -37108,16 +37108,15 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 484317689836285773, guid: b12de47f83e55d44b94d044b3c434c62, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2959281887178568992, guid: 1c729b1be445b4643bf75ef6071b0a41,
-      type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 8232235001024629815, guid: 1c729b1be445b4643bf75ef6071b0a41,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -3302523272686255799, guid: 1c729b1be445b4643bf75ef6071b0a41,
+    m_Data: {fileID: 2959281887178568992, guid: 1c729b1be445b4643bf75ef6071b0a41,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -2227758150812901413, guid: 1c729b1be445b4643bf75ef6071b0a41,
@@ -37128,8 +37127,9 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -3738491931470420377, guid: 1c729b1be445b4643bf75ef6071b0a41,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -3302523272686255799, guid: 1c729b1be445b4643bf75ef6071b0a41,
+      type: 3}
   - m_RefCount: 16
     m_Data: {fileID: -8681371039934271586, guid: 1c729b1be445b4643bf75ef6071b0a41,
       type: 3}
@@ -40487,6 +40487,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 584299315}
+    - target: {fileID: 5617532197311795784, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
+      propertyPath: defaultPotion
+      value: 
+      objectReference: {fileID: 11400000, guid: c08f325b17752254a990d37fcc0dce3a,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d5819adbdaa3a45a014155818a85cb, type: 3}
 --- !u!114 &1093937964 stripped
@@ -45372,6 +45378,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4405551849419970642, guid: e1f48625802ff5548ada552086391771,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1093937964}
     - target: {fileID: 3296441100671584240, guid: e1f48625802ff5548ada552086391771,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45483,11 +45494,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5944026503914469716, guid: e1f48625802ff5548ada552086391771,
-        type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 1093937964}
-    - target: {fileID: 4405551849419970642, guid: e1f48625802ff5548ada552086391771,
         type: 3}
       propertyPath: inventory
       value: 
