@@ -61,6 +61,13 @@ public class Lycanthropy : MonoBehaviour
         UpdateSlider();
     }
 
+    public void decreaseLevel(float count)
+    {
+        LycanthropyPercent -= count / 100f;
+        if (LycanthropyPercent < 0)
+            LycanthropyPercent = 0;
+    }
+
     void UpdateSlider()
     {
         int newSize = (int)(299 * LycanthropyPercent);

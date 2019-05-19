@@ -9,15 +9,22 @@ using UnityEngine.UI;
 [System.Serializable]
 public class PlayerManager : MonoBehaviour
 {
-    public float speed = 1f;
     [SerializeField]
-    public float runSpeed = 2f;
+    public float initialspeed = 1f;
+    [SerializeField]
+    public float speed { get; private set; }
+    [SerializeField]
+    public float initialRunSpeed = 2f;
+    [SerializeField]
+    public float runSpeed { get; private set; }
     [SerializeField]
     public float runBloodLustCost = 0.001f;
     [SerializeField]
     public GameObject loseScreen;
     [SerializeField]
     public GameObject statCanvas;
+    [SerializeField]
+    public GameObject winCanvas;
     [SerializeField]
     public SpriteManagerPlayer spriteManager;
     [SerializeField]
@@ -36,6 +43,8 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         previousLevel = 0;
+        speed = initialspeed;
+        runSpeed = initialRunSpeed;
         spriteManager.init(gameObject.GetComponent < SpriteRenderer>());
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
@@ -51,7 +60,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isLose || !combatComponent.isDead)
+        if(!isLose && !combatComponent.isDead)
         {
             //if(Input.GetAxis("Interact") != 0 && pickableItem != null)
             //{
@@ -77,7 +86,7 @@ public class PlayerManager : MonoBehaviour
             {
                 if (checkLevel())
                 {
-                    DisplayLoseScreen();
+                    DisplayLoseScreen("Your Lycanthropy level As reach 100% you Lose ");
                 }
                 else
                 {
@@ -111,17 +120,29 @@ public class PlayerManager : MonoBehaviour
         {
             if(!isLose)
             {
-                DisplayLoseScreen();
+                DisplayLoseScreen("Your life as reach 0");
             }
         }
     }
 
-    void DisplayLoseScreen()
+    void DisplayLoseScreen(string message)
     {
         isLose = true;
         statCanvas.SetActive(false);
-        loseScreen.SetActive(true);        
+        loseScreen.SetActive(true);
+        Text text = loseScreen.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        if(text != null)
+            text.text =message ;
     }
+
+    void DisplayWinScreen()
+    {
+        isLose = true;
+        statCanvas.SetActive(false);
+        winCanvas.SetActive(true);
+    }
+
+
     private bool checkLevel()
     {
         switch(lycanthropyComponent.LycanthropyLevel)
@@ -182,6 +203,32 @@ public class PlayerManager : MonoBehaviour
 
     public void appplyEffect(Potion potion)
     {
+        if (!potion.win)
+        {
+            combatComponent.health(potion.life);
+            bloodLustComponent.addBloodLust(potion.bloodLust);
+            lycanthropyComponent.decreaseLevel((potion.Lycanthropie < 0) ? -potion.Lycanthropie : potion.Lycanthropie);
+            lycanthropyComponent.decreaseLevel((potion.Lycanthropie < 0) ? -potion.Lycanthropie : potion.Lycanthropie);
 
+            speed += potion.speed;
+            runSpeed += potion.runSpeed;
+            combatComponent.attackSpeed += potion.attackSpeed;
+            combatComponent.damage += potion.damage;
+            if (potion.effectTime > 0)
+                StartCoroutine(effectTime(potion));
+        }
+        else
+        {
+            DisplayWinScreen();
+        }
+    }
+
+    IEnumerator effectTime(Potion potion)
+    {
+        yield return new WaitForSeconds(potion.effectTime);
+        speed -= potion.speed;
+        runSpeed -= potion.runSpeed;
+        combatComponent.attackSpeed -= potion.attackSpeed;
+        combatComponent.damage -= potion.damage;
     }
 }

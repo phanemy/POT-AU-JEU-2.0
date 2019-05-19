@@ -5,10 +5,14 @@ using UnityEngine;
 public class CombatComponent : MonoBehaviour
 {
     public float initialLife = 2f;
-    public float actualLife = 2f;
-    public float attackSpeed = 1f;
-    public float damage = 1f;
-    public float knockBackDist = 1f;
+    [HideInInspector]
+    public float actualLife;
+    public float initialAttackSpeed = 1f;
+    [HideInInspector]
+    public float attackSpeed;
+    public float initialDamage = 1f;
+    [HideInInspector]
+    public float damage;
     public float attackDist = 1f;
 
     public float AttckUID { get; private set; }
@@ -29,19 +33,20 @@ public class CombatComponent : MonoBehaviour
     public bool isDead;
 
     public float timeSinceLastAttack = 0f;
-    public bool isKnockBack { get; private set; }
     public bool isAttacking;/*{ get; private set; }*/
 
     public void Awake()
     {
-        isKnockBack = false;
         isAttacking = false;
         isDead = false;
+        actualLife = initialLife;
+        attackSpeed = initialAttackSpeed;
+        damage = initialDamage;
     }
 
     public void Update()
     {
-        if(!isAttacking && !isDead)
+        if (!isAttacking && !isDead)
             timeSinceLastAttack += Time.deltaTime;
     }
 
@@ -84,6 +89,13 @@ public class CombatComponent : MonoBehaviour
         return (actualLife <= 0);
     }
 
+    public void health(float healtCount)
+    {
+        actualLife += healtCount;
+        if (actualLife > initialLife)
+            actualLife = initialLife;
+    }
+
     public void CombatEnd()
     {
         att.SetBool("isAttacking", false);
@@ -92,7 +104,7 @@ public class CombatComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isDead)
+        if (!isDead)
         {
             if (collision.tag == "Weapon" && collision != ownCollider)
             {
@@ -103,14 +115,14 @@ public class CombatComponent : MonoBehaviour
                     if (takeDamage(cbc.damage))
                         isDead = true;
                 }
-                    
+
             }
         }
     }
 
     private void OnDrawGizmos()
     {
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawWireSphere(transform.position,attackDist);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, attackDist);
     }
 }
