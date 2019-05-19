@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public Inventory inventory;
     public AudioSource clipWalk;
+    
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
@@ -38,9 +39,11 @@ public class PlayerManager : MonoBehaviour
     private DirectionEnum dir;
     private int previousLevel;
     bool isLose;
+    bool interact;
 
     private void Start()
     {
+        //interact = false;
         previousLevel = 0;
         speed = initialspeed;
         runSpeed = initialRunSpeed;
@@ -63,10 +66,14 @@ public class PlayerManager : MonoBehaviour
         if (!Menu.inGame)
             return;
 
+        //if (interact)
+        //    return;
+
         if (!isLose && !combatComponent.isDead)
         {
             if (Input.GetAxis("Interact") != 0 && interactableItem != null )
             {
+                //interact = true;
                 if (interactableItem.interact(this))
                 {
                     if (interactableItem != null)
@@ -75,6 +82,7 @@ public class PlayerManager : MonoBehaviour
                         interactableItem = null;
                     }
                 }
+                //interact = false;
             }
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {

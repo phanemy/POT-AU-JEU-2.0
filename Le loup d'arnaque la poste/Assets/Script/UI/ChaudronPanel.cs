@@ -24,7 +24,6 @@ public class ChaudronPanel : MonoBehaviour
 
     public void Show(List<ItemCptn> items)
     {
-        Debug.Log("items size " + items.Count);
         for (int i = 0; i < Utils.NbSlotColdon; ++i)
         {
             if (i < items.Count)
