@@ -191,7 +191,7 @@ MonoBehaviour:
   speed: 0.5
   followSpeed: 2
   maxMovementDist: 2
-  followPlayerDist: 3
+  followPlayerDist: 4
   startMovingChance: 0.1
   drawDebug: 0
   dropItems:
@@ -264,7 +264,7 @@ MonoBehaviour:
   attackSpeed: 1
   initialDamage: 1
   damage: 1
-  attackDist: 0.7
+  attackDist: 1.5
   lifeSlider: {fileID: 0}
   sliderMaxSizeInPixel: 0
   ownCollider: {fileID: 6688428465447531142}

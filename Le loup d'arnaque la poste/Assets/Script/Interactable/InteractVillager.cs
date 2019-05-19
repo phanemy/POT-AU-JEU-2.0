@@ -14,7 +14,6 @@ public class InteractVillager : MonoBehaviour, Interactable
 
     public void CanBeInteract(bool boolean)
     {
-        Debug.Log("a "+ boolean);
         childRend.enabled = boolean;
     }
 
