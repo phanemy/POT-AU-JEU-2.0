@@ -48,12 +48,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
-    uniqueID: 3020517069
+  - name: fondvert
+    uniqueID: 1876294485
     locked: 0
   - name: Chemin
     uniqueID: 1540085545
     locked: 0
-  - name: fondvert
-    uniqueID: 1876294485
+  - name: Obstacles
+    uniqueID: 3020517069
+    locked: 0
+  - name: Arbres, buissons, et groscailloux
+    uniqueID: 2159033579
     locked: 0
