@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 0}
+  ChaudronPanel: {fileID: 0}
+  player: {fileID: 0}

@@ -14,7 +14,7 @@ public class MobBehaviour : MovingEnties
     public float startMovingChance = 0.1f;
     public bool drawDebug = false;
     [SerializeField]
-    public Pickable dropItems;
+    public Pickable[] dropItems;
     [SerializeField]
     public SpriteManager spriteManager;
     private CombatComponent combatComponent;
@@ -187,7 +187,9 @@ public class MobBehaviour : MovingEnties
 
     private void Die()
     {
-        Utils.InstantiatePickable(transform.position, dropItems);
+        PlayerManager pl = player.GetComponent<PlayerManager>();
+        pl.mobDie((int)combatComponent.initialLife);
+        Utils.InstantiatePickable(transform.position, dropItems[Random.Range(0,dropItems.Length)]);
         if (spawner != null)
             spawner.wasGather();
         Destroy(gameObject);

@@ -19,12 +19,11 @@ public class PlayerManager : MonoBehaviour
     public float runSpeed { get; private set; }
     [SerializeField]
     public float runBloodLustCost = 0.001f;
+    public float attackBloodLustCost = 0.1f;
     [SerializeField]
     public GameObject loseScreen;
     [SerializeField]
     public GameObject statCanvas;
-    [SerializeField]
-    public GameObject winCanvas;
     [SerializeField]
     public SpriteManagerPlayer spriteManager;
     [SerializeField]
@@ -80,7 +79,7 @@ public class PlayerManager : MonoBehaviour
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
                 combatComponent.Attack(dir);
-
+                bloodLustComponent.addBloodLust(attackBloodLustCost);
                 if (spriteManager.update)
                 {
                     clipWalk.Stop();
@@ -237,5 +236,10 @@ public class PlayerManager : MonoBehaviour
     public void InitRestart()
     {
         GameObject.Find("MenuManager").GetComponent<Menu>().RestartMenu();
+    }
+
+    public void mobDie(int count)
+    {
+        bloodLustComponent.addBloodLust(-attackBloodLustCost*count);
     }
 }

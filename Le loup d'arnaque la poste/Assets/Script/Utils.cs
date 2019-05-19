@@ -16,9 +16,8 @@ public static class Utils
     {
         pickablePrefab = Resources.Load<GameObject>("Prefab/GameObject/Interactable/DropableItemPrefab").GetComponent<ItemPrefab>();
         backGround = GameObject.FindWithTag("BackGround");
-        backGround = GameObject.FindWithTag("MiddleGround");
+        middleGround = GameObject.FindWithTag("MiddleGround");
         recipes = InitRecipes();
-        Debug.Log(recipes.Length);
     }
 
     private static Recipe[] InitRecipes()
@@ -106,7 +105,7 @@ public static class Utils
     {
         MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
         newGm.Init(new Vector3(position.x, position.y, backGround.transform.position.z), spawn);
-        newGm.transform.SetParent(backGround.transform);
+        newGm.transform.SetParent(middleGround.transform);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
