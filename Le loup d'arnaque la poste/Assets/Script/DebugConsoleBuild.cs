@@ -38,8 +38,8 @@ public class DebugConsoleBuild : MonoBehaviour
         nbMaxLine = height - 20;
         nbMaxLine /= fontSize;
         maxPriority = priorityColor.Count;
-        DebugConsoleBuild.Log(height.ToString(), 0);
-        DebugConsoleBuild.Log(nbMaxLine.ToString(), 0);
+        //DebugConsoleBuild.Log(height.ToString(), 0);
+        //DebugConsoleBuild.Log(nbMaxLine.ToString(), 0);
 
     }
 

@@ -177,6 +177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5814069204973491295, guid: 46b73cc1cdeffd44eafb39b7671bcbd5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5814069204973491235, guid: 46b73cc1cdeffd44eafb39b7671bcbd5,
         type: 3}
       propertyPath: m_LocalPosition.x

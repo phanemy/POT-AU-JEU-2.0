@@ -39,11 +39,9 @@ public class PlayerManager : MonoBehaviour
     private DirectionEnum dir;
     private int previousLevel;
     bool isLose;
-    bool interact;
 
     private void Start()
     {
-        //interact = false;
         previousLevel = 0;
         speed = initialspeed;
         runSpeed = initialRunSpeed;
@@ -66,8 +64,8 @@ public class PlayerManager : MonoBehaviour
         if (!Menu.inGame)
             return;
 
-        //if (interact)
-        //    return;
+        if (inventory.inventoryPanel.gameObject.activeSelf)
+            return;
 
         if (!isLose && !combatComponent.isDead)
         {
@@ -152,7 +150,6 @@ public class PlayerManager : MonoBehaviour
         if(text != null)
             text.text =message ;
     }
-
 
     private bool checkLevel()
     {
@@ -250,4 +247,5 @@ public class PlayerManager : MonoBehaviour
     {
         bloodLustComponent.addBloodLust(-attackBloodLustCost*count);
     }
+
 }

@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5244119913729445753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.413, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5244119912468237356}
@@ -334,9 +334,9 @@ MonoBehaviour:
   initialspeed: 1
   initialRunSpeed: 2
   runBloodLustCost: 0.1
+  attackBloodLustCost: 0.01
   loseScreen: {fileID: 0}
   statCanvas: {fileID: 0}
-  winCanvas: {fileID: 0}
   spriteManager:
     goingTop:
     - {fileID: -929924348341195587, guid: 08c5b5df352d1ac46a1c5efb2f60e68d, type: 3}
@@ -386,9 +386,9 @@ MonoBehaviour:
     - {fileID: 9191841913531045593, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     - {fileID: 9097479709055234549, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
     sprites66_99:
-    - {fileID: 8705388010662042007, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
-    - {fileID: 5037457074752967068, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
-    - {fileID: -1328976827267632531, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: -2222482442075865421, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
+    - {fileID: 854587533092848133, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
+    - {fileID: 3265540044750120816, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 9044708862281140763, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: -4963559621091209125, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 5846442661370981703, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
@@ -397,10 +397,9 @@ MonoBehaviour:
     - {fileID: -2491552140834359887, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 6474358076326431576, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 6587344738144755231, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
-    - {fileID: 9097479709055234549, guid: 8b91e9cd249403a4885976225e7fc5a0, type: 3}
+    - {fileID: -7250049394573588225, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
   inventory: {fileID: 0}
   clipWalk: {fileID: 7440562238985716409}
-  attackBloodLustCost: 0.01
 --- !u!61 &5244119913729445696
 BoxCollider2D:
   m_ObjectHideFlags: 0

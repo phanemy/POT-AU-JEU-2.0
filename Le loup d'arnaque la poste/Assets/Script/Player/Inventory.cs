@@ -11,9 +11,12 @@ public class Inventory : MonoBehaviour
     private new List<ItemCptn> items = new List<ItemCptn>();
     private new List<ItemCptn> caldonItems = new List<ItemCptn>();
     public PlayerManager player;
+    public AudioSource cauldonSound;
+    private bool test;
 
     public void Start()
     {
+        test = true;
         //Crash if inventary if invisible on start
         //inventoryPanel.gameObject.SetActive(false);
         ChaudronPanel.gameObject.SetActive(false);
@@ -21,6 +24,11 @@ public class Inventory : MonoBehaviour
 
     public void Update()
     {
+        if (test)
+        {
+            inventoryPanel.gameObject.SetActive(false);
+            test = false;
+        }
         if (Input.GetButtonDown("Inventary"))
         {
             Show();
@@ -39,13 +47,14 @@ public class Inventory : MonoBehaviour
             inventoryPanel.Show(items);
         }
         ChaudronPanel.gameObject.SetActive(false);
+        cauldonSound.Stop();
     }
 
     public void ShowColdon()
     {
         ChaudronPanel.gameObject.SetActive(true);
         ChaudronPanel.Show(caldonItems);
-
+        cauldonSound.Play();
         inventoryPanel.gameObject.SetActive(true);
         inventoryPanel.Show(items);
     }
