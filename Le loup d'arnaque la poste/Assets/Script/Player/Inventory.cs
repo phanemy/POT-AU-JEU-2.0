@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     private new List<ItemCptn> caldonItems = new List<ItemCptn>();
     public PlayerManager player;
     public AudioSource cauldonSound;
+    public Potion defaultPotion;
     private bool test;
 
     public void Start()
@@ -19,7 +20,7 @@ public class Inventory : MonoBehaviour
         test = true;
         //Crash if inventary if invisible on start
         //inventoryPanel.gameObject.SetActive(false);
-        ChaudronPanel.gameObject.SetActive(false);
+        //ChaudronPanel.gameObject.SetActive(false);
     }
 
     public void Update()
@@ -27,6 +28,7 @@ public class Inventory : MonoBehaviour
         if (test)
         {
             inventoryPanel.gameObject.SetActive(false);
+            ChaudronPanel.gameObject.SetActive(false);
             test = false;
         }
         if (Input.GetButtonDown("Inventary"))
@@ -134,15 +136,21 @@ public class Inventory : MonoBehaviour
     {
         if (caldonItems.Count == Utils.NbSlotColdon)
         {
+            bool ok = false;
             foreach(Recipe recipe in Utils.recipes)
             {
-                bool ok = caldonItems.Except(recipe.Items).Count() == 0;
+                ok = caldonItems.Except(recipe.Items).Count() == 0;
 
                 if (ok)
                 {
                     AddItem(recipe.potion);
                     break;
                 }
+            }
+
+            if (!ok)
+            {
+                AddItem(defaultPotion);
             }
 
             caldonItems.Clear();
