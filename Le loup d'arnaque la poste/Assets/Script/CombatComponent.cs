@@ -23,6 +23,8 @@ public class CombatComponent : MonoBehaviour
     public BoxCollider2D ownCollider;
     public Animator att;
     public Transform weaponParent;
+    public AudioSource clip;
+
     public bool CanAttack
     {
         get
@@ -65,6 +67,7 @@ public class CombatComponent : MonoBehaviour
             timeSinceLastAttack = 0;
             isAttacking = true;
             AttckUID = Random.value;
+            clip.Play();
             switch (dir)
             {
                 case DirectionEnum.Bottom:
@@ -115,6 +118,7 @@ public class CombatComponent : MonoBehaviour
 
     public void CombatEnd()
     {
+        clip.Stop();
         att.SetBool("isAttacking", false);
         isAttacking = false;
     }

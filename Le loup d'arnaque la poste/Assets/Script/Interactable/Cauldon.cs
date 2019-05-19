@@ -11,7 +11,6 @@ public class Cauldon : MonoBehaviour, Interactable
         childRend.enabled = boolean;
     }
 
-
     
     public bool interact(PlayerManager player)
     {

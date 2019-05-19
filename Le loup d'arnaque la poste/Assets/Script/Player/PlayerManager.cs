@@ -29,7 +29,7 @@ public class PlayerManager : MonoBehaviour
     public SpriteManagerPlayer spriteManager;
     [SerializeField]
     public Inventory inventory;
-
+    public AudioSource clipWalk;
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
@@ -56,7 +56,6 @@ public class PlayerManager : MonoBehaviour
         bloodLustComponent.startGame();
         dir = DirectionEnum.Bottom;
         Utils.Init();
-        
     }
 
     // Update is called once per frame
@@ -67,25 +66,23 @@ public class PlayerManager : MonoBehaviour
 
         if (!isLose && !combatComponent.isDead)
         {
-            //if(Input.GetAxis("Interact") != 0 && pickableItem != null)
-            //{
-            //    if (inventory.AddItem(pickableItem.item))
-            //    {
-            //        pickableItem.Gather();
-            //        pickableItem = null;
-            //    }
-            //}
-            if (Input.GetAxis("Interact") != 0 && interactableItem != null)
+            if (Input.GetAxis("Interact") != 0 && interactableItem != null )
             {
                 if (interactableItem.interact(this))
+                {
                     interactableItem = null;
+                    interactableItem.CanBeInteract(false);
+                }
             }
             else if (Input.GetAxis("Fight") != 0 && combatComponent.CanAttack)
             {
                 combatComponent.Attack(dir);
 
                 if (spriteManager.update)
+                {
+                    clipWalk.Stop();
                     spriteManager.stop();
+                }
             }
             else if (!combatComponent.isAttacking)
             {
@@ -111,13 +108,19 @@ public class PlayerManager : MonoBehaviour
 
                         camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
                         if (!spriteManager.update)
+                        {
                             spriteManager.start();
+                            clipWalk.Play();
+                        }
 
                         spriteManager.Update();
                     }
                     else
                         if (spriteManager.update)
-                        spriteManager.stop();
+                        {
+                            clipWalk.Stop();
+                            spriteManager.stop();
+                        }
                 }
             }
         }
