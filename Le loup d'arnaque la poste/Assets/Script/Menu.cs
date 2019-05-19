@@ -48,9 +48,19 @@ public class Menu : MonoBehaviour
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
-            loadingBar.sizeDelta = new Vector2(asyncLoad.progress * 400, loadingBar.sizeDelta.y);
+            loadingBar.sizeDelta = new Vector2(asyncLoad.progress * 200, loadingBar.sizeDelta.y);
             yield return null;
         }
+
+        asyncLoad = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            loadingBar.sizeDelta = new Vector2(asyncLoad.progress * 200 + 200, loadingBar.sizeDelta.y);
+            yield return null;
+        }
+
         listenerToDeactivate.enabled = false;
 
         StartCoroutine(FadeOut());
