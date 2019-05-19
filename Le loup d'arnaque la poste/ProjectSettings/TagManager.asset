@@ -57,6 +57,9 @@ TagManager:
   - name: Obstacles
     uniqueID: 3020517069
     locked: 0
-  - name: Arbres, buissons, et groscailloux
+  - name: Buissons et groscailloux
     uniqueID: 2159033579
+    locked: 0
+  - name: Arbres
+    uniqueID: 3931935421
     locked: 0
