@@ -44,6 +44,7 @@ public class MobBehaviour : MovingEnties
     {
         transform.position = position;
         this.spawner = spawner;
+        transform.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
 
     // Update is called once per frame

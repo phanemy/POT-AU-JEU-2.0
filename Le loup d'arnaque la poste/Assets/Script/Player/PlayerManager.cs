@@ -204,7 +204,9 @@ public class PlayerManager : MonoBehaviour
             {
                 interactableItem = collision.gameObject.GetComponent<Interactable>();
                 if (interactableItem != null)
+                {
                     interactableItem.CanBeInteract(true);
+                }
             }
         }
     }

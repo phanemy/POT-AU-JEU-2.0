@@ -8,13 +8,13 @@ public class InteractVillager : MonoBehaviour, Interactable
     public SpriteRenderer childRend;
     public SpriteRenderer textrender;
 
-    public string text;
     public float displayTime;
     private bool isShow;
 
 
     public void CanBeInteract(bool boolean)
     {
+        Debug.Log("a "+ boolean);
         childRend.enabled = boolean;
     }
 

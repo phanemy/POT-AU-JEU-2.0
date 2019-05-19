@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: b561f46bda6e033469abbbd57c1ed9d8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7551623370178775459
+    second: dialogues_0
+  - first:
+      213: 7831123315098030560
+    second: dialogues_1
+  - first:
+      213: -8253733758814727310
+    second: dialogues_2
+  - first:
+      213: -2344667623535059840
+    second: dialogues_3
+  - first:
+      213: -1685145170737521303
+    second: dialogues_4
+  - first:
+      213: -2988837504617765473
+    second: dialogues_5
+  - first:
+      213: 389852434765901770
+    second: dialogues_6
+  - first:
+      213: -9078105878311041612
+    second: dialogues_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +93,199 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dialogues_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 445
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bae53f25307aee42ba6d620baeabbd7
+      internalID: 7551623370178775459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 445
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51d09044eb49b1418169e83957da28c
+      internalID: 7831123315098030560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 313
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4fcbf3b95c15641944f87b75fc4e8e
+      internalID: -8253733758814727310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_3
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 309
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4122e325f2c40874e985209fb446d01a
+      internalID: -2344667623535059840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 179
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072e935c014a6bf4e84c2b26bb6fadad
+      internalID: -1685145170737521303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_5
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 170
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633f68e57ca1a54489e1864ccc4ea087
+      internalID: -2988837504617765473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_6
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 48
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e903cf8273c660347871cf4941db66fc
+      internalID: 389852434765901770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogues_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 35
+        width: 238
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686acba4b6d51f5408c641c042232d8a
+      internalID: -9078105878311041612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
