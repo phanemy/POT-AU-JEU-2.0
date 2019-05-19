@@ -41357,7 +41357,8 @@ GameObject:
   - component: {fileID: 183787311}
   - component: {fileID: 183787313}
   - component: {fileID: 183787312}
-  m_Layer: 0
+  - component: {fileID: 183787314}
+  m_Layer: 8
   m_Name: arbres3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44998,6 +44999,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &183787314
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183787310}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &375560054
 GameObject:
   m_ObjectHideFlags: 0
@@ -45009,7 +45026,8 @@ GameObject:
   - component: {fileID: 375560055}
   - component: {fileID: 375560057}
   - component: {fileID: 375560056}
-  m_Layer: 0
+  - component: {fileID: 375560058}
+  m_Layer: 8
   m_Name: arbres_tronc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45374,6 +45392,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &375560058
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375560054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &456707242
 GameObject:
   m_ObjectHideFlags: 0
@@ -45385,7 +45419,8 @@ GameObject:
   - component: {fileID: 456707243}
   - component: {fileID: 456707245}
   - component: {fileID: 456707244}
-  m_Layer: 0
+  - component: {fileID: 456707246}
+  m_Layer: 8
   m_Name: clotures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47036,6 +47071,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &456707246
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456707242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &625881287
 GameObject:
   m_ObjectHideFlags: 0
@@ -47047,7 +47098,8 @@ GameObject:
   - component: {fileID: 625881288}
   - component: {fileID: 625881290}
   - component: {fileID: 625881289}
-  m_Layer: 0
+  - component: {fileID: 625881291}
+  m_Layer: 8
   m_Name: maisons_bas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49694,6 +49746,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &625881291
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625881287}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &647760861
 GameObject:
   m_ObjectHideFlags: 0
@@ -52840,7 +52908,8 @@ GameObject:
   - component: {fileID: 1439775590}
   - component: {fileID: 1439775592}
   - component: {fileID: 1439775591}
-  m_Layer: 0
+  - component: {fileID: 1439775593}
+  m_Layer: 8
   m_Name: arbres1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56171,6 +56240,79 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1439775593
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439775589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!1 &1509526662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509526664}
+  - component: {fileID: 1509526663}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1509526663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509526662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa9e62335c9ee44f873b933cbe46898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 0.1
+  pointDistributionSize: 0.5
+  destroyNodeMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  size:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 50
+    height: 50
+--- !u!4 &1509526664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509526662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639845740
 GameObject:
   m_ObjectHideFlags: 0
@@ -56182,7 +56324,8 @@ GameObject:
   - component: {fileID: 1639845741}
   - component: {fileID: 1639845743}
   - component: {fileID: 1639845742}
-  m_Layer: 0
+  - component: {fileID: 1639845744}
+  m_Layer: 8
   m_Name: arbres2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59494,6 +59637,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1639845744
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639845740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1715717112
 GameObject:
   m_ObjectHideFlags: 0
