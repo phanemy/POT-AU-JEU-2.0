@@ -19,18 +19,16 @@ public class PlayerManager : MonoBehaviour
     public float runSpeed { get; private set; }
     [SerializeField]
     public float runBloodLustCost = 0.001f;
+    public float attackBloodLustCost = 0.1f;
     [SerializeField]
     public GameObject loseScreen;
     [SerializeField]
     public GameObject statCanvas;
     [SerializeField]
-    public GameObject winCanvas;
-    [SerializeField]
     public SpriteManagerPlayer spriteManager;
     [SerializeField]
     public Inventory inventory;
     public AudioSource clipWalk;
-    public float attackBloodLustCost = 0.01f;
     private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
