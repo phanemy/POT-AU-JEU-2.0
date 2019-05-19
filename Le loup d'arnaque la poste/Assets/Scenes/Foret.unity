@@ -202,11 +202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 20
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 30
   delayBeforeStartSpawnMax: 50
-  maxEntity: 2
+  maxEntity: 4
   debugColor: {r: 1, g: 1, b: 1, a: 1}
   itemToSpawn: {fileID: 6688428466509488760, guid: deddbf145dd14f748bbb87c8fbcd21ba,
     type: 3}
@@ -5838,8 +5838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 60
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 20
   delayBeforeStartSpawnMax: 40
   maxEntity: 2
@@ -5889,7 +5889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 5
+  delayBeetweenSpawnMin: 10
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 0
   delayBeforeStartSpawnMax: 15
@@ -5940,8 +5940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 5
   delayBeforeStartSpawnMax: 15
   maxEntity: 2
@@ -5991,7 +5991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 5
+  delayBeetweenSpawnMin: 10
   delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 0
   delayBeforeStartSpawnMax: 15
@@ -14701,8 +14701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 5
   delayBeforeStartSpawnMax: 15
   maxEntity: 2
@@ -14835,8 +14835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 5
   delayBeforeStartSpawnMax: 15
   maxEntity: 2
@@ -14938,8 +14938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 5
   delayBeforeStartSpawnMax: 15
   maxEntity: 2
@@ -14989,8 +14989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawDebug: 1
-  delayBeetweenSpawnMin: 30
-  delayBeetweenSpawnMax: 40
+  delayBeetweenSpawnMin: 10
+  delayBeetweenSpawnMax: 20
   delayBeforeStartSpawnMin: 5
   delayBeforeStartSpawnMax: 15
   maxEntity: 2
