@@ -14,7 +14,8 @@ public class Inventory : MonoBehaviour
 
     public void Start()
     {
-        inventoryPanel.gameObject.SetActive(false);
+        //Crash if inventary if invisible on start
+        //inventoryPanel.gameObject.SetActive(false);
         ChaudronPanel.gameObject.SetActive(false);
     }
 

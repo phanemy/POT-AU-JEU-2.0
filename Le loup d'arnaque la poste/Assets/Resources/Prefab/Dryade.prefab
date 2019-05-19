@@ -194,7 +194,10 @@ MonoBehaviour:
   followPlayerDist: 3
   startMovingChance: 0.1
   drawDebug: 0
-  dropItems: {fileID: 11400000, guid: 487095a4791846644a40d0314a8c0485, type: 2}
+  dropItems:
+  - {fileID: 11400000, guid: 487095a4791846644a40d0314a8c0485, type: 2}
+  - {fileID: 11400000, guid: 487095a4791846644a40d0314a8c0485, type: 2}
+  - {fileID: 11400000, guid: 97584f3c66012394e9f472cdfeae2623, type: 2}
   spriteManager:
     goingTop:
     - {fileID: 2896206741646701041, guid: 372c76b5b11064847bb2a576a7686098, type: 3}

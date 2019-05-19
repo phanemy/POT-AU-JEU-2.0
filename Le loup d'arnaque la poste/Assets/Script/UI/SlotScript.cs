@@ -28,8 +28,6 @@ public class SlotScript : MonoBehaviour
     {
         if(item != null && imageItem !=null)
         {
-            DebugConsoleBuild.Log(("init  " + item.ToString()), 1);
-            DebugConsoleBuild.Log(("init  " + item.icon.ToString()), 0);
             this.id = id;
             this.item = item;
             imageItem.sprite = item.icon;
