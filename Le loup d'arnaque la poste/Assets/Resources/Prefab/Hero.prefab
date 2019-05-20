@@ -333,8 +333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialspeed: 2
   initialRunSpeed: 4
-  runBloodLustCost: 0.1
+  runBloodLustCost: 0.2
   attackBloodLustCost: 5
+  gainWithKilling: 5
   loseScreen: {fileID: 0}
   statCanvas: {fileID: 0}
   spriteManager:
@@ -413,7 +414,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0043982267, y: -0.0073304772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -424,7 +425,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.64}
+  m_Size: {x: 0.4591025, y: 0.56669545}
   m_EdgeRadius: 0
 --- !u!50 &5244119913729445703
 Rigidbody2D:

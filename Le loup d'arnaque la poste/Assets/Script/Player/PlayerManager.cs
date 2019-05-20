@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public float runBloodLustCost = 0.001f;
     public float attackBloodLustCost = 0.1f;
+    public float gainWithKilling = 0.1f;
     [SerializeField]
     public GameObject loseScreen;
     [SerializeField]
@@ -268,7 +269,7 @@ public class PlayerManager : MonoBehaviour
 
     public void mobDie(int count)
     {
-        bloodLustComponent.addBloodLust(-attackBloodLustCost*count);
+        bloodLustComponent.addBloodLust(-attackBloodLustCost*(count) + gainWithKilling);
     }
 
 }
