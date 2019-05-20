@@ -11,7 +11,7 @@ public abstract class SpawnerAbstract : MonoBehaviour
     public float delayBeforeStartSpawnMax;
     public int maxEntity;
 
-    public Color debugColor;
+    public Color debugColor = Color.red;
 
     protected float timeSinceLastSpawn;
     protected int actualNumber;

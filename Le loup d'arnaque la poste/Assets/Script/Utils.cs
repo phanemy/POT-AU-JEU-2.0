@@ -36,7 +36,6 @@ public static class Utils
         Resources.LoadAll("Items", typeof(ItemCptn));
         Recipe[] allRecipe = Resources.FindObjectsOfTypeAll<Recipe>();
         ItemCptn[] allItems = Resources.FindObjectsOfTypeAll<ItemCptn>();
-        Debug.Log(allRecipe.Length+" "+ allItems.Length);
 
         List<Recipe> finalRecipes = new List<Recipe>();
 
