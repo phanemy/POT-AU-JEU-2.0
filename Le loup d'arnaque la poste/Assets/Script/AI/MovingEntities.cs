@@ -19,7 +19,9 @@ public abstract class MovingEnties : MonoBehaviour
     protected Vector2[] path;
     protected int indexDest;
     protected bool isMoving;
-
+    protected Vector2 movement;
+    protected Rigidbody2D rb;
+    
     // Start is called before the first frame update
 
     protected void Awake()
@@ -27,6 +29,7 @@ public abstract class MovingEnties : MonoBehaviour
         indexDest = -1;
         isMoving = false;
         AINavMeshGenerator gen = GameObject.FindWithTag("navMeshGenerator").GetComponent<AINavMeshGenerator>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
         if (gen == null)
             Debug.LogError("missing grid Generator");
         pathFinder = new Pathfinder(gen);

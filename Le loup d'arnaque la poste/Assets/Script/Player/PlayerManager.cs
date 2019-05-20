@@ -34,11 +34,13 @@ public class PlayerManager : MonoBehaviour
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
     private CombatComponent combatComponent;
+    private Rigidbody2D rb;
     public Interactable interactableItem;
-    private Vector3 movement;
+    private Vector2 movement;
     private DirectionEnum dir;
     private int previousLevel;
     bool isLose;
+    bool isMoving;
 
     private void Start()
     {
@@ -50,6 +52,7 @@ public class PlayerManager : MonoBehaviour
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
         combatComponent = gameObject.GetComponent<CombatComponent>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
         camTransform = Camera.main.transform;
         camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
         lycanthropyComponent.startGame(bloodLustComponent);
@@ -102,21 +105,25 @@ public class PlayerManager : MonoBehaviour
                 {
                     float inputX = Input.GetAxis("Horizontal");
                     float inputY = Input.GetAxis("Vertical");
-                    movement = new Vector3(inputX, inputY, 0).normalized;
+                    movement = new Vector3(inputX, inputY).normalized;
                     if (movement.magnitude > 0)
                     {
+                        isMoving = true;
                         dir = DirectionEnumMethods.GetDirection(movement);
                         spriteManager.ActualDir = dir;
 
                         float run = Input.GetAxis("Run");
 
-                        transform.position = transform.position + movement * Time.deltaTime * (((1 - run) * speed) + (run * runSpeed));
+
+                        //transform.position = transform.position + movement * Time.deltaTime * (((1 - run) * speed) + (run * runSpeed));
+                        movement *=/* Time.deltaTime * */(((1 - run) * speed) + (run * runSpeed));
                         if (run == 1)
                             bloodLustComponent.addBloodLust(runBloodLustCost * Time.deltaTime);
 
-                        camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
+                        //camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
                         if (!spriteManager.update)
                         {
+                            isMoving = true;
                             spriteManager.start();
                             clipWalk.Play();
                         }
@@ -126,6 +133,7 @@ public class PlayerManager : MonoBehaviour
                     else
                         if (spriteManager.update)
                         {
+                            isMoving = false;
                             clipWalk.Stop();
                             spriteManager.stop();
                         }
@@ -138,6 +146,19 @@ public class PlayerManager : MonoBehaviour
             {
                 DisplayLoseScreen("Your life as reach 0");
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(isMoving)
+        {
+            rb.MovePosition(rb.position  + movement * Time.fixedDeltaTime);
+            camTransform.position = new Vector3(rb.position.x, rb.position.y, camTransform.position.z);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
         }
     }
 

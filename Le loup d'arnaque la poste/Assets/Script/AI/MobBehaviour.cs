@@ -19,7 +19,6 @@ public class MobBehaviour : MovingEnties
     public SpriteManager spriteManager;
     private CombatComponent combatComponent;
 
-    private Vector3 movement;
     private DirectionEnum dir;
     private int actualLife;
     private GameObject player;
@@ -53,7 +52,7 @@ public class MobBehaviour : MovingEnties
         if (!Menu.inGame)
             return;
 
-        if(combatComponent.isDead)
+        if (combatComponent.isDead)
         {
             Die();
         }
@@ -104,14 +103,14 @@ public class MobBehaviour : MovingEnties
                     {
                         isMoving = true;
                         indexDest = 0;
-                        move();
+                        //move();
                     }
                 }
             }
-            else
-            {
-                move();
-            }
+            //else
+            //{
+            //    move();
+            //}
         }
     }
 
@@ -120,16 +119,16 @@ public class MobBehaviour : MovingEnties
         if (Position2D != targetPos)
         {
             Vector2 axis;
-            float updateSpeed = (isSearching? followSpeed : speed) * Time.deltaTime;
+            float updateSpeed = (isSearching ? followSpeed : speed) * Time.fixedDeltaTime;
             if (indexDest != -1)
             {
-                axis = path[indexDest] - Position2D;
-                dir = DirectionEnumMethods.GetDirection(axis);
+                movement = path[indexDest] - Position2D;
+                dir = DirectionEnumMethods.GetDirection(movement);
                 spriteManager.ActualDir = dir;
 
-                if (axis.magnitude <= updateSpeed)
+                if (movement.magnitude <= updateSpeed)
                 {
-                    transform.position = new Vector3(path[indexDest].x, path[indexDest].y, transform.position.z);
+                    //transform.position = new Vector3(path[indexDest].x, path[indexDest].y, transform.position.z);
                     indexDest++;
                     if (indexDest == path.Length)
                     {
@@ -140,11 +139,13 @@ public class MobBehaviour : MovingEnties
                         spriteManager.stop();
                     }
                 }
-                else
-                {
-                    axis.Normalize();
-                    transform.position = transform.position + new Vector3(axis.x, axis.y, 0) * updateSpeed;
-                }
+                movement.Normalize();
+                rb.MovePosition(rb.position + movement * updateSpeed);
+                //else
+                //{
+                //    movement.Normalize();
+                //    transform.position = transform.position + new Vector3(movement.x, movement.y, 0) * updateSpeed;
+                //}
             }
             if (!spriteManager.update)
                 spriteManager.start();
@@ -152,7 +153,19 @@ public class MobBehaviour : MovingEnties
         }
         else
             if (spriteManager.update)
-                spriteManager.stop();
+            spriteManager.stop();
+    }
+
+    private void FixedUpdate()
+    {
+        if (isMoving)
+        {
+            move();
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     protected override bool choseDestination()
@@ -181,7 +194,7 @@ public class MobBehaviour : MovingEnties
                 Gizmos.DrawWireSphere(Position2D, maxMovementDist);
                 Gizmos.color = Color.red;
 
-                Gizmos.DrawWireSphere(Position2D, followPlayerDist );
+                Gizmos.DrawWireSphere(Position2D, followPlayerDist);
             }
         }
     }
@@ -190,7 +203,7 @@ public class MobBehaviour : MovingEnties
     {
         PlayerManager pl = player.GetComponent<PlayerManager>();
         pl.mobDie((int)combatComponent.initialLife);
-        Utils.InstantiatePickable(transform.position, dropItems[Random.Range(0,dropItems.Length)]);
+        Utils.InstantiatePickable(transform.position, dropItems[Random.Range(0, dropItems.Length)]);
         if (spawner != null)
             spawner.wasGather();
         Destroy(gameObject);

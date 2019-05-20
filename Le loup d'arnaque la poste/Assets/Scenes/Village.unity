@@ -32414,6 +32414,16 @@ PrefabInstance:
       propertyPath: lycanthropyUiSlider
       value: 
       objectReference: {fileID: 1671542280}
+    - target: {fileID: 5244119913729445703, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244119913729445703, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aea88aeb82e23f4294cac9f2a8df990, type: 3}
 --- !u!1001 &437837879
@@ -40961,6 +40971,7 @@ GameObject:
   - component: {fileID: 1323114211}
   - component: {fileID: 1323114210}
   - component: {fileID: 1323114209}
+  - component: {fileID: 1323114208}
   m_Layer: 0
   m_Name: COlider
   m_TagString: Untagged
@@ -40968,6 +40979,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &1323114208
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323114207}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1323114209
 BoxCollider2D:
   m_ObjectHideFlags: 0
