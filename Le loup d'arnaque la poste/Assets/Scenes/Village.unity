@@ -35084,6 +35084,11 @@ PrefabInstance:
       propertyPath: bloodLustUiSlider
       value: 
       objectReference: {fileID: 1671542281}
+    - target: {fileID: 5244119913729445701, guid: 5aea88aeb82e23f4294cac9f2a8df990,
+        type: 3}
+      propertyPath: progressTimeInSeconds
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5244119913729445697, guid: 5aea88aeb82e23f4294cac9f2a8df990,
         type: 3}
       propertyPath: lifeSlider

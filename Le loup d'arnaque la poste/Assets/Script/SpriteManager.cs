@@ -48,11 +48,12 @@ public class SpriteManager
     protected int index;
     public bool update { get; private set; }
 
-    public void init(SpriteRenderer renderer)
+    public void init(SpriteRenderer renderer, DirectionEnum dir)
     {
         index = 0;
         rend = renderer;
         update = false;
+        actualDir = dir;
     }
 
     public void stop()

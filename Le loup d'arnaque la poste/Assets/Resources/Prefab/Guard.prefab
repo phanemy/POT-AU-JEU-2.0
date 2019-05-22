@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childRend: {fileID: 3751311998935786132}
   textrender: {fileID: 8903036987659532589}
-  displayTime: 1
+  displayTime: 3
 --- !u!61 &8306502049651694594
 BoxCollider2D:
   m_ObjectHideFlags: 0

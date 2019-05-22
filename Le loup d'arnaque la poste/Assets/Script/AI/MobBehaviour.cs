@@ -26,7 +26,8 @@ public class MobBehaviour : MovingEnties
     private SpawnerAbstract spawner;
     private void Start()
     {
-        spriteManager.init(gameObject.GetComponent<SpriteRenderer>());
+        dir = DirectionEnum.Bottom;
+        spriteManager.init(gameObject.GetComponent<SpriteRenderer>(), dir);
         path = null;
         player = GameObject.FindGameObjectWithTag("Player");
         CircleCollider2D circle = gameObject.GetComponent<CircleCollider2D>();
@@ -36,7 +37,6 @@ public class MobBehaviour : MovingEnties
             circle.radius = maxMovementDist;
             circle.isTrigger = true;
         }
-        dir = DirectionEnum.Bottom;
     }
 
     public void Init(Vector3 position, SpawnerAbstract spawner)

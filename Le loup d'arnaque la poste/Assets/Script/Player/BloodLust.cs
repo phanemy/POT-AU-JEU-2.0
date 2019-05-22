@@ -3,21 +3,24 @@ using UnityEngine;
 
 public class BloodLust : MonoBehaviour
 {
-    public float progressTimeInSeconds = 1f;
-    public float timeStep0_33 = 40;
-    public float timeStep33_66 = 30;
-    public float timeStep66_99 = 15;
-    public float timeStep100 = 10;
+    public float progressTimeInSeconds = 1.5f;
+    public float timeStep0_25 = 60;
+    public float timeStep25_50 = 40;
+    public float timeStep50_75 = 20;
+    public float timeStep75_99 = 10;
+    public float timeStep100 = 5;
     public RectTransform bloodLustUiSlider;
     public float LycanthropeProgressFromBloodLust
     {
         get {
-            if (percent < 0.33f)
-                return timeStep0_33;
-            else if (percent < 0.66f)
-                return timeStep33_66;
+            if (percent < 0.25f)
+                return timeStep0_25;
+            else if (percent < 0.50f)
+                return timeStep25_50;
+            else if (percent < 0.75f)
+                return timeStep50_75;
             else if (percent < 0.99f)
-                return timeStep66_99;
+                return timeStep75_99;
             else
                 return timeStep100;
         }

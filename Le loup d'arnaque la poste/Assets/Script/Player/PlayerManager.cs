@@ -49,7 +49,8 @@ public class PlayerManager : MonoBehaviour
         previousLevel = 0;
         speed = initialspeed;
         runSpeed = initialRunSpeed;
-        spriteManager.init(gameObject.GetComponent < SpriteRenderer>());
+        dir = DirectionEnum.Bottom;
+        spriteManager.init(gameObject.GetComponent < SpriteRenderer>(),dir);
         spriteManager.changeLycanthropieLevel(0);
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
@@ -57,7 +58,6 @@ public class PlayerManager : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         lycanthropyComponent.startGame(bloodLustComponent);
         bloodLustComponent.startGame();
-        dir = DirectionEnum.Bottom;
         Utils.Init();
 
         cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
@@ -160,7 +160,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            rb.MovePosition(rb.position);
         }
     }
 

@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4937691821919625332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.34, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5244119912468237356}
@@ -114,8 +114,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5244119913607847829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.262, y: 0.2, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.482, y: -0.001, z: -1}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 5244119912468237356}
   m_RootOrder: 0
@@ -272,10 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8707188db0c096948a3caceb14538fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressTimeInSeconds: 1
-  timeStep0_33: 60
-  timeStep33_66: 20
-  timeStep66_99: 6
+  progressTimeInSeconds: 1.5
+  timeStep0_25: 60
+  timeStep25_50: 40
+  timeStep50_75: 20
+  timeStep75_99: 10
   timeStep100: 3
   bloodLustUiSlider: {fileID: 0}
 --- !u!114 &5244119913729445697
@@ -401,6 +402,7 @@ MonoBehaviour:
     - {fileID: 3265540044750120816, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
   inventory: {fileID: 0}
   clipWalk: {fileID: 7440562238985716409}
+  confinedCollider: {fileID: 0}
 --- !u!61 &5244119913729445696
 BoxCollider2D:
   m_ObjectHideFlags: 0
