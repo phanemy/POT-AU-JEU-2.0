@@ -6,35 +6,52 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public InventoryPanel inventoryPanel;
-    public ChaudronPanel ChaudronPanel;
+    static private Inventory inventory;
+    static public Inventory Instance
+    {
+        get
+        {
+            if (inventory == null)
+            {
+                inventory = FindObjectOfType<Inventory>();
+            }
+            return inventory;
+        }
+    }
+
     private new List<ItemCptn> items = new List<ItemCptn>();
     private new List<ItemCptn> caldonItems = new List<ItemCptn>();
     public PlayerManager player;
     public AudioSource cauldonSound;
     public Potion defaultPotion;
-    private bool test;
+
+    private InventoryPanel inventoryPanel;
+    private ChaudronPanel chaudronPanel;
 
     public void Start()
     {
-        test = true;
-        //Crash if inventary if invisible on start
-        //inventoryPanel.gameObject.SetActive(false);
-        //ChaudronPanel.gameObject.SetActive(false);
+        inventoryPanel = GetComponentInChildren<InventoryPanel>();
+        chaudronPanel = GetComponentInChildren<ChaudronPanel>();
+
+        inventoryPanel.gameObject.SetActive(false);
+        chaudronPanel.gameObject.SetActive(false);
     }
 
     public void Update()
     {
-        if (test)
-        {
-            inventoryPanel.gameObject.SetActive(false);
-            ChaudronPanel.gameObject.SetActive(false);
-            test = false;
-        }
         if (Input.GetButtonDown("Inventary"))
         {
             Show();
         }
+    }
+
+    public bool IsInInventory()
+    {
+        if (inventoryPanel != null)
+        {
+            return inventoryPanel.gameObject.activeSelf;
+        }
+        return false;
     }
 
     public void Show()
@@ -48,14 +65,14 @@ public class Inventory : MonoBehaviour
             inventoryPanel.gameObject.SetActive(true);
             inventoryPanel.Show(items);
         }
-        ChaudronPanel.gameObject.SetActive(false);
+        chaudronPanel.gameObject.SetActive(false);
         cauldonSound.Stop();
     }
 
     public void ShowColdon()
     {
-        ChaudronPanel.gameObject.SetActive(true);
-        ChaudronPanel.Show(caldonItems);
+        chaudronPanel.gameObject.SetActive(true);
+        chaudronPanel.Show(caldonItems);
         cauldonSound.Play();
         inventoryPanel.gameObject.SetActive(true);
         inventoryPanel.Show(items);
@@ -84,7 +101,7 @@ public class Inventory : MonoBehaviour
         else
         {
             caldonItems.Add(item);
-            ChaudronPanel.Show(caldonItems);
+            chaudronPanel.Show(caldonItems);
             return true;
         }
     }
@@ -104,7 +121,7 @@ public class Inventory : MonoBehaviour
     {
         if (id >= 0 && id < items.Count && isInventary)
         {
-            if (ChaudronPanel.gameObject.activeSelf)
+            if (chaudronPanel.gameObject.activeSelf)
             {
                 ItemCptn item = items[id];
                 if (AddCaldonItem(item))
@@ -127,7 +144,7 @@ public class Inventory : MonoBehaviour
         {
             ItemCptn item = caldonItems[id];
             caldonItems.RemoveAt(id);
-            ChaudronPanel.Show(caldonItems);
+            chaudronPanel.Show(caldonItems);
             AddItem(item);
         }
     }
@@ -154,7 +171,7 @@ public class Inventory : MonoBehaviour
             }
 
             caldonItems.Clear();
-            ChaudronPanel.Show(caldonItems);
+            chaudronPanel.Show(caldonItems);
         }
     }
 

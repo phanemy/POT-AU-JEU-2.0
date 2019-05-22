@@ -27,8 +27,6 @@ public class PlayerManager : MonoBehaviour
     public GameObject statCanvas;
     [SerializeField]
     public SpriteManagerPlayer spriteManager;
-    [SerializeField]
-    public Inventory inventory;
     public AudioSource clipWalk;
 
     public Collider2D confinedCollider;
@@ -73,7 +71,7 @@ public class PlayerManager : MonoBehaviour
         if (!Menu.inGame)
             return;
 
-        if (inventory.inventoryPanel.gameObject.activeSelf)
+        if (Inventory.Instance.IsInInventory())
             return;
 
         if (!isLose && !combatComponent.isDead)

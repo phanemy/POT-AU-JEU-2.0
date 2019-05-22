@@ -6,25 +6,23 @@ using UnityEngine.UI;
 public class SlotScript : MonoBehaviour
 {
     public ItemCptn item;
-    private Inventory inventory;
     private Image imageItem;
     private Image borderImage;
     private int id = -1;
     private bool isInventary;
 
-    public void Start()
+    private void Start()
     {
         borderImage = GetComponent<Image>();
         imageItem = transform.GetChild(0).GetComponent<Image>();
     }
 
-    public void Init(Inventory inv, bool isInventary)
+    public void Init(bool isInventary)
     {
-        inventory = inv;
         this.isInventary = isInventary;
     }
 
-    public void Init(ItemCptn item, int id)
+    public void SetItem(ItemCptn item, int id)
     {
         if(item != null && imageItem !=null)
         {
@@ -64,6 +62,6 @@ public class SlotScript : MonoBehaviour
 
     public void RemoveFromInventory()
     {
-        inventory.RemoveItem(id, isInventary);
+        Inventory.Instance.RemoveItem(id, isInventary);
     }
 }

@@ -42,7 +42,7 @@ public class ItemPrefab : MonoBehaviour, Interactable
 
     public bool interact(PlayerManager player)
     {
-        bool b = player.inventory.AddItem(item);
+        bool b = Inventory.Instance.AddItem(item);
         //DebugConsoleBuild.Log(b.ToString(), 1);
         if (b)
         {

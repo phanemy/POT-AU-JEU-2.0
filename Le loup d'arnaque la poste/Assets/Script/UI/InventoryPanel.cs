@@ -5,19 +5,18 @@ using UnityEngine;
 public class InventoryPanel : MonoBehaviour
 {
     public SlotScript slotPrefab;
-    public Inventory inventory;
     private Transform slotPanelTransform;
 
     private List<SlotScript> slots = new List<SlotScript>();
 
-    void Awake()
+    private void Awake()
     {
         slotPanelTransform = transform.GetChild(0);
-        
-        for(int i = 0; i < Utils.NbSlot; ++i)
+
+        for (int i = 0; i < Utils.NbSlot; ++i)
         {
             SlotScript slot = Instantiate<SlotScript>(slotPrefab, slotPanelTransform);
-            slot.Init(inventory, true);
+            slot.Init(true);
             slots.Add(slot);
         }
     }
@@ -28,7 +27,7 @@ public class InventoryPanel : MonoBehaviour
         {
             if (i < items.Count)
             {
-                slots[i].Init(items[i], i);
+                slots[i].SetItem(items[i], i);
             }
             else
             {

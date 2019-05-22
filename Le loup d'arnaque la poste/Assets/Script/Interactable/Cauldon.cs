@@ -14,7 +14,7 @@ public class Cauldon : MonoBehaviour, Interactable
     
     public bool interact(PlayerManager player)
     {
-        player.inventory.ShowColdon();
+        Inventory.Instance.ShowColdon();
         return true;
     }
 }

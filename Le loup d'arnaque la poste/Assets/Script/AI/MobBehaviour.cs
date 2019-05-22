@@ -118,7 +118,6 @@ public class MobBehaviour : MovingEnties
     {
         if (Position2D != targetPos)
         {
-            Vector2 axis;
             float updateSpeed = (isSearching ? followSpeed : speed) * Time.fixedDeltaTime;
             if (indexDest != -1)
             {
