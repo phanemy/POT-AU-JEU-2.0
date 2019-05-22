@@ -30,8 +30,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     public Inventory inventory;
     public AudioSource clipWalk;
+
+    public Collider2D confinedCollider;
     
-    private Transform camTransform;
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
     private CombatComponent combatComponent;
@@ -42,6 +43,8 @@ public class PlayerManager : MonoBehaviour
     private int previousLevel;
     bool isLose;
     bool isMoving;
+
+    private Cinemachine.CinemachineVirtualCamera cam;
 
     private void Start()
     {
@@ -54,12 +57,14 @@ public class PlayerManager : MonoBehaviour
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
         combatComponent = gameObject.GetComponent<CombatComponent>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        camTransform = Camera.main.transform;
-        camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
         lycanthropyComponent.startGame(bloodLustComponent);
         bloodLustComponent.startGame();
         dir = DirectionEnum.Bottom;
         Utils.Init();
+
+        cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+        cam.Follow = transform;
+        FindObjectOfType<Cinemachine.CinemachineConfiner>().m_BoundingShape2D = confinedCollider;
     }
 
     // Update is called once per frame
@@ -121,7 +126,6 @@ public class PlayerManager : MonoBehaviour
                         if (run == 1)
                             bloodLustComponent.addBloodLust(runBloodLustCost * Time.deltaTime);
 
-                        //camTransform.position = new Vector3(transform.position.x, transform.position.y, camTransform.position.z);
                         if (!spriteManager.update)
                         {
                             isMoving = true;
@@ -155,7 +159,6 @@ public class PlayerManager : MonoBehaviour
         if(isMoving)
         {
             rb.MovePosition(rb.position  + movement * Time.fixedDeltaTime);
-            camTransform.position = new Vector3(rb.position.x, rb.position.y, camTransform.position.z);
         }
         else
         {
