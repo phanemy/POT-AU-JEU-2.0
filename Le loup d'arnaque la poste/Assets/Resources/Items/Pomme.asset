@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2182100fe4325734c83ba0d17dc1f9d2, type: 3}
   m_Name: Pomme
   m_EditorClassIdentifier: 
-  itemName: pomme
-  description: pomme
+  itemName: Apple
+  description: A red apple
   icon: {fileID: 21300000, guid: 12bb6fde632c1364ebd7c290d4d1d824, type: 3}
   rarety: 0
   location: 0

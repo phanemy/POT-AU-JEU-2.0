@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SlotScript : MonoBehaviour
+public class SlotScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public ItemCptn item;
     private Image imageItem;
@@ -63,5 +64,18 @@ public class SlotScript : MonoBehaviour
     public void RemoveFromInventory()
     {
         Inventory.Instance.RemoveItem(id, isInventary);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            Inventory.Instance.ShowTooltip(transform.position, item.itemName + "\n" + item.description);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Inventory.Instance.HideTooltip();
     }
 }

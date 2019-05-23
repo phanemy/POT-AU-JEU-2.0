@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Inventory : MonoBehaviour
     public PlayerManager player;
     public AudioSource cauldonSound;
     public Potion defaultPotion;
+
+    public GameObject tooltip;
 
     private InventoryPanel inventoryPanel;
     private ChaudronPanel chaudronPanel;
@@ -59,6 +62,7 @@ public class Inventory : MonoBehaviour
         if (inventoryPanel.gameObject.activeSelf)
         {
             inventoryPanel.gameObject.SetActive(false);
+            HideTooltip();
         }
         else
         {
@@ -179,5 +183,17 @@ public class Inventory : MonoBehaviour
     {
         items.Clear();
         inventoryPanel.Show(items);
+    }
+
+    public void ShowTooltip(Vector3 position, String text)
+    {
+        tooltip.transform.position = position;
+        tooltip.SetActive(true);
+        tooltip.GetComponentInChildren<Text>().text = text;
+    }
+
+    public void HideTooltip()
+    {
+        tooltip.SetActive(false);
     }
 }
