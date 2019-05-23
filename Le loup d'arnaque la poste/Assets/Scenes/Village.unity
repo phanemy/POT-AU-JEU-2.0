@@ -47939,6 +47939,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1197084110052497939, guid: 8c83f6d4232d3084988473c744ede0e3,
         type: 3}
+    - target: {fileID: 2187340669967062846, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 724723021}
+    - target: {fileID: 2187340669967062846, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187340669967062846, guid: 22d5819adbdaa3a45a014155818a85cb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d5819adbdaa3a45a014155818a85cb, type: 3}
 --- !u!114 &724723021 stripped
