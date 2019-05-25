@@ -93,7 +93,6 @@ public class AINavMeshGenerator : MonoBehaviour
         CheckForBadNodes();
     }
 
-
     public LayerMask GetAvoidanceMasks()
     {
         return destroyNodeMask | obstacleMask;
@@ -239,15 +238,6 @@ public class AINavMeshGenerator : MonoBehaviour
                     Grid[i].valid = false;
                     Grid[i].associatedObject = hit.transform.gameObject;
                 }
-                //else
-                //{
-                //    RaycastHit2D rayHit = Physics2D.Raycast(Grid[i].position, Vector2.zero, 50, obstacleMask);
-                //    if (rayHit.collider != null)
-                //    {
-                //        Grid[i].valid = false;
-                //        Grid[i].associatedObject = rayHit.transform.gameObject;
-                //    }
-                //}
             }
         }
     }
@@ -465,7 +455,8 @@ public class Pathfinder
         path.Reverse();
         if (path[0] != start)
         {
-            return null;
+            path[0] = start;
+            //return null;
         }
         return path.ToArray();
     }
