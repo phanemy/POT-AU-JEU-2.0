@@ -67,9 +67,9 @@ public class MobBehaviour : MovingEnties
         else
         if (dist <= followPlayerDist)
         {
-
             targetPos = player.transform.position;
             path = pathFinder.FindPath(Position2D, targetPos);
+            Debug.Log("path " + path);
             if (path != null)
             {
                 if (!isSearching)
@@ -99,7 +99,7 @@ public class MobBehaviour : MovingEnties
             {
                 if (choseDestination())
                 {
-                    path = pathFinder.FindPath(Position2D, targetPos, player);
+                    path = pathFinder.FindPath(Position2D, targetPos);
                     if (path != null && path.Length != 0)
                     {
                         isMoving = true;
@@ -117,6 +117,8 @@ public class MobBehaviour : MovingEnties
             float updateSpeed = (isSearching ? followSpeed : speed) * Time.fixedDeltaTime;
             if (indexDest != -1)
             {
+                if (indexDest >= path.Length)
+                    indexDest = path.Length - 1;
                 movement = path[indexDest] - Position2D;
                 dir = DirectionEnumMethods.GetDirection(movement);
                 spriteManager.ActualDir = dir;

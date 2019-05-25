@@ -68,11 +68,17 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Menu.inGame)
+        if (!Menu.inGame || Inventory.Instance.IsInInventory())
+        {
+            if (spriteManager.update)
+            {
+                clipWalk.Stop();
+                spriteManager.stop();
+                isMoving = false;
+            }
             return;
+        }
 
-        if (Inventory.Instance.IsInInventory())
-            return;
 
         if (!isLose && !combatComponent.isDead)
         {
@@ -97,6 +103,7 @@ public class PlayerManager : MonoBehaviour
                 {
                     clipWalk.Stop();
                     spriteManager.stop();
+                    //isMoving = false;
                 }
             }
             else if (!combatComponent.isAttacking)
