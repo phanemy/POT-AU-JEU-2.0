@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2182100fe4325734c83ba0d17dc1f9d2, type: 3}
   m_Name: Aconit
   m_EditorClassIdentifier: 
-  itemName: Aconit
-  description: 
+  itemName: Aconite
+  description: Also know as Wolf's bane, it could be useful...
   icon: {fileID: 21300000, guid: 258e924c0b0018c45bb99efbce55e026, type: 3}
   rarety: 1
   location: 1

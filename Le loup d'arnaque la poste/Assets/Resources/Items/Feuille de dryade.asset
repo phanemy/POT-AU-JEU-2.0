@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2182100fe4325734c83ba0d17dc1f9d2, type: 3}
   m_Name: Feuille de dryade
   m_EditorClassIdentifier: 
-  itemName: feuille De Dryade
-  description: feuille De Dryade
+  itemName: Dyad leaf
+  description: It's probably magic !
   icon: {fileID: 21300000, guid: 3b62b17fbd2cac840a60d84e4011130b, type: 3}
   rarety: 2
   location: 1

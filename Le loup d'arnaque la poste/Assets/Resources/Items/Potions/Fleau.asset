@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
   m_Name: Fleau
   m_EditorClassIdentifier: 
-  itemName: Fleau de la bete
-  description: 
+  itemName: Scourge of the beast
+  description: Hold back the beast inside you !
   icon: {fileID: 21300000, guid: 024269ceeaeb24a438638c924f02cce1, type: 3}
   rarety: 3
   life: 0

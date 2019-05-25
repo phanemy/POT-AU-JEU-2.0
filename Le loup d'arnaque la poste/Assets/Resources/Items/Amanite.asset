@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2182100fe4325734c83ba0d17dc1f9d2, type: 3}
   m_Name: Amanite
   m_EditorClassIdentifier: 
-  itemName: Amanite
-  description: 
+  itemName: Amanita
+  description: It's certainly not venomous !
   icon: {fileID: 21300000, guid: ee72063748b854643bf45d673fdcc133, type: 3}
   rarety: 0
   location: 1

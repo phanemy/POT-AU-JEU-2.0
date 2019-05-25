@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
   m_Name: Lycanthropie
   m_EditorClassIdentifier: 
-  itemName: Essence de lycanthropie
-  description: 
-  icon: {fileID: -6367634124021630630, guid: e40303d93be88334c96ca435a4cb33c5, type: 3}
+  itemName: Lycanthropy essence
+  description: It's probably a bad idea to drink that !
+  icon: {fileID: 21300000, guid: ba6eb81d23a37f44e98e7319560e849f, type: 3}
   rarety: 3
   life: 0
   bloodLust: 0

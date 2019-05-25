@@ -272,11 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8707188db0c096948a3caceb14538fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressTimeInSeconds: 1.5
+  progressTimeInSeconds: 1
   timeStep0_25: 60
-  timeStep25_50: 40
-  timeStep50_75: 20
-  timeStep75_99: 10
+  timeStep25_50: 30
+  timeStep50_75: 15
+  timeStep75_99: 7
   timeStep100: 3
   bloodLustUiSlider: {fileID: 0}
 --- !u!114 &5244119913729445697
@@ -334,9 +334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialspeed: 4
   initialRunSpeed: 7
-  runBloodLustCost: 0.1
+  runBloodLustCost: 0.5
   attackBloodLustCost: 5
-  gainWithKilling: 5
+  gainWithKilling: -50
   loseScreen: {fileID: 0}
   statCanvas: {fileID: 0}
   spriteManager:
