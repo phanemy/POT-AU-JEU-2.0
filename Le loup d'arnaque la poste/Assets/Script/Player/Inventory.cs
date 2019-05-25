@@ -160,7 +160,7 @@ public class Inventory : MonoBehaviour
             bool ok = false;
             foreach(Recipe recipe in Utils.recipes)
             {
-                ok = caldonItems.Except(recipe.Items).Count() == 0;
+                ok = Utils.CheckRecipe(recipe, caldonItems);
 
                 if (ok)
                 {

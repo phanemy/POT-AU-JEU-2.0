@@ -18,20 +18,15 @@ public static class Utils
         backGround = GameObject.FindWithTag("BackGround");
         //middleGround = GameObject.FindWithTag("MiddleGround");
         recipes = InitRecipes();
+
+        foreach (Recipe recipe in recipes)
+        {
+            Debug.Log(recipe.potion.itemName + " : " + recipe.Items[0].itemName + " " + recipe.Items[1].itemName + " " + recipe.Items[2].itemName);
+        }
     }
 
     private static Recipe[] InitRecipes()
     {
-        //Resources.Load<Recipe>("Recipes/CataplasmeR");
-        //Resources.Load<Recipe>("Recipes/CatarthiqueR");
-        //Resources.Load<Recipe>("Recipes/CeleriteR");
-        //Resources.Load<Recipe>("Recipes/EssenceR");
-        //Resources.Load<Recipe>("Recipes/FleauR");
-        //Resources.Load<Recipe>("Recipes/PacificationR");
-        //Resources.Load<Recipe>("Recipes/PurificationR");
-        //Resources.Load<Recipe>("Recipes/RemedeR");
-        //Resources.Load<Recipe>("Recipes/TonifiantR");
-        //Resources.Load<Recipe>("Recipes/TranquilisantR");
         Resources.LoadAll("Recipes", typeof(Recipe));
         Resources.LoadAll("Items", typeof(ItemCptn));
         Recipe[] allRecipe = Resources.FindObjectsOfTypeAll<Recipe>();
@@ -41,7 +36,30 @@ public static class Utils
 
         foreach (Recipe recipe in allRecipe)
         {
-            Recipe newRecipe = GenerateRecipe(allItems, recipe);
+            bool unique = true;
+            Recipe newRecipe;
+            do
+            {
+                newRecipe = GenerateRecipe(allItems, recipe);
+
+                List<ItemCptn> items = new List<ItemCptn>();
+
+                foreach (ItemCptn cptn in newRecipe.Items)
+                {
+                    items.Add(cptn);
+                }
+
+                foreach (Recipe finalRecipe in finalRecipes)
+                {
+                    if (CheckRecipe(finalRecipe, items))
+                    {
+                        unique = false;
+                        break;
+                    }
+                }
+
+            } while (!unique);
+
             finalRecipes.Add(newRecipe);
         }
 
@@ -66,6 +84,7 @@ public static class Utils
                 newRecipe.Items[i++] = item;
             }
         }
+        System.Array.Sort(newRecipe.Items);
 
         return newRecipe;
     }
@@ -74,7 +93,7 @@ public static class Utils
     {
         List<ItemCptn> raretyList = new List<ItemCptn>();
 
-        foreach(ItemCptn item in allItems)
+        foreach (ItemCptn item in allItems)
         {
             if (item.rarety == rarety)
             {
@@ -89,7 +108,7 @@ public static class Utils
 
     public static ItemPrefab InstantiatePickable(Vector3 position, Pickable item)
     {
-        if(pickablePrefab == null)
+        if (pickablePrefab == null)
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
@@ -106,7 +125,7 @@ public static class Utils
             pickablePrefab = Resources.Load<ItemPrefab>("Prefab/GameObject/Interactable/DropableItemPrefab");
 
         ItemPrefab newGm = GameObject.Instantiate<ItemPrefab>(pickablePrefab);
-        newGm.Init(new Vector3(position.x, position.y,5), item, spawn);
+        newGm.Init(new Vector3(position.x, position.y, 5), item, spawn);
         newGm.transform.SetParent(backGround.transform, true);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
@@ -117,11 +136,37 @@ public static class Utils
     public static MobBehaviour InstantiateMob(Vector3 position, MobBehaviour mob, MobSpawner spawn)
     {
         MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
-        newGm.Init(new Vector3(position.x, position.y,5), spawn);
+        newGm.Init(new Vector3(position.x, position.y, 5), spawn);
         newGm.transform.SetParent(backGround.transform, true);
         BoxCollider2D box = newGm.gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         return newGm;
     }
 
+    public static bool CheckRecipe(Recipe recipe, List<ItemCptn> items)
+    {
+        if (recipe.Items.Length != items.Count)
+        {
+            return false;
+        }
+
+        ItemCptn[] temp = new ItemCptn[items.Count];
+
+        for (int i = 0; i < items.Count; ++i)
+        {
+            temp[i] = items[i];
+        }
+
+        System.Array.Sort(temp);
+
+        for (int i = 0; i < items.Count; ++i)
+        {
+            if (temp[i] != recipe.Items[i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
