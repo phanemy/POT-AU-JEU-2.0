@@ -114,7 +114,7 @@ public static class Utils
 
     }
 
-    public static MobBehaviour InstantiateMob(Vector3 position, MobBehaviour mob, SpawnerAbstract spawn)
+    public static MobBehaviour InstantiateMob(Vector3 position, MobBehaviour mob, MobSpawner spawn)
     {
         MobBehaviour newGm = GameObject.Instantiate<MobBehaviour>(mob);
         newGm.Init(new Vector3(position.x, position.y,5), spawn);

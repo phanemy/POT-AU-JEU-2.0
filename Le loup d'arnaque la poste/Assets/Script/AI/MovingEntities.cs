@@ -18,7 +18,7 @@ public abstract class MovingEnties : MonoBehaviour
     protected Vector2 targetPos;
     protected Vector2[] path;
     protected int indexDest;
-    protected bool isMoving;
+    public bool isMoving;
     protected Vector2 movement;
     protected Rigidbody2D rb;
     

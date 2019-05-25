@@ -22,8 +22,9 @@ public class MobBehaviour : MovingEnties
     private DirectionEnum dir;
     private int actualLife;
     private GameObject player;
-    private bool isSearching;
-    private SpawnerAbstract spawner;
+    public bool isSearching;
+    private MobSpawner spawner;
+
     private void Start()
     {
         dir = DirectionEnum.Bottom;
@@ -39,7 +40,7 @@ public class MobBehaviour : MovingEnties
         }
     }
 
-    public void Init(Vector3 position, SpawnerAbstract spawner)
+    public void Init(Vector3 position, MobSpawner spawner)
     {
         transform.position = position;
         this.spawner = spawner;
@@ -103,14 +104,9 @@ public class MobBehaviour : MovingEnties
                     {
                         isMoving = true;
                         indexDest = 0;
-                        //move();
                     }
                 }
             }
-            //else
-            //{
-            //    move();
-            //}
         }
     }
 
@@ -171,7 +167,15 @@ public class MobBehaviour : MovingEnties
     {
         if (Random.value < startMovingChance)
         {
-            targetPos = Position2D + Random.insideUnitCircle.normalized * maxMovementDist;
+            int i = 0;
+            do
+            {
+                targetPos = Position2D + Random.insideUnitCircle.normalized * maxMovementDist;
+                i++;
+            } while (spawner != null && !spawner.pointIsInSpawner(targetPos) && i < 5);
+
+            if (i == 5)
+                return false;
             return true;
         }
         else

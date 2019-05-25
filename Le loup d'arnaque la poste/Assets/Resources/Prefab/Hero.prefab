@@ -400,7 +400,6 @@ MonoBehaviour:
     - {fileID: -2222482442075865421, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 854587533092848133, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
     - {fileID: 3265540044750120816, guid: 40184591fea3cf4459221ec1efb38ea8, type: 3}
-  inventory: {fileID: 0}
   clipWalk: {fileID: 7440562238985716409}
   confinedCollider: {fileID: 0}
 --- !u!61 &5244119913729445696
@@ -416,7 +415,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0043982267, y: -0.0073304772}
+  m_Offset: {x: 0.009536393, y: -0.029595912}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -427,7 +426,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4591025, y: 0.56669545}
+  m_Size: {x: 0.35976475, y: 0.5221646}
   m_EdgeRadius: 0
 --- !u!50 &5244119913729445703
 Rigidbody2D:

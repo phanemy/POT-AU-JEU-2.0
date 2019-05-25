@@ -8,14 +8,17 @@ using Unity.Collections;
 using UnityEditor;
 #endif
 
+[System.Serializable]
 public class Node
 {
     public bool valid = true;
     public Vector2 position;
+    [SerializeField]
     public readonly Node[] connections;
     public float gCost;
     public float hCost;
     public float fCost { get { return gCost + hCost; } }
+    [SerializeField]
     public Node parent;
     public GameObject associatedObject;
 
@@ -48,6 +51,7 @@ public class Node
 }
 
 [ExecuteInEditMode]
+[System.Serializable]
 public class AINavMeshGenerator : MonoBehaviour
 {
     enum Directions { Right, DownRight, Down, DownLeft, Left, UpLeft, Up, UpRight }
@@ -63,8 +67,10 @@ public class AINavMeshGenerator : MonoBehaviour
 
     public Rect size;
     public static AINavMeshGenerator instance;
+    public bool needUpdate;
 
     private float updateTimer = 0;
+    [SerializeField]
     private List<Node> grid = null;
     private List<Node> Grid
     {
@@ -227,12 +233,21 @@ public class AINavMeshGenerator : MonoBehaviour
         {
             if (Grid[i].valid)
             {
-                Collider2D hit = Physics2D.OverlapCircle(Grid[i].position, 0.05f, obstacleMask);
+                Collider2D hit = Physics2D.OverlapCircle(Grid[i].position, pointDistributionSize /2, obstacleMask);
                 if (hit != null)
                 {
                     Grid[i].valid = false;
                     Grid[i].associatedObject = hit.transform.gameObject;
                 }
+                //else
+                //{
+                //    RaycastHit2D rayHit = Physics2D.Raycast(Grid[i].position, Vector2.zero, 50, obstacleMask);
+                //    if (rayHit.collider != null)
+                //    {
+                //        Grid[i].valid = false;
+                //        Grid[i].associatedObject = rayHit.transform.gameObject;
+                //    }
+                //}
             }
         }
     }
@@ -319,13 +334,15 @@ public class AINavMeshGenerator : MonoBehaviour
         {
             GenerateNewGrid();
         }
-
-        //We update the bad nodes constantly, so as objects or enemies move, the grid automatically adjusts itself.
-        updateTimer -= Time.deltaTime;
-        if (updateTimer <= 0)
+        if (needUpdate)
         {
-            updateTimer = updateInterval;
-            CheckForBadNodes();
+            //We update the bad nodes constantly, so as objects or enemies move, the grid automatically adjusts itself.
+            updateTimer -= Time.deltaTime;
+            if (updateTimer <= 0)
+            {
+                updateTimer = updateInterval;
+                CheckForBadNodes();
+            }
         }
     }
 

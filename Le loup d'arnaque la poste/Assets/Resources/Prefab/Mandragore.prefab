@@ -189,11 +189,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  isMoving: 0
   followSpeed: 4.5
-  maxMovementDist: 2
+  maxMovementDist: 5
   followPlayerDist: 4
   startMovingChance: 0.1
-  drawDebug: 0
+  drawDebug: 1
   dropItems:
   - {fileID: 11400000, guid: 311ecd94338008e4fa8d59e41b98ceff, type: 2}
   - {fileID: 11400000, guid: 311ecd94338008e4fa8d59e41b98ceff, type: 2}
@@ -220,6 +221,7 @@ MonoBehaviour:
     - {fileID: -3000835293284643083, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
     - {fileID: 8986238795027483831, guid: 4133ef87b6c6d8b4181038c6b5ed887d, type: 3}
     changeTime: 0.1
+  isSearching: 0
 --- !u!61 &6688428466509488761
 BoxCollider2D:
   m_ObjectHideFlags: 0
