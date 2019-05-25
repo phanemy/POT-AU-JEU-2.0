@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
   m_Name: Tonifiant
   m_EditorClassIdentifier: 
-  itemName: Tonifiant
-  description: 
+  itemName: Toning
+  description: More strength, more corpses, more possibilities!
   icon: {fileID: 21300000, guid: c7895269933be6a41bba4c967e88dc79, type: 3}
   rarety: 3
   life: 0

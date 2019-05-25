@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quartz
   m_EditorClassIdentifier: 
   itemName: Quartz
-  description: 
+  description: Transparents pebbles ? Seriously ?
   icon: {fileID: 21300000, guid: 17dd1854346e0de4a9fd7d7d81ce3443, type: 3}
   rarety: 1
   location: 1

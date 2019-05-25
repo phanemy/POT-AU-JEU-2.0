@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pomme
   m_EditorClassIdentifier: 
   itemName: Apple
-  description: A red apple
+  description: Sometimes the simplest ingredients are the most effective...
   icon: {fileID: 21300000, guid: 12bb6fde632c1364ebd7c290d4d1d824, type: 3}
   rarety: 0
   location: 0

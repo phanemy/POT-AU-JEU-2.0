@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
   m_Name: Philtre
   m_EditorClassIdentifier: 
-  itemName: "Philtre d'humanit\xE9"
-  description: 
+  itemName: Philter of humanity
+  description: The only known cure for lycanthropy
   icon: {fileID: 21300000, guid: a5a33d5f734f5e34f8ef91a1a41b1d26, type: 3}
   rarety: 3
   life: 0

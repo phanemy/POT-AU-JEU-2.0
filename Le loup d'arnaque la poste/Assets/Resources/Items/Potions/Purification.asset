@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eeb7dafff25c746afff027e34872d3, type: 3}
   m_Name: Purification
   m_EditorClassIdentifier: 
-  itemName: Elixir de purification
-  description: 
+  itemName: Purification elixir
+  description: Makes the hair soft and more human
   icon: {fileID: 21300000, guid: 5367fca423daf2f4cb2b5006336cefa0, type: 3}
   rarety: 3
   life: 0
