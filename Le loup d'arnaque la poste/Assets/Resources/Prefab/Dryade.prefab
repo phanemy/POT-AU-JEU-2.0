@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  isMoving: 0
   followSpeed: 4.5
   maxMovementDist: 2
   followPlayerDist: 4
@@ -220,6 +221,7 @@ MonoBehaviour:
     - {fileID: 5253527823111406239, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     - {fileID: 5959479799409275937, guid: 372c76b5b11064847bb2a576a7686098, type: 3}
     changeTime: 0.1
+  isSearching: 0
 --- !u!61 &6688428466509488761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,7 +328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: a7d1d9cef047c434dbefdd3d06e1554d,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 41053884bfc9c4d48ae0a4bff47f2dbc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

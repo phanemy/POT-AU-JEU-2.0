@@ -239,7 +239,7 @@ public class PlayerManager : MonoBehaviour
         if (!potion.win)
         {
             combatComponent.health(potion.life);
-            lycanthropyComponent.decreaseLevel((potion.Lycanthropie < 0) ? -potion.Lycanthropie : potion.Lycanthropie);
+            lycanthropyComponent.AddLycanthropyLevel(potion.Lycanthropie);
 
             speed += potion.speed;
             runSpeed += potion.runSpeed;
