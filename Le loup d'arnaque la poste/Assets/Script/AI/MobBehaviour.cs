@@ -17,7 +17,7 @@ public class MobBehaviour : MovingEnties
     public Pickable[] dropItems;
     [SerializeField]
     public SpriteManager spriteManager;
-    private CombatComponent combatComponent;
+    public CombatComponent combatComponent { get; private set; }
 
     private DirectionEnum dir;
     private int actualLife;

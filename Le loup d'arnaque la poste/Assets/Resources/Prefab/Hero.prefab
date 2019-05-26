@@ -320,6 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lycanthropyUiSlider: {fileID: 0}
+  effect0To1: {fileID: 11400000, guid: f79a5ce6ed967224dab2f7c337e94ebf, type: 2}
+  effect1To2: {fileID: 11400000, guid: 3d0651057c6d4604ba93ea710e4bcc37, type: 2}
 --- !u!114 &5244119913729445755
 MonoBehaviour:
   m_ObjectHideFlags: 0

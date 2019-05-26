@@ -30,12 +30,12 @@ public class PlayerManager : MonoBehaviour
     public AudioSource clipWalk;
 
     public Collider2D confinedCollider;
-    
+
     private BloodLust bloodLustComponent;
     private Lycanthropy lycanthropyComponent;
     private CombatComponent combatComponent;
     private Rigidbody2D rb;
-    public Interactable interactableItem;
+    private Interactable interactableItem;
     private Vector2 movement;
     private DirectionEnum dir;
     private int previousLevel;
@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
         speed = initialspeed;
         runSpeed = initialRunSpeed;
         dir = DirectionEnum.Bottom;
-        spriteManager.init(gameObject.GetComponent < SpriteRenderer>(),dir);
+        spriteManager.init(gameObject.GetComponent<SpriteRenderer>(), dir);
         spriteManager.changeLycanthropieLevel(0);
         bloodLustComponent = gameObject.GetComponent<BloodLust>();
         lycanthropyComponent = gameObject.GetComponent<Lycanthropy>();
@@ -82,7 +82,7 @@ public class PlayerManager : MonoBehaviour
 
         if (!isLose && !combatComponent.isDead)
         {
-            if (Input.GetButtonDown("Interact") && interactableItem != null )
+            if (Input.GetButtonDown("Interact") && interactableItem != null)
             {
                 //interact = true;
                 if (interactableItem.interact(this))
@@ -142,17 +142,17 @@ public class PlayerManager : MonoBehaviour
                     }
                     else
                         if (spriteManager.update)
-                        {
-                            isMoving = false;
-                            clipWalk.Stop();
-                            spriteManager.stop();
-                        }
+                    {
+                        isMoving = false;
+                        clipWalk.Stop();
+                        spriteManager.stop();
+                    }
                 }
             }
         }
         else
         {
-            if(!isLose)
+            if (!isLose)
             {
                 DisplayLoseScreen("Your life as reach 0");
             }
@@ -161,9 +161,9 @@ public class PlayerManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isMoving)
+        if (isMoving)
         {
-            rb.MovePosition(rb.position  + movement * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
         }
         else
         {
@@ -177,26 +177,32 @@ public class PlayerManager : MonoBehaviour
         statCanvas.SetActive(false);
         loseScreen.SetActive(true);
         Text text = loseScreen.transform.GetChild(0).GetChild(0).GetComponent<Text>();
-        if(text != null)
-            text.text =message ;
+        if (text != null)
+            text.text = message;
     }
 
     private bool checkLevel()
     {
-        switch(lycanthropyComponent.LycanthropyLevel)
+        switch (lycanthropyComponent.LycanthropyLevel)
         {
             case 3:
                 return true;
             case 2:
                 if (previousLevel != 2)
                 {
-                    previousLevel =2;
+                    //if (previousLevel == 1)
+                    applyPotionEffect(lycanthropyComponent.effect1To2);
+                    previousLevel = 2;
                     spriteManager.changeLycanthropieLevel(2);
                 }
                 return false;
             case 1:
                 if (previousLevel != 1)
                 {
+                    if (previousLevel == 1)
+                        reversePotionEffect(lycanthropyComponent.effect1To2);
+                    else if (previousLevel == 0)
+                        applyPotionEffect(lycanthropyComponent.effect0To1);
                     previousLevel = 1;
                     spriteManager.changeLycanthropieLevel(1);
                 }
@@ -205,6 +211,8 @@ public class PlayerManager : MonoBehaviour
             case 0:
                 if (previousLevel != 0)
                 {
+                    //if (previousLevel == 1)
+                    reversePotionEffect(lycanthropyComponent.effect0To1);
                     previousLevel = 0;
                     spriteManager.changeLycanthropieLevel(0);
                 }
@@ -241,7 +249,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void appplyEffect(Potion potion)
+    public void applyPotionEffect(Potion potion)
     {
         if (!potion.win)
         {
@@ -261,13 +269,18 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    IEnumerator effectTime(Potion potion)
+    private void reversePotionEffect(Potion potion)
     {
-        yield return new WaitForSeconds(potion.effectTime);
         speed -= potion.speed;
         runSpeed -= potion.runSpeed;
         combatComponent.attackSpeed -= potion.attackSpeed;
         combatComponent.damage -= potion.damage;
+    }
+
+    IEnumerator effectTime(Potion potion)
+    {
+        yield return new WaitForSeconds(potion.effectTime);
+        reversePotionEffect(potion);
     }
 
     public void InitRestart()
@@ -277,7 +290,6 @@ public class PlayerManager : MonoBehaviour
 
     public void mobDie(int count)
     {
-        bloodLustComponent.addBloodLust(-attackBloodLustCost*(count) + gainWithKilling);
+        bloodLustComponent.addBloodLust(-attackBloodLustCost * (count) + gainWithKilling);
     }
-
 }

@@ -114,7 +114,7 @@ public class Inventory : MonoBehaviour
     {
         Potion pop = item as Potion;
         if (pop != null)
-            player.appplyEffect(pop);
+            player.applyPotionEffect(pop);
 
         items.Remove(item);
         inventoryPanel.Show(items);
@@ -138,7 +138,7 @@ public class Inventory : MonoBehaviour
             {
                 Potion pop = items[id] as Potion;
                 if (pop != null)
-                    player.appplyEffect(pop);
+                    player.applyPotionEffect(pop);
                 items.RemoveAt(id);
                 inventoryPanel.Show(items);
             }

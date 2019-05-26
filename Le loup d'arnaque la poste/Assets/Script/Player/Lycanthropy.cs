@@ -8,7 +8,8 @@ public class Lycanthropy : MonoBehaviour
 {
 
     public RectTransform lycanthropyUiSlider;
-
+    public Potion effect0To1;
+    public Potion effect1To2; 
 
     float progressTimeFromLast = 0f;
     public float LycanthropyPercent { get; private set; }
@@ -31,7 +32,7 @@ public class Lycanthropy : MonoBehaviour
         }
         private set { }
     }
-
+   
     public void startGame(BloodLust bloodLustComponent)
     {
         LycanthropyPercent = 0f;

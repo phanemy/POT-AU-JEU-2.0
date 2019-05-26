@@ -34,10 +34,10 @@ public class CombatComponent : MonoBehaviour
         private set { }
     }
 
-    public bool isDead;
+    public bool isDead { get; private set; }
 
-    public float timeSinceLastAttack = 0f;
-    public bool isAttacking;/*{ get; private set; }*/
+    private float timeSinceLastAttack = 0f;
+    public bool isAttacking{ get; private set; }
 
     public void Awake()
     {
