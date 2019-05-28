@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField]
-    public float initialspeed = 1f;
+    public float initialSpeed = 1f;
     [SerializeField]
     public float speed { get; private set; }
     [SerializeField]
@@ -41,13 +41,14 @@ public class PlayerManager : MonoBehaviour
     private int previousLevel;
     bool isLose;
     bool isMoving;
-
+    System.Diagnostics.Stopwatch sw;
     private Cinemachine.CinemachineVirtualCamera cam;
 
     private void Start()
     {
+        sw = System.Diagnostics.Stopwatch.StartNew();
         previousLevel = 0;
-        speed = initialspeed;
+        speed = initialSpeed;
         runSpeed = initialRunSpeed;
         dir = DirectionEnum.Bottom;
         spriteManager.init(gameObject.GetComponent<SpriteRenderer>(), dir);
@@ -186,6 +187,9 @@ public class PlayerManager : MonoBehaviour
         switch (lycanthropyComponent.LycanthropyLevel)
         {
             case 3:
+                sw.Stop();
+                Debug.Log("time before Lose " + sw.ElapsedMilliseconds);
+                sw.Start();
                 return true;
             case 2:
                 if (previousLevel != 2)
@@ -194,6 +198,9 @@ public class PlayerManager : MonoBehaviour
                     applyPotionEffect(lycanthropyComponent.effect1To2);
                     previousLevel = 2;
                     spriteManager.changeLycanthropieLevel(2);
+                    sw.Stop();
+                    Debug.Log("time before 2 " + sw.ElapsedMilliseconds);
+                    sw.Start();
                 }
                 return false;
             case 1:
@@ -205,6 +212,9 @@ public class PlayerManager : MonoBehaviour
                         applyPotionEffect(lycanthropyComponent.effect0To1);
                     previousLevel = 1;
                     spriteManager.changeLycanthropieLevel(1);
+                    sw.Stop();
+                    Debug.Log("time before 1 " + sw.ElapsedMilliseconds);
+                    sw.Start();
                 }
 
                 return false;

@@ -19,7 +19,7 @@ public class BloodLust : MonoBehaviour
                 return timeStep25_50;
             else if (percent < 0.75f)
                 return timeStep50_75;
-            else if (percent < 0.99f)
+            else if (percent <= 0.99f)
                 return timeStep75_99;
             else
                 return timeStep100;

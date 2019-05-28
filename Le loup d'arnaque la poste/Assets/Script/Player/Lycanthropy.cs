@@ -24,7 +24,7 @@ public class Lycanthropy : MonoBehaviour
                 return 0;
             else if (LycanthropyPercent < 0.66f)
                 return 1;
-            else if (LycanthropyPercent < 0.99f)
+            else if (LycanthropyPercent <= 0.99f)
                 return 2;
             else
                 return 3;
@@ -50,7 +50,7 @@ public class Lycanthropy : MonoBehaviour
         if (progressTimeFromLast >= updateTime)
         {
             updateLycanthropy();
-            progressTimeFromLast %= bloodLustComponent.LycanthropeProgressFromBloodLust;
+            progressTimeFromLast -= bloodLustComponent.LycanthropeProgressFromBloodLust;
         }
     }
 
@@ -70,6 +70,8 @@ public class Lycanthropy : MonoBehaviour
         LycanthropyPercent -= count / 100f;
         if (LycanthropyPercent < 0)
             LycanthropyPercent = 0;
+        else if (LycanthropyPercent > 1f)
+            LycanthropyPercent = 1f;
         UpdateSlider();
     }
 
