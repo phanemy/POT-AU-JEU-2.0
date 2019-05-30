@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885de99f1beae2348b8a9a8dbb525ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLife: 10
+  initialLife: 15
   actualLife: 3
   initialAttackSpeed: 1
   attackSpeed: 0.5
@@ -304,9 +304,6 @@ MonoBehaviour:
   att: {fileID: 5244119913729445698}
   weaponParent: {fileID: 5244119912468237356}
   clip: {fileID: 2501021221483606350}
-  isDead: 0
-  timeSinceLastAttack: 0
-  isAttacking: 0
 --- !u!114 &5244119913729445700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,11 +331,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24d04b167c45cf49b45867469d516b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialspeed: 4
-  initialRunSpeed: 7
+  initialSpeed: 3
+  initialRunSpeed: 4
   runBloodLustCost: 0.5
   attackBloodLustCost: 5
-  gainWithKilling: -50
+  gainWithKilling: -30
   loseScreen: {fileID: 0}
   statCanvas: {fileID: 0}
   spriteManager:

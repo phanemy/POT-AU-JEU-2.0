@@ -250,10 +250,18 @@ public class PlayerManager : MonoBehaviour
         {
             if (interactableItem == null)
             {
-                interactableItem = collision.gameObject.GetComponent<Interactable>();
-                if (interactableItem != null)
+                var test = collision.gameObject.GetComponent<ItemPrefab>();
+                if(test != null)
                 {
-                    interactableItem.CanBeInteract(true);
+                    test.interact(this);
+                }
+                else
+                {
+                    interactableItem = collision.gameObject.GetComponent<Interactable>();
+                    if (interactableItem != null)
+                    {
+                        interactableItem.CanBeInteract(true);
+                    }
                 }
             }
         }

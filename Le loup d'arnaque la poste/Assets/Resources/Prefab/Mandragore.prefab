@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   isMoving: 0
-  followSpeed: 4.5
+  followSpeed: 3
   maxMovementDist: 5
   followPlayerDist: 4
   startMovingChance: 0.1
@@ -260,11 +260,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885de99f1beae2348b8a9a8dbb525ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLife: 2
+  initialLife: 5
   actualLife: 2
-  initialAttackSpeed: 1
+  initialAttackSpeed: 2
   attackSpeed: 1
-  initialDamage: 1
+  initialDamage: 2
   damage: 1
   attackDist: 1.5
   lifeSlider: {fileID: 0}
@@ -273,9 +273,6 @@ MonoBehaviour:
   att: {fileID: 6688428466509488762}
   weaponParent: {fileID: 6688428464937696232}
   clip: {fileID: 8118661467824560262}
-  isDead: 0
-  timeSinceLastAttack: 0
-  isAttacking: 0
 --- !u!95 &6688428466509488762
 Animator:
   serializedVersion: 3

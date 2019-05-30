@@ -27,6 +27,14 @@ public class Inventory : MonoBehaviour
     public Potion defaultPotion;
 
     public GameObject tooltip;
+    public bool HavePlace
+    {
+        get
+        {
+            return items.Count < Utils.NbSlot;
+        }
+        private set { }
+    }
 
     private InventoryPanel inventoryPanel;
     private ChaudronPanel chaudronPanel;
