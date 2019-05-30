@@ -260,9 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885de99f1beae2348b8a9a8dbb525ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLife: 5
+  initialLife: 4
   actualLife: 2
-  initialAttackSpeed: 2
+  initialAttackSpeed: 3
   attackSpeed: 1
   initialDamage: 2
   damage: 1

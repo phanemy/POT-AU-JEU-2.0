@@ -12,7 +12,7 @@ public class SpawnerManager : MonoBehaviour
     {
         nbEnable = 0;
         int idxToEnable;
-        foreach (ItemsSpawner spawner in itemsSpawner)
+        foreach (SpawnerAbstract spawner in itemsSpawner)
         {
             spawner.enabled = false;
         }

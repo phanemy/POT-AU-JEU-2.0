@@ -22,7 +22,6 @@ public class ItemPrefab : MonoBehaviour, Interactable
         transform.GetComponent<SpriteRenderer>().sprite = item.icon;
         transform.GetComponent<SpriteRenderer>().sortingOrder = 2;
         player = GameObject.FindWithTag("Player").transform;
-        Debug.Log(player);
     }
 
     public void Init(Vector3 position, Pickable item, SpawnerAbstract spawner)
@@ -33,7 +32,6 @@ public class ItemPrefab : MonoBehaviour, Interactable
         transform.GetComponent<SpriteRenderer>().sortingOrder = 2;
         this.spawner = spawner;
         player = GameObject.FindWithTag("Player").transform;
-        Debug.Log(player);
     }
 
     public void Update()

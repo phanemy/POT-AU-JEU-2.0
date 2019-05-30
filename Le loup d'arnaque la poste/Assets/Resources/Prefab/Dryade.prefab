@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialLife: 3
   actualLife: 2
-  initialAttackSpeed: 1.5
+  initialAttackSpeed: 2
   attackSpeed: 1
   initialDamage: 1
   damage: 1

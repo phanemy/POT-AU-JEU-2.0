@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Boh, it's not so bad.
   icon: {fileID: 21300000, guid: d6e5b1a5cdbf4db4cb0cc2b4975de7ec, type: 3}
   rarety: 3
-  life: 1
+  life: 2
   bloodLust: 0
   Lycanthropie: 0
   effectTime: 0
