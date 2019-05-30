@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8707188db0c096948a3caceb14538fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressTimeInSeconds: 1
+  progressTimeInSeconds: 1.5
   timeStep0_25: 60
   timeStep25_50: 30
   timeStep50_75: 15

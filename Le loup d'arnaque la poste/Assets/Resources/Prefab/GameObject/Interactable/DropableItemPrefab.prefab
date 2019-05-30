@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   childRend: {fileID: 188817685890974913}
-  minDistMag: 3
+  minDistMag: 1.5
   magSpeedMin: 1
   magSpeedMax: 5
   magIncreaseSpeed: 1

@@ -62,11 +62,10 @@ public abstract class SpawnerAbstract : MonoBehaviour
 
     protected void OnDrawGizmos()
     {
-        if (drawDebug)
+        if (drawDebug && this.enabled)
         {
             Gizmos.color = debugColor;
             Gizmos.DrawCube(transform.position, transform.localScale);
         }
-
     }
 }

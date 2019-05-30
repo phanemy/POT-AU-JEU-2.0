@@ -45,7 +45,7 @@ public class ItemPrefab : MonoBehaviour, Interactable
             {
                 Vector3 dir = player.position - transform.position;
                 dir.Normalize();
-                transform.position += (dir * Time.deltaTime * (((1 - offset) * (1 - offset) * magSpeedMin) + (offset * offset * magSpeedMax)));
+                transform.position += (dir * Time.deltaTime * (((1 - offset) /** (1 - offset)*/ * magSpeedMin) + (offset * offset * magSpeedMax)));
                 if (offset < 1)
                     offset += magIncreaseSpeed * Time.deltaTime;
                 if (offset > 1)
